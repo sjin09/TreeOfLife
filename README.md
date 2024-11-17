@@ -23,9 +23,9 @@ Python scripts and R code are used downstream of germline and somatic mutation d
 python get_reference_tricounts.py -i sample.fasta --target sample.target -o sample.tri
 ```
 
-### SBS52 counts
+### SBS52 classification counts
 
-Please note that this code assumes that variants are not haplotype phased (i.e., PS is absent from the VCF file and genotypes are separated by / and not |)
+Unlike somatic mutations, germline mutations are classified into 52 categories (SBS52 classification). Please refer to the methods section of the manuscript for a detailed description of how the SBS96 classification is collapsed into the SBS52 classification.
 
 ```
 ## The file sample.vcf.gz contains germline mutations.
@@ -39,7 +39,9 @@ python get_sbs52_barplot.py -i sample.sbs52.tsv --sample sample -o sample.sbs52.
 ```
 ```
 
-### SBS96 counts
+### SBS96 classification counts
+
+Somatic mutations can be classified into 96 categories (SBS96 classification), depending on the 6 different classes of base substitution and 16 combinations of the bases immediately 5’ and 3’ to the mutation. 
 
 Please note that the script here is used to retrieve and plot raw SBS96 counts and not the expected number of somatic mutations based on the callalbe positions in the reference genome and the callable bases from Pacific Biosciences CCS reads.
 
@@ -50,6 +52,11 @@ python get_sbs96_barplot.py -i sample.sbs96.tsv --sample sample -o sample.sbs96.
 ```
 
 #### SBS96 counts, where each trinucleotide contributes equally.
+
+```
+```
+
+#### Map SBS96 classification counts to SBS52 classification counts
 
 ```
 ```
