@@ -19,7 +19,8 @@ SBS96_CLASSIFICATION = [f"{nti}[{sub}]{ntj}" for sub in SUBS for nti in NTS for 
 
 def parse_args(args):
     parser = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+        description="Get SBS96 counts from a VCF file",
+        formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument(
         "-i",
