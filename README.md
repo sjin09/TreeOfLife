@@ -23,8 +23,6 @@ Python scripts and R code are used downstream of germline and somatic mutation d
 python get_reference_tricounts.py -i sample.fasta --target sample.target -o sample.tri
 ```
 
-The first column represents the trinucleotide, and the second column shows the total count of trinucleotides from the target chromosomes.
-
 ### SBS52 counts
 
 ```
@@ -40,6 +38,8 @@ The first column represents the trinucleotide, and the second column shows the t
 Please note that the script here is used to retrieve and plot raw SBS96 counts and not the expected number of somatic mutations based on the callalbe positions in the reference genome and the callable bases from Pacific Biosciences CCS reads.
 
 ```
+python get_sbs96_counts.py -i sample.himut.vcf.bgz --ref-fasta sample.fasta -o sample.himut.sbs96.tsv
+python get_sbs96_barplot.py -i sample.himut.sbs96.tsv --sample sample -o sample.himut.sbs96.pdf
 ```
 
 ### Trinucleotide normalised SBS96 counts
