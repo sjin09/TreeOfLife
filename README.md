@@ -54,6 +54,7 @@ python get_sbs96_barplot.py -i sample.sbs96.tsv --sample sample -o sample.sbs96.
 #### SBS96 counts, where each trinucleotide contributes equally.
 
 ```
+python get_tri_equal_weight_sbs96_counts.py -i sample.sbs96.tsv --tri sample.tri -o sample.tri_equal_weight.sbs96.tsv
 ```
 
 #### Collapse SBS96 classification counts to SBS52 classification counts
