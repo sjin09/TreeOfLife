@@ -110,6 +110,7 @@ def write_trinucleotide_count(trinucleotide_count_per_chrom: Dict[str, Dict[str,
             trinucleotide_count[tri] += count
 
     with open(output_path, "w") as outfile:
+        outfile.write("TRINUCLEOTIDE\tCOUNT\n")
         for tri in TRINUCLEOTIDES:
             outfile.write("{}\t{}\n".format(tri, trinucleotide_count[tri]))
 
