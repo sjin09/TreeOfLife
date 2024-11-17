@@ -118,8 +118,8 @@ SBS96_TO_SBS52 = {
 }
 
 SBS52_TO_SBS96_CLASSIFICATIONS = defaultdict(list)
-for SBS96, SBS52 in SBS96_TO_SBS52.items():
-    SBS52_TO_SBS96_CLASSIFICATIONS[SBS52].append(SBS96)
+for sbs96, sbs52 in SBS96_TO_SBS52.items():
+    SBS52_TO_SBS96_CLASSIFICATIONS[sbs52].append(sbs96)
 SBS52_TO_SBS96_CLASSIFICATIONS = {k: natsort.natsorted(set(v)) for k, v in SBS52_TO_SBS96_CLASSIFICATIONS.items()}
 
 SBS52_CLASSIFICATIONS_PER_SUB = defaultdict(set)
