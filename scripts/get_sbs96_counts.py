@@ -2,10 +2,10 @@
 
 import argparse
 from collections import defaultdict
+from pathlib import Path
 from typing import Dict, List
 import sys
 
-from pathlib import Path
 import pysam
 
 PUR = set(["A", "G"])

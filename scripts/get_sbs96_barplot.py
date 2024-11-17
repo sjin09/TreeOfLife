@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 import argparse
+from pathlib import Path
 import sys
 
 import pandas as pd
-from pathlib import Path
 import plotnine as p9
 
 PUR = set(["A", "G"])

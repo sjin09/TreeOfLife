@@ -2,11 +2,11 @@
 
 import argparse
 from collections import defaultdict
+from pathlib import Path
 from typing import Dict, List
 import sys
 
 import natsort
-from pathlib import Path
 import pysam
 
 
