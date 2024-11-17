@@ -17,7 +17,7 @@ Python scripts and R code are used downstream of germline and somatic mutation d
 
 ## User's Guide
 
-### Trinucletide counts
+### Reference FASTA file trinucletide (3-mer) counts
 
 ```
 python get_reference_tricounts.py -i sample.fasta --target sample.target -o sample.tri
@@ -25,10 +25,16 @@ python get_reference_tricounts.py -i sample.fasta --target sample.target -o samp
 
 ### SBS52 counts
 
+Please note that this code assumes that variants are not haplotype phased (i.e., PS is absent from the VCF file and genotypes are separated by / and not |)
+
 ```
+## The file sample.vcf.gz contains germline mutations.
+python get_sbs52_counts.py -i sample.vcf.bgz --ref-fasta sample.fasta -o sample.sbs52.tsv
+python get_sbs52_barplot.py -i sample.sbs52.tsv --sample sample -o sample.sbs52.pdf
 ```
 
-### Trinucleotide normalised SBS52 counts
+#### SBS52 counts, where each trinucleotide contributes equally.
+
 
 ```
 ```
@@ -38,21 +44,23 @@ python get_reference_tricounts.py -i sample.fasta --target sample.target -o samp
 Please note that the script here is used to retrieve and plot raw SBS96 counts and not the expected number of somatic mutations based on the callalbe positions in the reference genome and the callable bases from Pacific Biosciences CCS reads.
 
 ```
-python get_sbs96_counts.py -i sample.himut.vcf.bgz --ref-fasta sample.fasta -o sample.himut.sbs96.tsv
-python get_sbs96_barplot.py -i sample.himut.sbs96.tsv --sample sample -o sample.himut.sbs96.pdf
+## The file sample.vcf.gz contains somatic mutations.
+python get_sbs96_counts.py -i sample.vcf.bgz --ref-fasta sample.fasta -o sample.sbs96.tsv
+python get_sbs96_barplot.py -i sample.sbs96.tsv --sample sample -o sample.sbs96.pdf
 ```
 
-### Trinucleotide normalised SBS96 counts
-
-```
-```
-
-### R code for germline mutational signature extraction
+#### SBS96 counts, where each trinucleotide contributes equally.
 
 ```
 ```
 
-### R code for somatic mutational signature extraction
+### R code for mutational signature extraction
+
+#### Germline mutational signature extraction
+```
+```
+
+#### Somatic mutational signature extraction
 
 ```
 ```
