@@ -61,7 +61,7 @@ python get_sbs96_barplot.py -i sample.sbs96.tsv --sample sample -o sample.sbs96.
 ```
 ## sbs96_to_sbs52.tsv can be found under the scripts directory
 python sbs96_to_sbs52.py -i sample.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.sbs96_to_sbs52.tsv
-python sbs96_to_sbs52.py -i sample.tri_equal_weights.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.tri_equal_weights.sbs96_to_sbs52.tsv
+python sbs96_to_sbs52.py -i sample.tri_equal_weight.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.tri_equal_weight.sbs96_to_sbs52.tsv
 ```
 
 ### R code for mutational signature extraction
