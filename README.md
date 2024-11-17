@@ -35,7 +35,6 @@ python get_sbs52_barplot.py -i sample.sbs52.tsv --sample sample -o sample.sbs52.
 
 #### SBS52 counts, where each trinucleotide contributes equally.
 
-Please note that the chromosomes specified in `sample.vcf.bgz` and `sample.target`, which is used to obtain `sample.tri`, must be the same.
 
 ```
 ```
@@ -54,8 +53,6 @@ python get_sbs96_barplot.py -i sample.sbs96.tsv --sample sample -o sample.sbs96.
 
 #### SBS96 counts, where each trinucleotide contributes equally.
 
-Please note that the chromosomes specified in `sample.vcf.bgz` and `sample.target`, which is used to obtain `sample.tri`, must be the same.
-
 ```
 ```
 
@@ -64,13 +61,12 @@ Please note that the chromosomes specified in `sample.vcf.bgz` and `sample.targe
 ```
 ## sbs96_to_sbs52.tsv can be found under the scripts directory
 python sbs96_to_sbs52.py -i sample.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.sbs96_to_sbs52.tsv
-python sbs96_to_sbs52.py -i sample.tri_equal_weight.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.tri_equal_weight.sbs96_to_sbs52.tsv
+python sbs96_to_sbs52.py -i sample.tri_equal_weights.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.tri_equal_weights.sbs96_to_sbs52.tsv
 ```
 
 ### R code for mutational signature extraction
 
 #### Germline mutational signature extraction
-
 ```
 ```
 
