@@ -180,7 +180,6 @@ def draw_sbs52_barplot(input_path: Path, sample: str, output_path: Path) -> None
         + p9.labs(x="\nTrinucleotide\n", y="\nCounts\n")
         + p9.ggtitle("\n{}\n".format(sample))
         + p9.theme(
-            text=p9.element_text(size=10),
             legend_title=p9.element_blank(),
             axis_text_x=p9.element_text(
                 family="monospace", angle=90, ha="center"
