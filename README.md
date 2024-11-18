@@ -35,7 +35,6 @@ python get_sbs52_barplot.py -i sample.sbs52.tsv --sample sample -o sample.sbs52.
 
 #### SBS52 counts, where each trinucleotide contributes equally.
 
-
 ```
 ```
 
@@ -47,6 +46,7 @@ Please note that the script here is used to retrieve and plot raw SBS96 counts a
 
 ```
 ## The file sample.vcf.gz contains somatic mutations.
+
 python get_sbs96_counts.py -i sample.vcf.bgz --ref-fasta sample.fasta -o sample.sbs96.tsv
 python get_sbs96_barplot.py -i sample.sbs96.tsv --sample sample -o sample.sbs96.pdf
 ```
@@ -61,20 +61,28 @@ python get_tri_equal_weight_sbs96_counts.py -i sample.sbs96.tsv --tri sample.tri
 
 ```
 ## sbs96_to_sbs52.tsv can be found under the scripts directory
+
 python sbs96_to_sbs52.py -i sample.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.sbs96_to_sbs52.tsv
 python sbs96_to_sbs52.py -i sample.tri_equal_weight.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.tri_equal_weight.sbs96_to_sbs52.tsv
 ```
 
 ### R code for mutational signature extraction
 
-#### Germline mutational signature extraction
-```
-```
-
-#### Somatic mutational signature extraction
+In the file `hdp_input.mat`, the rows represent samples, and the columns correspond to either the SBS52 or the SBS96 classification. Each element in the matrix indicates the counts of mutations.
 
 ```
+## Germline mutational signature extraction
+
+Rscript hdp_noprior_SBS52.R ${hdp_input.mat} ${chain_index} ${hdp_output_prefix}
+Rscript hdp_extraction_SBS52.R ${hdp_output_prefix} ${hdp_input.mat} ${output_directory} ${output_prefix}
+
+## Germline mutational signature extraction
+Rscript hdp_noprior_SBS96.R ${hdp_input.mat} ${chain_index} ${hdp_output_prefix}
+Rscript hdp_extraction_SBS96.R ${hdp_output_prefix} ${hdp_input.mat} ${output_directory} ${output_prefix}
 ```
+`hdp_extraction_SBS52/SBS96.R` returns two excel spreadsheets `${output_prefix}_HDP_sigs.csv` and `${output_prefix}_HDP_exposure.csv`. 
+- In the file `${output_prefix}_HDP_sigs.csv`, the rows represent SBS52/SBS96 classifications, and the columns correspond to the mutational signatures. Each element in the matrix indicates the probability of a mutation occuring in a specific sequence context under a given mutational signature.
+- In the file `${output_prefix}_HDP_exposure.csv`, the rows represent samples, and the columns correspond to the mutational signatures. Each element in the matrix reflects the contribution of each mutational signature to the sample's mutation burden.
 
 ### Julia script for phylogenetic signal analysis
 
