@@ -9,7 +9,7 @@ import sys
 import pysam
 
 AUTOSOMES = [str(i) for i in range(1, 23)]
-CORD_BLOOD_MUTATION_BURDEN = 40
+CORD_BLOOD_MUTATION_BURDEN = 50
 
 
 def parse_args(args):
