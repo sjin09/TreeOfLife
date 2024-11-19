@@ -151,9 +151,10 @@ def get_circular_consensus_sequencing_error_rate(
             if ccs_error_count > 0:
                 ccs_error_rate = ccs_error_count/callable_ccs_tri_count
             else:
+                ccs_error_count = 1
                 ccs_error_rate = 1/callable_ccs_tri_count
             phred_q_score = get_phred_scaled_q_score(ccs_error_rate)
-            outfile.write("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
+            outfile.write("{}\t{}\t{}\t{}\t{}\t{:.2f}\t{}\t{}\n".format(
                 sub,
                 ubase,
                 dbase,
