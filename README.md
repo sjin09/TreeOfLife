@@ -36,6 +36,8 @@ python get_sbs52_barplot.py -i sample.sbs52.tsv --sample sample -o sample.sbs52.
 #### SBS52 counts, where each trinucleotide contributes equally.
 
 ```
+python get_tri_equal_weight_sbs52_counts.py -i sample.vcf.bgz --ref-fasta sample.fasta --target sample.target --tri sample.tri -o -o sample.tri_equal_weight.sbs52.tsv --is-sample-reference-sample
+python get_sbs52_barplot.py -i sample.tri_equal_weight.sbs52.tsv --sample sample -o sample.tri_equal_weight.sbs52.pdf
 ```
 
 ### SBS96 classification counts
@@ -61,7 +63,7 @@ python get_tri_equal_weight_sbs96_counts.py -i sample.sbs96.tsv --tri sample.tri
 
 ```
 ## sbs96_to_sbs52.tsv can be found under the scripts directory
-
+## get_sbs96_to_sbs52_lookup_table.py is used to generate sbs96_to_sbs52.tsv
 python sbs96_to_sbs52.py -i sample.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.sbs96_to_sbs52.tsv
 python sbs96_to_sbs52.py -i sample.tri_equal_weight.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.tri_equal_weight.sbs96_to_sbs52.tsv
 ```
