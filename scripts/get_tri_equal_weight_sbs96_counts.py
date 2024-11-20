@@ -76,8 +76,8 @@ def write_tri_equal_weight_sbs96_counts(input_path: Path, tri_path: Path, output
             sub = f"{sbs96[2]}>{sbs96[4]}"
             tri = f"{sbs96[0]}{sbs96[2]}{sbs96[6]}"
             count = count_per_sbs96[sbs96]
-            tri_weight = 1/(proportion_per_tri[tri]/SBS96_TRINUCLEOTIDE_WEIGHT)
-            weighted_count = count * tri_weight
+            weight = 1/(proportion_per_tri[tri]/SBS96_TRINUCLEOTIDE_WEIGHT)
+            weighted_count = count * weight
             outfile.write("{}\t{}\t{}\t{}\n".format(sub, tri, sbs96, weighted_count))
 
 
