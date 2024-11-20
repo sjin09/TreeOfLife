@@ -1,4 +1,4 @@
-# Code accompanying *Germline and somatic mutational processes across the Tree of Life*
+# Code accompanying *Germline and somatic mutational processes across the tree of life*
 
 Preprint available is at bioRxiv, .
 
