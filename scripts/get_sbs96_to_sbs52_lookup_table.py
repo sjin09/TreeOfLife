@@ -41,6 +41,9 @@ def get_sbs96_pyrimidine_count(sbs96: str):
 
 
 def get_max_pyrimidine_sbs96(sbs96_classifications: List[str]) -> List[str]:
+    """
+    Get the SBS96 classification with the highest pyrimidine base count.
+    """
     max_pyr_count = -1
     max_pyr_sbs96_classifications = []
     for sbs96 in sbs96_classifications:
@@ -54,10 +57,19 @@ def get_max_pyrimidine_sbs96(sbs96_classifications: List[str]) -> List[str]:
 
 
 def get_lexicographically_sorted_sbs52(sbs96_classifications: List[str]) -> List[str]:
+    """
+    Get alphabetically sorted SBS96 classifications
+    """
     return natsorted(sbs96_classifications)
 
 
 def get_sbs52(sbs96_classifications: List[str]) -> str:
+    """
+    Determine the SBS52 classification from a list of SBS96 classifications.
+
+    This function picks the SBS96 category with the most pyrimidine bases.
+    If there is a tie, it chooses the one that comes first alphabetically.
+    """
     max_pyr_sbs96_classifications = get_max_pyrimidine_sbs96(sbs96_classifications)
     if len(max_pyr_sbs96_classifications) == 1:
         sbs52 = max_pyr_sbs96_classifications[0]
