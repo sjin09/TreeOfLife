@@ -17,7 +17,7 @@ Python scripts and R code are used downstream of germline and somatic mutation d
 
 ## User's Guide
 
-### Reference FASTA file trinucletide (3-mer) counts
+### Reference FASTA file trinucleotide (3-mer) counts
 
 ```
 python get_reference_tricounts.py -i sample.fasta --target sample.target -o sample.tri
@@ -44,7 +44,7 @@ python get_sbs52_barplot.py -i sample.tri_equal_weight.sbs52.tsv --sample sample
 
 Somatic mutations can be classified into 96 categories (SBS96 classification), depending on the 6 different classes of base substitution and 16 combinations of the bases immediately 5’ and 3’ to the mutation. 
 
-Please note that the script here is used to retrieve and plot raw SBS96 counts and not the expected number of somatic mutations based on the callalbe positions in the reference genome and the callable bases from Pacific Biosciences CCS reads.
+Please note that the script here is used to retrieve and plot raw SBS96 counts and not the expected number of somatic mutations based on the callable positions in the reference genome and the callable bases from Pacific Biosciences CCS reads.
 
 ```
 ## The file sample.vcf.gz contains somatic mutations.
@@ -61,9 +61,11 @@ python get_tri_equal_weight_sbs96_counts.py -i sample.sbs96.tsv --tri sample.tri
 
 #### Collapse SBS96 classification counts to SBS52 classification counts
 
+Please refer to the methods section of the manuscript or the `get_sbs96_to_sbs52_lookup_table.py` script for a detailed description of how the SBS96 classification is mapped to the SBS52 classification.
+
 ```
-## sbs96_to_sbs52.tsv can be found under the scripts directory
-## get_sbs96_to_sbs52_lookup_table.py is used to generate sbs96_to_sbs52.tsv
+## sbs96_to_sbs52_lookup_table.tsv can be found under the scripts directory
+## get_sbs96_to_sbs52_lookup_table.py is used to generate sbs96_to_sbs52_lookup_table.tsv
 python sbs96_to_sbs52.py -i sample.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.sbs96_to_sbs52.tsv
 python sbs96_to_sbs52.py -i sample.tri_equal_weight.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.tri_equal_weight.sbs96_to_sbs52.tsv
 ```
