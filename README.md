@@ -90,5 +90,4 @@ Rscript hdp_extraction_SBS96.R ${hdp_output_prefix} ${hdp_input.mat} ${output_di
 
 ### Julia script for phylogenetic signal analysis
 
-```
-```
+Please refer to the pluto/DToL_signatures.html Pluto notebook for detailed instructions on how to perform a phylogenetic signal analysis of germline and somatic mutational signatures.
