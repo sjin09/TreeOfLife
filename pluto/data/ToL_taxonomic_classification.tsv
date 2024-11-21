@@ -1,0 +1,713 @@
+Reference sample	Sample	Species	Common name	Family taxon	Superkingdom	Kingdom	Phylum	Subphylum	Class	Superclass	Infraclass	Order
+bAccGen1	bAccGen1	Accipiter gentilis	northern goshawk	56259	Eukaryota	Metazoa	Chordata	Craniata	Aves	Sarcopterygii	Neognathae	Accipitriformes
+bAnaAcu1	bAnaAcu1	Anas acuta	northern pintail	8830	Eukaryota	Metazoa	Chordata	Craniata	Aves	Sarcopterygii	Neognathae	Galloanserae
+bAnsBra1	bAnsBra1	Anser brachyrhynchus	pink footed goose	8830	Eukaryota	Metazoa	Chordata	Craniata	Aves	Sarcopterygii	Neognathae	Galloanserae
+bCinCin1	bCinCin1	Cinclus cinclus	white throated dipper	127873	Eukaryota	Metazoa	Chordata	Craniata	Aves	Sarcopterygii	Neognathae	Passeriformes
+bClaHye2	bClaHye2	Clangula hyemalis	long tailed duck	8830	Eukaryota	Metazoa	Chordata	Craniata	Aves	Sarcopterygii	Neognathae	Galloanserae
+bFriCoe1	bFriCoe1	Fringilla coelebs	chaffinch	9133	Eukaryota	Metazoa	Chordata	Craniata	Aves	Sarcopterygii	Neognathae	Passeriformes
+bLarFus1	bLarFus1	Larus fuscus	lesser black backed gull	8910	Eukaryota	Metazoa	Chordata	Craniata	Aves	Sarcopterygii	Neognathae	Charadriiformes
+bPhaCar2	bPhaCar2	Phalacrocorax carbo	great cormorant	9206	Eukaryota	Metazoa	Chordata	Craniata	Aves	Sarcopterygii	Neognathae	Suliformes
+bTetUro1	bTetUro1	Tetrao urogallus	western capercaillie	9005	Eukaryota	Metazoa	Chordata	Craniata	Aves	Sarcopterygii	Neognathae	Galloanserae
+daAjuCham1	daAjuCham1	Ajuga chamaepitys	.	4136	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Lamiales
+daArcMinu1	daArcMinu1	Arctium minus	.	4210	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Asterales
+daBalNigr1	daBalNigr1	Ballota nigra	.	4136	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Lamiales
+daGnaUlig1	daGnaUlig1	Gnaphalium uliginosum	.	4210	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Asterales
+daLigVulg1	daLigVulg1	Ligustrum vulgare	common privet	4144	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Lamiales
+daLinVulg1	daLinVulg1	Linaria vulgaris	.	156152	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Lamiales
+daMisOron1	daMisOron1	Misopates orontium	.	156152	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Lamiales
+daPseLute1	daPseLute1	Pseudognaphalium luteoalbum	.	4210	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Asterales
+daPulDyse1	daPulDyse1	Pulicaria dysenterica	.	4210	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Asterales
+daScuGale1	daScuGale1	Scutellaria galericulata	.	4136	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Lamiales
+daScuMino1	daScuMino1	Scutellaria minor	.	4136	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Lamiales
+daSolDulc1	daSolDulc1	Solanum dulcamara	.	4070	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Solanales
+daVerOffi1	daVerOffi1	Verbena officinalis	.	21910	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Lamiales
+dcAgrGith1	dcAgrGith1	Agrostemma githago	corn cockle	3568	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Caryophyllales
+dcCheAlbu1	dcCheAlbu1	Chenopodium album	white goosefoot	1804623	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Caryophyllales
+dcPolAvic1	dcPolAvic1	Polygonum aviculare	.	3615	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Caryophyllales
+dcSalRamo1	dcSalRamo1	Salicornia ramosissima	.	1804623	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Caryophyllales
+dcSpeBocc1	dcSpeBocc1	Spergularia bocconei	.	3568	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Caryophyllales
+dcSpeMari1	dcSpeMari1	Spergularia marina	.	3568	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Caryophyllales
+ddAraThal4	ddAraThal4	Arabidopsis thaliana	.	3700	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Brassicales
+ddBarVulg1	ddBarVulg1	Barbarea vulgaris	winter cress	3700	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Brassicales
+ddEupLath1	ddEupLath1	Euphorbia lathyris	.	3977	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Malpighiales
+ddEupPepu3	ddEupPepu3	Euphorbia peplus	.	3977	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Malpighiales
+ddLepDidy1	ddLepDidy1	Lepidium didymum	.	3700	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Brassicales
+ddPopNigr1	ddPopNigr1	Populus nigra	.	3688	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Malpighiales
+ddPriVeri1	ddPriVeri1	Primula veris	.	4335	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Ericales
+ddSalCapr1	ddSalCapr1	Salix caprea	.	3688	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Malpighiales
+ddVioOdor1	ddVioOdor1	Viola odorata	sweet violet	24921	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Malpighiales
+dhAlnGlut1	dhAlnGlut1	Alnus glutinosa	.	3514	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Fagales
+dmBerVulg1	dmBerVulg1	Berberis vulgaris	.	41773	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Ranunculales
+drAilAlti1	drAilAlti1	Ailanthus altissima	tree of heaven	23808	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Sapindales
+drAstGlyc1	drAstGlyc1	Astragalus glycyphyllos	liquorice milkvetch	3803	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Fabales
+drBuxSemp1	drBuxSemp1	Buxus sempervirens	.	4000	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Buxales
+drChaAngu1	drChaAngu1	Chamaenerion angustifolium	.	3934	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Myrtales
+drCraLaev2	drCraLaev2	Crataegus laevigata	midland hawthorn	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drEroMari8	drEroMari8	Erodium maritimum	.	4027	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Geraniales
+drFilUlma1	drFilUlma1	Filipendula ulmaria	.	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drGeuUrba1	drGeuUrba1	Geum urbanum	.	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drHedHeli1	drHedHeli1	Hedera helix	.	4050	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Apiales
+drIleAqui2	drIleAqui2	Ilex aquifolium	English holly	4294	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Aquifoliales
+drMalDome5	drMalDome5	Malus domestica	apple	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drMalDome10	drMalDome10	Malus domestica	apple	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drMalDome11	drMalDome11	Malus domestica	apple	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drMalRobu1	drMalRobu1	Malus x robusta	Robusta 5	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drMalSylv7	drMalSylv7	Malus sylvestris	.	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drMedArab1	drMedArab1	Medicago arabica	.	3803	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Fabales
+drMedLupu1	drMedLupu1	Medicago lupulina	.	3803	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Fabales
+drParJuda1	drParJuda1	Parietaria judaica	.	3499	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drPotAnse1	drPotAnse1	Potentilla anserina	.	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drPotSter1	drPotSter1	Potentilla sterilis	.	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drPruPadu1	drPruPadu1	Prunus padus	bird cherry	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drPyrComm1	drPyrComm1	Pyrus communis	pear	3745	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+drTriFrag1	drTriFrag1	Trifolium fragiferum	.	3803	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Fabales
+drTriSubt1	drTriSubt1	Trifolium subterraneum	.	3803	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Fabales
+drUmbRupe1	drUmbRupe1	Umbilicus rupestris	.	3781	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Saxifragales
+drUrtUren1	drUrtUren1	Urtica urens	.	3499	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Rosales
+eaLuiSars1	eaLuiSars1	Luidia sarsii	(a starfish)	60582	Eukaryota	Metazoa	Echinodermata	.	Asteroidea	Asterozoa	.	Valvatacea
+eaMarGlac1	eaMarGlac1	Marthasterias glacialis	spiny starfish	7600	Eukaryota	Metazoa	Echinodermata	.	Asteroidea	Asterozoa	.	Forcipulatacea
+ecAntBifi1	ecAntBifi1	Antedon bifida	rosy feather star	35072	Eukaryota	Metazoa	Echinodermata	.	Crinoidea	.	.	Comatulida
+fAbrBra2	fAbrBra2	Abramis brama	common bream	2743726	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Cypriniphysae
+fAciRut3	fAciRut3	Acipenser ruthenus	sterlet	7900	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Acipenseriformes
+fBarBab1	fBarBab1	Barbus barbus	barbel	7953	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Cypriniphysae
+fBarBar1	fBarBar1	Barbatula barbatula	stone loach	278171	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Cypriniphysae
+fBleOce1	fBleOce1	Blennius ocellaris	butterfly blenny	56718	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Blenniiformes
+fCarCar2	fCarCar2	Carassius carassius	crucian carp	7953	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Cypriniphysae
+fCheLab1	fCheLab1	Chelon labrosus	thicklip grey mullet	8189	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Mugiliformes
+fConCon1	fConCon1	Conger conger	European conger	7941	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Anguilliformes
+fCycLum2	fCycLum2	Cyclopterus lumpus	lumpfish	8101	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Perciformes
+fDanRer4	fDanRer4	Danio rerio	zebrafish	2743709	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Cypriniphysae
+fEchVip8	fEchVip8	Echiichthys vipera	lesser weever	56735	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Perciformes
+fEutGur1	fEutGur1	Eutrigla gurnardus	grey gurnard	27774	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Perciformes
+fGobGob1	fGobGob1	Gobio gobio	gudgeon	2743714	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Cypriniphysae
+fGobNig1	fGobNig1	Gobius niger	black goby	8220	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Gobiiformes
+fHypImm3	fHypImm3	Hyperoplus immaculatus	greater sand eel	84619	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Uranoscopiformes
+fLabBer1	fLabBer1	Labrus bergylta	ballan wrasse	8247	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Labriformes
+fLabMix1	fLabMix1	Labrus mixtus	cuckoo wrasse	8247	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Labriformes
+fLipPho2	fLipPho2	Lipophrys pholis	shanny	56718	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Blenniiformes
+fMicPou1	fMicPou1	Micromesistius poutassou	blue whiting	8045	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Gadiformes
+fMicVar1	fMicVar1	Microchirus variegatus	thickback sole	30948	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Pleuronectiformes
+fPhoGun1	fPhoGun1	Pholis gunnellus	rock gunnel	56724	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Perciformes
+fPhoPho1	fPhoPho1	Phoxinus phoxinus	Eurasian minnow	2743726	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Cypriniphysae
+fPlaFle2	fPlaFle2	Platichthys flesus	European flounder	8256	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Pleuronectiformes
+fPlePla1	fPlePla1	Pleuronectes platessa	European plaice	8256	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Pleuronectiformes
+fPolPol2	fPolPol2	Pollachius pollachius	pollack	8045	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Gadiformes
+fPunPun2	fPunPun2	Pungitius pungitius	ninespine stickleback	69291	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Perciformes
+fRutRut2	fRutRut2	Rutilus rutilus	roach minnow	2743726	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Cypriniphysae
+fScoMax1	fScoMax1	Scophthalmus maximus	turbot	52902	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Pleuronectiformes
+fScoSco1	fScoSco1	Scomber scombrus	Atlantic mackerel	8224	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Scombriformes
+fSprSpr1	fSprSpr1	Sprattus sprattus	European sprat	55118	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Clupeiformes
+fSquCep2	fSquCep2	Squalius cephalus	European chub	2743726	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Cypriniphysae
+fSymMel2	fSymMel2	Symphodus melops	corkwing wrasse	8247	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Labriformes
+fSynAcu2	fSynAcu2	Syngnathus acus	greater pipefish	72045	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Syngnathiformes
+fTauBub2	fTauBub2	Taurulus bubalis	long spined sea scorpion	8092	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Perciformes
+fTelBon1	fTelBon1	Telmatherina bonti	.	238703	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Atherinomorphae
+fThuMac1	fThuMac1	Thunnus maccoyii	southern bluefin tuna	8224	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Scombriformes
+fTraTra1	fTraTra1	Trachurus trachurus	Atlantic horse mackerel	8157	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Carangiformes
+fZeuFab8	fZeuFab8	Zeus faber	John dory	31103	Eukaryota	Metazoa	Chordata	Craniata	Actinopteri	Actinopterygii	Teleostei	Zeiformes
+gfAgaBisp1	gfAgaBisp1	Agaricus bisporus	cultivated mushroom	5339	Eukaryota	Fungi	Basidiomycota	Agaricomycotina	Agaricomycetes	.	.	Agaricales
+gfClaFumo1	gfClaFumo1	Clavaria fumosa	smoky spindles	40105	Eukaryota	Fungi	Basidiomycota	Agaricomycotina	Agaricomycetes	.	.	Agaricales
+gfFlaVelt1	gfFlaVelt1	Flammulina velutipes	velvet shank	862241	Eukaryota	Fungi	Basidiomycota	Agaricomycotina	Agaricomycetes	.	.	Agaricales
+gfLaeSulp1	gfLaeSulp1	Laetiporus sulphureus	chicken of the woods	2028212	Eukaryota	Fungi	Basidiomycota	Agaricomycotina	Agaricomycetes	.	.	Polyporales
+gfPleOstr1	gfPleOstr1	Pleurotus ostreatus	oyster mushroom	104366	Eukaryota	Fungi	Basidiomycota	Agaricomycotina	Agaricomycetes	.	.	Agaricales
+gfPorCaly1	gfPorCaly1	Porpolomopsis calyptriformis	.	51005	Eukaryota	Fungi	Basidiomycota	Agaricomycotina	Agaricomycetes	.	.	Agaricales
+glLicPygm2	glLicPygm2	Lichina pygmaea	black lichen	157478	Eukaryota	Fungi	Ascomycota	Pezizomycotina	Lichinomycetes	.	.	Lichinales
+grCorFumo1	grCorFumo1	Cordyceps fumosorosea	.	474943	Eukaryota	Fungi	Ascomycota	Pezizomycotina	Sordariomycetes	.	.	Hypocreales
+grSimLame1	grSimLame1	Simplicillium lamellicola	.	474943	Eukaryota	Fungi	Ascomycota	Pezizomycotina	Sordariomycetes	.	.	Hypocreales
+grTriPseu1	grTriPseu1	Trichoderma citrinoviride	.	5129	Eukaryota	Fungi	Ascomycota	Pezizomycotina	Sordariomycetes	.	.	Hypocreales
+gsMetZobe1	gsMetZobe1	Metschnikowia zobellii	(a marine yeast)	27319	Eukaryota	Fungi	Ascomycota	Saccharomycotina	Pichiomycetes	.	.	Serinales
+gzEntParv1	gzEntParv1	Entomortierella parvispora	.	4854	Eukaryota	Fungi	Mucoromycota	Mortierellomycotina	Mortierellomycetes	.	.	Mortierellales
+gzMucPiri1	gzMucPiri1	Mucor piriformis	.	34489	Eukaryota	Fungi	Mucoromycota	Mucoromycotina	Mucoromycetes	.	.	Mucorales
+iHemFuc1	iHemFuc2	Hemaris fuciformis	broad bordered bee hawk moth	7128	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+icAdaBipu1	icAdaBipu1	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu6	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu9	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu15	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu20	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu28	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu29	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu31	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu32	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu33	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu34	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAdaBipu1	icAdaBipu36	Adalia bipunctata	2 spot ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAgoFuli1	icAgoFuli1	Agonum fuliginosum	.	41073	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAgrCyan1	icAgrCyan1	Agrilus cyanescens	.	50527	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAgrMuri1	icAgrMuri1	Agrypnus murinus	.	30009	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icAnaMacu3	icAnaMacu3	Anaspis maculata	.	219440	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icApoCory1	icApoCory1	Apoderus coryli	hazel leaf roller	122737	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icCanRust1	icCanRust1	Cantharis rustica	sailor beetle	41097	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icCanRust1	icCanRust3	Cantharis rustica	sailor beetle	41097	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icCetAura1	icCetAura1	Cetonia aurata	.	7055	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icChrOric1	icChrOric1	Chrysolina oricalcia	.	27439	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icCocSept1	icCocSept1	Coccinella septempunctata	seven spotted ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icCryMora2	icCryMora2	Cryptocephalus moraei	.	27439	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icElmAene2	icElmAene2	Elmis aenea	riffle beetle	186980	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icHalSede1	icHalSede1	Halyzia sedecimguttata	orange ladybird	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icHarAxyr1	icHarAxyr1	Harmonia axyridis	harlequin	7080	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icLagHirt1	icLagHirt1	Lagria hirta	.	7065	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icLeiSpin1	icLeiSpin1	Leistus spinibarbis	.	41073	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icLepMacu1	icLepMacu1	Rutpela maculata	.	34667	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icLocCapr1	icLocCapr1	Lochmaea capreae	willow leaf beetle	27439	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icLocCrat2	icLocCrat2	Lochmaea crataegi	hawthorn leaf beetle	27439	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icMalBipu1	icMalBipu1	Malachius bipustulatus	common malachite beetle	186093	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icMelMelo1	icMelMelo1	Melolontha melolontha	cockchafer	7055	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icNebBrev1	icNebBrev1	Nebria brevicollis	.	41073	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icNebSali1	icNebSali1	Nebria salina	.	41073	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icOcyOlen1	icOcyOlen1	Ocypus olens	Devil's coach horse	29026	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icOphArdo1	icOphArdo1	Ophonus ardosiacus	.	41073	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icPhiCogn1	icPhiCogn1	Philonthus cognatus	rove beetle	29026	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icPodAlpi1	icPodAlpi1	Podabrus alpinus	.	41097	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icPolCerv1	icPolCerv1	Polydrusus cervinus	.	7042	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icPteMadi1	icPteMadi1	Pterostichus madidus	black clock beetle	41073	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icPteMadi1	icPteMadi3	Pterostichus madidus	black clock beetle	41073	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icPyrSerr1	icPyrSerr1	Pyrochroa serraticornis	red headed cardinal beetle	55098	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icRhaFulv1	icRhaFulv1	Rhagonycha fulva	common red soldier beetle	41097	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+icSilAtra2	icSilAtra2	Phosphuga atrata	black snail beetle	57514	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Coleoptera
+idAcrOrbc1	idAcrOrbc1	Acrocera orbiculus	top horned hunchback	92616	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idBacElon1	idBacElon1	Baccha elongata	gossamer hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idBelPand1	idBelPand1	Bellardia pandia	bisetose emerald bottle	7371	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idBerChal2	idBerChal2	Beris chalybata	yellow legged black legionnaire	34687	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idBibMarc1	idBibMarc1	Bibio marci	St. Mark's fly	52729	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idBleFall4	idBleFall4	Blera fallax	pine hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idBomDisc1	idBomDisc1	Bombylius discolor	dotted bee fly	50674	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idBomMajo1	idBomMajo1	Bombylius major	dark edged bee fly	50674	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idBraLaph1	idBraLaph1	Brachypalpus laphriformis	forest hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCalVomi1	idCalVomi1	Calliphora vomitoria	.	7371	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCheImpr3	idCheImpr3	Cheilosia impressa	.	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idChePaga1	idChePaga1	Cheilosia pagana	parsley Cheilosia	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCheUrba1	idCheUrba1	Cheilosia urbana	hawkweed Cheilosia	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCheVern2	idCheVern2	Cheilosia vernalis	yarrow Cheilosia	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCheVulp2	idCheVulp2	Cheilosia vulpina	large burdock Cheilosia	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idChrBici1	idChrBici1	Chrysotoxum bicinctum	two banded wasp hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCisGlob1	idCisGlob1	Cistogaster globosa	.	27474	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCluTigr1	idCluTigr1	Clusia tigrina	.	286472	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCoePili4	idCoePili4	Coelopa pilipes	.	169440	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCorMarg1	idCorMarg1	Coremacera marginata	.	169447	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idCriBerb1	idCriBerb1	Criorhina berberina	dimorphic bear hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idDasAlbo1	idDasAlbo1	Dasysyrphus albostriatus	stripe backed Dasysyrphus	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEpiBalt1	idEpiBalt1	Episyrphus balteatus	marmalade hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEpiEuco1	idEpiEuco1	Epistrophella euchroma	.	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEpiGros1	idEpiGros1	Epistrophe grossulariae	broad banded epistrophe	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEpiSucc1	idEpiSucc1	Epicampocera succincta	.	27474	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEriArbu1	idEriArbu1	Eristalis arbustorum	plane faced dronefly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEriPert2	idEriPert2	Eristalis pertinax	tapered dronefly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEriSepu1	idEriSepu1	Eristalinus sepulchralis	small spotty eyed dronefly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEriTena2	idEriTena2	Eristalis tenax	the dronefly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEupCoro1	idEupCoro1	Eupeodes corollae	.	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idEupLati1	idEupLati1	Eupeodes latifasciatus	meadow field syrph	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idGymRotn1	idGymRotn1	Gymnosoma rotundatum	.	27474	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idLeuLate1	idLeuLate1	Leucozona laternaria	dark saddled leucozona	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idLypDubi1	idLypDubi1	Lypha dubia	.	27474	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idMacAtri3	idMacAtri3	Machimus atricapillus	.	50673	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idMelAuri2	idMelAuri2	Meliscaeva auricollis	spotted Meliscaeva	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idMelMell2	idMelMell2	Melanostoma mellinum	dumpy grass hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idMyaFlor2	idMyaFlor2	Myathropa florea	batman hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idMyoTess1	idMyoTess1	Myopa tessellatipennis	.	115263	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idNemNigr1	idNemNigr1	Nemotelus nigrinus	.	34687	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idNeoCyan1	idNeoCyan1	Neoitamus cyanurus	common awl robberfly	50673	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idNeoInte1	idNeoInte1	Neoascia interrupta	bulrush Neoascia	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idNepAppe1	idNepAppe1	Nephrotoma appendiculata	spotted cranefly	41042	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idNepFlae1	idNepFlae1	Nephrotoma flavescens	cranefly	41042	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idNepScut1	idNepScut1	Nephrocerus scutellatus	.	43835	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idNowFero1	idNowFero1	Nowickia ferox	.	27474	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idPheCory1	idPheCory1	Pherbina coryleti	.	169447	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idPhyMeln1	idPhyMeln1	Phyto melanocephala	.	43758	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idPlaAlba1	idPlaAlba1	Platycheirus albimanus	white footed hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idPlaAlba1	idPlaAlba3	Platycheirus albimanus	white footed hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idPlaAlba1	idPlaAlba4	Platycheirus albimanus	white footed hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idPoeNobi2	idPoeNobi2	Poecilobothrus nobilitatus	.	92558	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idPolAmen1	idPolAmen1	Pollenia amentaria	black bellied clusterfly	54279	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idPolAngu1	idPolAngu1	Pollenia angustigena	narrow cheeked clusterfly	54279	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idPolDomi1	idPolDomi1	Polietes domitor	.	7366	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idProAzur1	idProAzur1	Protocalliphora azurea	bird blowfly	7371	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idRhiCamp1	idRhiCamp1	Rhingia campestris	common snout hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSarCaer1	idSarCaer1	Sarcophaga caerulescens	.	7381	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSarRose1	idSarRose1	Sarcophaga rosellei	.	7381	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSarSubv1	idSarSubv1	Sarcophaga subvicina	.	7381	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSarVari1	idSarVari1	Sarcophaga variegata	.	7381	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idScaPyra1	idScaPyra1	Scaeva pyrastri	pied hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSicFerr1	idSicFerr1	Sicus ferrugineus	ferruginous bee grabber	115263	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSphTaen1	idSphTaen1	Sphaerophoria taeniata	.	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idStoLuna1	idStoLuna1	Stomorhina lunata	.	1902070	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSuiVari3	idSuiVari3	Suillia variegata	.	219548	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSyrPipi1	idSyrPipi1	Syritta pipiens	thick legged hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSyrPipi1	idSyrPipi2	Syritta pipiens	thick legged hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSyrPipi1	idSyrPipi5	Syritta pipiens	thick legged hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSyrPipi1	idSyrPipi6	Syritta pipiens	thick legged hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSyrPipi1	idSyrPipi7	Syritta pipiens	thick legged hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSyrPipi1	idSyrPipi8	Syritta pipiens	thick legged hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSyrPipi1	idSyrPipi9	Syritta pipiens	thick legged hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSyrPipi1	idSyrPipi10	Syritta pipiens	thick legged hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idSyrPipi1	idSyrPipi11	Syritta pipiens	thick legged hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idTacFera2	idTacFera2	Tachina fera	.	27474	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idTacLuri1	idTacLuri1	Tachina lurida	.	27474	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idTheAcut1	idTheAcut1	Thecocarcelia acutangulata	.	27474	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idTheAtra2	idTheAtra2	Thecophora atra	.	115263	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idTheSoli1	idTheSoli1	Thelaira solivaga	.	27474	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idVolInan1	idVolInan1	Volucella inanis	lesser hornet hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idVolInfl1	idVolInfl1	Volucella inflata	cossus hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idXanPedi1	idXanPedi1	Xanthogramma pedissequum	hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+idXylSylv2	idXylSylv2	Xylota sylvarum	golden tailed hoverfly	34680	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Diptera
+ihAcaHaem1	ihAcaHaem1	Acanthosoma haemorrhoidale	hawthorn shieldbug	236378	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hemiptera
+ihAelAcum1	ihAelAcum1	Aelia acuminata	Bishop's mitre shieldbug	160513	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hemiptera
+ihDrePlat2	ihDrePlat2	Drepanosiphum platanoidis	common sycamore aphid	27482	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hemiptera
+ihGonAcut1	ihGonAcut1	Gonocerus acuteangulatus	box bug	186376	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hemiptera
+iiAthCine2	iiAthCine2	Athripsodes cinereus	.	50642	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+iiGlyPell1	iiGlyPell1	Glyphotaelius pellucidus	.	50645	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+iiLimLuna2	iiLimLuna2	Limnephilus lunatus	.	50645	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+iiLimMarm1	iiLimMarm1	Limnephilus marmoratus	.	50645	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+iiLimRhom1	iiLimRhom1	Limnephilus rhombicus	.	50645	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAbrTril1	ilAbrTril1	Abrostola triplasia	dark spectacle	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAbrTrip1	ilAbrTrip1	Abrostola tripartita	the spectacle	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAceEphe1	ilAceEphe1	Acentria ephemerella	water veneer	268499	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAchFlav2	ilAchFlav2	Achlya flavicornis	yellow horned	104425	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAclCris2	ilAclCris2	Acleris cristana	tufted button	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAclEmar1	ilAclEmar1	Acleris emargana	notch wing button	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAclLite1	ilAclLite1	Acleris literana	lichen button	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAclSpar1	ilAclSpar1	Acleris sparsana	ashy button	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAcrAcer1	ilAcrAcer1	Acronicta aceris	the sycamore	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAcrLepo1	ilAcrLepo1	Acronicta leporina	the miller	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAcrPsix1	ilAcrPsix1	Acronicta psi	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAcrSuav1	ilAcrSuav1	Acrobasis suavella	thicket knot horn	7135	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAglIoxx1	ilAglIoxx1	Inachis io	European peacock	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAglUrti1	ilAglUrti1	Nymphalis urticae	small tortoiseshell	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAgoAren1	ilAgoAren1	Agonopterix arenella	brindled flat body	2681869	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAgoSubp1	ilAgoSubp1	Agonopterix subpropinquella	ruddy flat body	2681869	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAgrAura1	ilAgrAura1	Agriopis aurantiaria	scarce umber	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAgrCirc1	ilAgrCirc1	Agrochola circellaris	the brick	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAgrLeuc1	ilAgrLeuc1	Agriopis leucophaearia	spring usher	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAgrLota1	ilAgrLota1	Agrochola lota	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAgrMaci1	ilAgrMaci1	Agrochola macilenta	yellow line quaker	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAgrMarg1	ilAgrMarg1	Agriopis marginaria	dotted border	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAgrTris1	ilAgrTris1	Agriphila tristella	common grass veneer	268499	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAllOxya1	ilAllOxya1	Allophyes oxyacanthae	green brindled crescent	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAlsAesc1	ilAlsAesc1	Alsophila aescularia	March moth	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAmpBerb1	ilAmpBerb1	Amphipyra berbera	Svensson's copper underwing	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAmpLuce6	ilAmpLuce6	Amphipoea lucens	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAmpOcul1	ilAmpOcul1	Amphipoea oculea	ear moth	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAmpTrag2	ilAmpTrag2	Amphipyra tragopoginis	mouse moth	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAnaInnx2	ilAnaInnx2	Anarsia innoxiella	acer sober	32434	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAnoMund1	ilAnoMund1	Anorthoa munda	twin spotted quaker	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAntCard3	ilAntCard3	Anthocharis cardamines	orange tip	7114	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAntChix2	ilAntChix2	Antitype chi	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAntDeri1	ilAntDeri1	Anticlea derivata	streamer	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApaEpom1	ilApaEpom1	Apamea epomidion	clouded brindle	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApaMono1	ilApaMono1	Apamea monoglypha	dark arches	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApaSord1	ilApaSord1	Apamea sordens	rustic shoulder knot	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApeSyri1	ilApeSyri1	Apeira syringaria	lilac beauty	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAplEffo1	ilAplEffo1	Aplocera efformata	lesser treble bar	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApoBetu1	ilApoBetu1	Apotomis betuletana	birch marble	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApoBist1	ilApoBist1	Apomyelois bistriatella	heath knot horn	7135	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApoCapr1	ilApoCapr1	Apotomis capreana	sallow marble	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApoCrat1	ilApoCrat1	Aporia crataegi	black veined white	7114	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApoHisp1	ilApoHisp1	Apocheima hispidaria	small brindled beauty	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApoLima1	ilApoLima1	Apoda limacodes	.	115353	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApoLuen1	ilApoLuen1	Aporophyla lueneburgensis	northern deep brown dart	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApoNigr3	ilApoNigr3	Aporophyla nigra	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilApoTurb1	ilApoTurb1	Apotomis turbidana	white shouldered marble	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilArcCraa1	ilArcCraa1	Archips crataeganus	brown oak tortrix	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilArcXylo1	ilArcXylo1	Archips xylosteana	variegated golden tortrix	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAriAges1	ilAriAges1	Aricia agestis	brown argus	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAriAges1	ilAriAges2	Aricia agestis	brown argus	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAriArta2	ilAriArta2	Aricia artaxerxes	northern brown argus	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAteCent1	ilAteCent1	Atethmia centrago	centre barred sallow	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAthMouf1	ilAthMouf1	Athrips mouffetella	dotted grey groundling	32434	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAutGamm1	ilAutGamm1	Autographa gamma	silver Y	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilAutPulc1	ilAutPulc1	Autographa pulchrina	beautiful golden Y	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilBemIchn1	ilBemIchn1	Bembecia ichneumoniformis	six belted clearwing	106496	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilBicAnyn1	ilBicAnyn1	Bicyclus anynana	squinting bush brown	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilBisBetu1	ilBisBetu1	Biston betularia	peppered moth	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilBlaAdus2	ilBlaAdus2	Blastobasis adustella	dingy dowd	173649	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilBlaLact1	ilBlaLact1	Blastobasis lacticolella	London dowd	173649	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilBolSele5	ilBolSele5	Boloria selene	silver meadow fritillary	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilBraVimi1	ilBraVimi1	Brachylomia viminalis	minor shoulder knot	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCalPalu1	ilCalPalu1	Calamotropha paludella	bulrush veneer	268499	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCamMarg1	ilCamMarg1	Campaea margaritaria	light emerald	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCarClav1	ilCarClav1	Caradrina clavipalpis	pale mottled willow	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCarKade1	ilCarKade1	Caradrina kadenii	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCarPala2	ilCarPala2	Carterocephalus palaemon	Arctic skipper	40093	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCarQuer1	ilCarQuer1	Carcina quercana	long horned flat body	2681869	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCatFrax1	ilCatFrax1	Catocala fraxini	Cliften non pareil	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCelArgi3	ilCelArgi3	Celastrina argiolus	holly blue	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilChaFerr1	ilChaFerr1	Charanyca ferruginea	brown rustic	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCheLega1	ilCheLega1	Chesias legatella	.	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilChlSite2	ilChlSite2	Chloroclysta siterata	red green carpet	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilChrCulm1	ilChrCulm1	Chrysoteuchia culmella	garden grass veneer	268499	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCloCurt1	ilCloCurt1	Clostera curtula	chocolate tip	37571	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilColCroc2	ilColCroc2	Colias croceus	clouded yellow	7114	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilColFlav1	ilColFlav1	Coleophora flavipennella	tipped oak case bearer	173644	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilConVacc3	ilConVacc3	Conistra vaccinii	the chestnut	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCosPyra2	ilCosPyra2	Cosmia pyralina	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCosTrap1	ilCosTrap1	Cosmia trapezina	dun bar pinion	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCraLigu1	ilCraLigu1	Craniophora ligustri	coronet	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCroElin1	ilCroElin1	Crocallis elinguaria	scalloped oak	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCyaSemi1	ilCyaSemi1	Cyaniris semiargus	mazarine blue	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCybMeso1	ilCybMeso1	Cybosia mesomella	.	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCydAmpl1	ilCydAmpl1	Cydia amplana	.	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCydSple1	ilCydSple1	Cydia splendana	marbled piercer	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCydStro3	ilCydStro1	Cydia strobilella	spruce seed moth	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilCydStro3	ilCydStro3	Cydia strobilella	spruce seed moth	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDeiPorc1	ilDeiPorc1	Deilephila porcellus	small elephant hawk moth	7128	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDiaChry1	ilDiaChry1	Diachrysia chrysitis	burnished brass	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDiaMend1	ilDiaMend1	Diaphora mendica	muslin	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDiaRubi1	ilDiaRubi1	Diarsia rubi	small square spot	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDicOoxx2	ilDicOoxx2	Dicycla oo	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDilCaer1	ilDilCaer1	Diloba caeruleocephala	figure of eight	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDreFalc1	ilDreFalc1	Drepana falcataria	pebble hook tip	104425	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDryErem1	ilDryErem1	Dryobotodes eremita	brindled green	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDryLabe1	ilDryLabe1	Dryobota labecula	oak rustic	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilDryRufi1	ilDryRufi1	Drymonia ruficornis	lunar marbled brown	37571	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEclSila1	ilEclSila1	Ecliptopera silaceata	small phoenix	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEilCani1	ilEilCani1	Eilema caniola	.	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEilDepe1	ilEilDepe1	Eilema depressum	buff footman	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEilSoro1	ilEilSoro1	Eilema sororcula	orange footman	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEleCory1	ilEleCory1	Electrophaes corylata	broken barred carpet	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEleSimi1	ilEleSimi1	Elegia similella	white barred knot horn	7135	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEmmMono1	ilEmmMono1	Emmelina monodactyla	common plume	186111	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEndFlam1	ilEndFlam1	Endotricha flammealis	rose flounced tabby	7135	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEnnFusc2	ilEnnFusc2	Ennomos fuscantarius	dusky thorn	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEnnQuei1	ilEnnQuei1	Ennomos quercinarius	August thorn	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEpiBilu1	ilEpiBilu1	Epinotia bilunana	crescent bell	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEpiDema1	ilEpiDema1	Epinotia demarniana	birch bell	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEpiNise2	ilEpiNise2	Epinotia nisella	grey poplar bell	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEpiRame1	ilEpiRame1	Epinotia ramella	small birch bell	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEraDefo1	ilEraDefo1	Erannis defoliaria	mottled umber	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEreAeth2	ilEreAeth2	Erebia aethiops	Scotch argus	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEreLige1	ilEreLige1	Erebia ligea	Arran brown	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEryTage1	ilEryTage1	Erynnis tages	dingy skipper	40093	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEspSulp1	ilEspSulp1	Esperia sulphurella	sulphur tubic	57992	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEucMixx1	ilEucMixx1	Euclidia mi	Mother Shipton	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEudProf1	ilEudProf1	Eudemis profundana	diamond back marble	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEugGlar6	ilEugGlar6	Eugnorisma glareosa	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEulPrun1	ilEulPrun1	Eulithis prunata	the phoenix	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEulTest2	ilEulTest2	Eulithis testata	.	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEupAbbr2	ilEupAbbr2	Eupithecia abbreviata	brindled pug	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEupCent1	ilEupCent1	Eupithecia centaureata	lime speck pug	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEupDodo1	ilEupDodo1	Eupithecia dodoneata	oak tree pug	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEupExig1	ilEupExig1	Eupithecia exiguata	mottled pug	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEupInsi1	ilEupInsi1	Eupithecia insigniata	pinion spotted pug	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEupLuci1	ilEupLuci1	Euplexia lucipara	small angle shades	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEupSimi1	ilEupSimi1	Euproctis similis	yellow tail	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEupTran1	ilEupTran1	Eupsilia transversa	the satellite	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEupVulg1	ilEupVulg1	Eupithecia vulgata	common pug	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilEuzPing2	ilEuzPing2	Euzophera pinguis	ash bark knot horn	7135	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilFabAdip1	ilFabAdip1	Fabriciana adippe	high brown fritillary	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilFurFurc1	ilFurFurc1	Furcula furcula	sallow kitten	37571	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilGanPyra1	ilGanPyra1	Gandaritis pyraliata	barred straw	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilGlaAlex1	ilGlaAlex1	Glaucopsyche alexis	green underside blue	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilGriApri1	ilGriApri1	Griposia aprilina	merveille du jour	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilGymRufi1	ilGymRufi1	Gymnoscelis rufifasciata	double striped pug	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHabPyri1	ilHabPyri1	Habrosyne pyritoides	buff arches	104425	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHecDyso1	ilHecDyso1	Hecatera dysodea	small ranunculus	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHedSali1	ilHedSali1	Hedya salicella	white backed marble	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHemAest2	ilHemAest2	Hemithea aestivaria	common emerald	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHemChry1	ilHemChry1	Hemistola chrysoprasaria	small emerald	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHerTari1	ilHerTari1	Herminia tarsipennalis	the fan foot	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHesComm1	ilHesComm1	Hesperia comma	common branded skipper	40093	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHipSeme1	ilHipSeme1	Hipparchia semele	rock grayling	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHofPseu3	ilHofPseu3	Hofmannophila pseudospretella	brown house moth	57992	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHydFurc1	ilHydFurc1	Hydriomena furcata	July highflyer	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHydMica1	ilHydMica1	Hydraecia micacea	rosy rustic	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHylFasc1	ilHylFasc1	Hylaea fasciaria	barred red	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHypCost1	ilHypCost1	Hypsopygia costalis	gold triangle	7135	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilHypProb1	ilHypProb1	Hypena proboscidalis	the snout	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilIdaAver1	ilIdaAver1	Idaea aversata	riband wave	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilIncMasc1	ilIncMasc1	Incurvaria masculella	.	98958	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLacWlai2	ilLacWlai2	Lacanobia wlatinum	light brocade	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLamSuff1	ilLamSuff1	Lampropteryx suffumata	water carpet	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLaoPopu1	ilLaoPopu1	Laothoe populi	poplar hawk moth	7128	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLasFlex1	ilLasFlex1	Laspeyria flexula	beautiful hook tip	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLasMege1	ilLasMege1	Lasiommata megera	wall brown	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLatStri6	ilLatStri6	Lathronympha strigana	.	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLepSina1	ilLepSina1	Leptidea sinapis	wood white	7114	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLeuSali1	ilLeuSali1	Leucoma salicis	white satin	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLigAdus1	ilLigAdus1	Ligdia adustata	scorched carpet	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLimCami1	ilLimCami1	Limenitis camilla	white admiral	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLitOrni1	ilLitOrni1	Lithophane ornitopus	grey shoulder knot	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLitSemi2	ilLitSemi2	Lithophane semibrunnea	tawny pinion	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLitSoci1	ilLitSoci1	Lithophane socia	pale pinion	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLobHalt1	ilLobHalt1	Lobophora halterata	the seraphim	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLomBima1	ilLomBima1	Lomographa bimaculata	white pinioned spotted	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLupTest1	ilLupTest1	Luperina testacea	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLycHirt1	ilLycHirt1	Lycia hirtaria	brindled beauty	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLycPhla1	ilLycPhla1	Lycaena phlaeas	small copper	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLymMona1	ilLymMona1	Lymantria monacha	black arches	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLysBell1	ilLysBell1	Lysandra bellargus	Adonis blue	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilLysCori1	ilLysCori1	Lysandra coridon	chalkhill blue	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMacNota1	ilMacNota1	Macaria notata	peacock moth	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMamBras1	ilMamBras1	Mamestra brassicae	cabbage moth	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilManJurt1	ilManJurt1	Maniola jurtina	meadow brown	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilManJurt1	ilManJurt4	Maniola jurtina	meadow brown	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMarLuna1	ilMarLuna1	Marasmarcha lunaedactyla	crescent plume	186111	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMegAlbu1	ilMegAlbu1	Meganola albula	Kent black arches	319783	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMelAtha1	ilMelAtha1	Mellicta athalia	heath fritillary	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMelCinx1	ilMelCinx1	Melitaea cinxia	Glanville fritillary	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMelGala2	ilMelGala2	Melanargia galathea	marbled white	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMelPers1	ilMelPers1	Melanchra persicariae	dot moth	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMesFuru1	ilMesFuru1	Mesoligia furuncula	cloaked minor	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMilMini2	ilMilMini2	Miltochrista miniata	rosy footman	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMimTili1	ilMimTili1	Mimas tiliae	lime hawk moth	7128	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMonLaev2	ilMonLaev1	Monopis laevigella	skin moth	41012	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMonLaev2	ilMonLaev2	Monopis laevigella	skin moth	41012	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMusNiti1	ilMusNiti1	Musotima nitidalis	.	268499	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMytAlbi1	ilMytAlbi1	Mythimna albipuncta	white point	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMytFerr1	ilMytFerr1	Mythimna ferrago	the clay	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilMytImpu1	ilMytImpu1	Mythimna impura	smoky wainscot	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNemSwae1	ilNemSwae1	Nematopogon swammerdamellus	large long horn	30222	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNocFimb1	ilNocFimb1	Noctua fimbriata	broad bordered yellow underwing	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNocJant1	ilNocJant1	Noctua janthe	tesser broad boardered yellow underwing	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNocPron1	ilNocPron1	Noctua pronuba	large yellow underwing	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNotDrom1	ilNotDrom1	Notodonta dromedarius	iron prominent	37571	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNotUddm1	ilNotUddm1	Notocelia uddmanniana	bramble shoot	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNotZicz1	ilNotZicz1	Notodonta ziczac	pebble prominent	37571	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNycReva1	ilNycReva1	Nycteola revayana	oak Nycteoline	319783	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNymNiti1	ilNymNiti1	Nymphula nitidulata	beautiful china mark	268499	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilNymPoly1	ilNymPoly1	Nymphalis polychloros	large tortoiseshell	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOchPlec1	ilOchPlec1	Ochropleura plecta	flame shoulder	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOchSylv3	ilOchSylv3	Ochlodes sylvanus	large skipper	40093	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOliLatr1	ilOliLatr1	Oligia latruncula	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOmpLuno1	ilOmpLuno1	Omphaloscelis lunosa	lunar underwing	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOpeBrum1	ilOpeBrum1	Operophtera brumata	winter moth	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOpiLute1	ilOpiLute1	Opisthograptis luteolata	brimstone moth	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOrgAnti1	ilOrgAnti1	Orgyia antiqua	rusty tussock moth	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOrgAnti1	ilOrgAnti2	Orgyia antiqua	rusty tussock moth	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOrtGrac1	ilOrtGrac1	Orthosia gracilis	powdered quaker	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilOrtInce1	ilOrtInce1	Orthosia incerta	clouded drab	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPamAuri1	ilPamAuri1	Pammene aurita	sycamore piercer	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPamFasc1	ilPamFasc1	Pammene fasciana	acorn piercer	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPanCinn1	ilPanCinn1	Pandemis cinnamomeana	white faced tortrix	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPapMach1	ilPapMach1	Papilio machaon	common yellow swallowtail	7143	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilParAegt1	ilParAegt1	Pararge aegeria	speckled wood	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilParStra1	ilParStra1	Parapoynx stratiotata	ringed china mark	268499	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPerRhom1	ilPerRhom1	Peribatodes rhomboidaria	willow beauty	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPhaBuce1	ilPhaBuce1	Phalera bucephala	buff tip	37571	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPheGnom1	ilPheGnom1	Pheosia gnoma	lesser swallow prominent	37571	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPheTrem1	ilPheTrem1	Pheosia tremula	swallow prominent	37571	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPhiVetu1	ilPhiVetu1	Philereme vetulata	brown scallop	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPhlMeti2	ilPhlMeti2	Phlogophora meticulosa	angle shades	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPhrFuli1	ilPhrFuli1	Phragmatobia fuliginosa	ruby tiger	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPieBrab1	ilPieBrab1	Pieris brassicae	large white	7114	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPieNapi4	ilPieNapi1	Pieris napi	green veined white	7114	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPieNapi4	ilPieNapi4	Pieris napi	green veined white	7114	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPieRapa1	ilPieRapa1	Pieris rapae	small white	7114	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPleArgu1	ilPleArgu1	Plebejus argus	silver studded blue	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPluXylo3	ilPluXylo3	Plutella xylostella	diamondback moth	51653	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPolIcar1	ilPolIcar1	Polyommatus icarus	common blue	27544	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPolLich1	ilPolLich1	Polymixis lichenea	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilProPyga1	ilProPyga1	Protodeltote pygarga	marbled white spot	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPtiCapc1	ilPtiCapc1	Ptilodon capucinus	coxcomb prominent	37571	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPyrFari1	ilPyrFari1	Pyralis farinalis	.	7135	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilPyrMalv3	ilPyrMalv3	Pyrgus malvae	grizzled skipper	40093	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSatPavo1	ilSatPavo1	Saturnia pavonia	emperor moth	7117	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSchCost1	ilSchCost1	Schrankia costaestrigalis	pinion streaked snout	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSelDent1	ilSelDent1	Selenia dentaria	early thorn	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSesApif2	ilSesApif2	Sesia apiformis	hornet moth	106496	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSesBemb1	ilSesBemb1	Sesia bembeciformis	lunar hornet clearwing	106496	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilShaVerb5	ilShaVerb5	Shargacucullia verbasci	mullein moth	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSphPina1	ilSphPina1	Sphinx pinastri	pine hawkmoth	7128	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSpiLubr1	ilSpiLubr1	Spilosoma lubricipeda	white ermine	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSpiLutu1	ilSpiLutu1	Spilarctia lutea	buff ermine	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSteBipu1	ilSteBipu1	Stenoptilia bipunctidactyla	twin spot plume	186111	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSynAndr1	ilSynAndr1	Synanthedon andrenaeformis	orange tailed clearwing	106496	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSynForm1	ilSynForm1	Synanthedon formicaeformis	red tipped clearwing	106496	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSynMyop1	ilSynMyop1	Synanthedon myopaeformis	red belted clearwing	106496	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSynTipu2	ilSynTipu2	Synanthedon tipuliformis	currant clearwing	106496	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilSynVesp1	ilSynVesp1	Synanthedon vespiformis	yellow legged clearwing	106496	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTelLucu1	ilTelLucu1	Teleiodes luculella	crescent groundling	32434	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilThaMatu1	ilThaMatu1	Thalpophila matura	straw underwing	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTheBrit1	ilTheBrit1	Thera britannica	spruce carpet	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTheObel3	ilTheObel3	Thera obeliscata	.	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilThoDeci1	ilThoDeci1	Tholera decimalis	feathered gothic	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilThuSene1	ilThuSene1	Thumatha senex	round winged muslin	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilThyBati1	ilThyBati1	Thyatira batis	peach blossom	104425	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilThySylv1	ilThySylv1	Thymelicus sylvestris	small skipper	40093	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTilAura1	ilTilAura1	Tiliacea aurago	barred sallow	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTinPell1	ilTinPell1	Tinea pellionella	casemaking clothes moth	41012	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTinSemi1	ilTinSemi1	Tinea semifulvella	fulvous clothes moth	41012	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTinTrin1	ilTinTrin1	Tinea trinotella	bird's nest moth	41012	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTorAlte1	ilTorAlte1	Tortricodes alternella	winter shade	7139	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTriEmor1	ilTriEmor1	Trisateles emortualis	olive crescent	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilTyrJaco4	ilTyrJaco4	Tyria jacobaeae	cinnabar moth	695564	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilUdeOliv2	ilUdeOliv2	Udea olivalis	olive pearl	268499	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilVanAtal1	ilVanAtal1	Vanessa atalanta	red admiral	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilVanCard2	ilVanCard2	Vanessa cardui	painted lady	33415	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilWatBina1	ilWatBina1	Watsonalla binaria	oak hook tip	104425	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilXanIcte2	ilXanIcte2	Xanthia icteritia	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilXanSpad1	ilXanSpad1	Xanthorhoe spadicearia	red twin spot carpet	82593	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilXesCnig1	ilXesCnig1	Xestia c-nigrum	setaceous Hebrew character	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilXesSexs1	ilXesSexs1	Xestia sexstrigata	six striped rustic	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilXesXant1	ilXesXant1	Xestia xanthographa	square spot rustic	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilXylAreo1	ilXylAreo1	Xylocampa areola	.	7100	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilYpoCagn1	ilYpoCagn1	Yponomeuta cagnagella	spindle ermine	33464	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilYpoCagn1	ilYpoCagn5	Yponomeuta cagnagella	spindle ermine	33464	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilYpoPade2	ilYpoPade1	Yponomeuta cagnagella	spindle ermine	33464	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilYpoPade2	ilYpoPade2	Yponomeuta cagnagella	spindle ermine	33464	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilYpoPlub1	ilYpoPlub1	Yponomeuta plumbellus	black tipped ermine	33464	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilYpoRore1	ilYpoRore1	Yponomeuta malinellus	apple ermine moth	33464	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilYpoSedl1	ilYpoSedl1	Yponomeuta sedellus	grey ermine	33464	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilYpsScab1	ilYpsScab1	Ypsolopha scabrella	wainscot smudge	687156	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilYpsSequ2	ilYpsSequ2	Ypsolopha sequella	pied smudge	687156	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilZeuPyri1	ilZeuPyri1	Zeuzera pyrina	leopard moth	186108	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+ilZygFili1	ilZygFili1	Zygaena filipendulae	6 spot burnet	115354	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Amphiesmenoptera
+inChrCarn1	inChrCarn1	Chrysoperla carnea	common green lacewing	7520	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Neuropterida
+ioIscEleg1	ioIscEleg1	Ischnura elegans	.	70895	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Palaeoptera	Odonata
+ioPlaPenn1	ioPlaPenn1	Platycnemis pennipes	.	126177	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Palaeoptera	Odonata
+ioSymStri1	ioSymStri1	Sympetrum striolatum	common darter	6964	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Palaeoptera	Odonata
+ipIsoGram3	ipIsoGram3	Isoperla grammatica	common yellow sally	50623	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Plecoptera
+ipLeuNigr2	ipLeuNigr2	Leuctra nigra	.	143733	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Plecoptera
+ipNemDubi1	ipNemDubi1	Nemoura dubitans	.	62802	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Plecoptera
+ipNemPict2	ipNemPict2	Nemurella pictetii	.	62802	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Plecoptera
+ipProMont4	ipProMont4	Protonemura montana	.	62802	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Plecoptera
+iyAncNigr1	iyAncNigr1	Ancistrocerus nigricornis	early mason wasp	7438	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyAndBuce1	iyAndBuce1	Andrena bucephala	big headed mining bee	48719	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyAndDors1	iyAndDors1	Andrena dorsata	short fringed mining bee	48719	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyAndFulv1	iyAndFulv1	Andrena fulva	tawny mining bee	48719	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyAndHaem1	iyAndHaem1	Andrena haemorrhoa	red tailed mining bee	48719	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyAndHatt1	iyAndHatt1	Andrena hattorfiana	large scabious mining bee	48719	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyAndMinu1	iyAndMinu1	Andrena minutula	common mini mining bee	48719	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyAnoNige1	iyAnoNige1	Anoplius nigerrimus	.	27515	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyAthRosa1	iyAthRosa1	Athalia rosae	turnip sawfly	2982298	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyAthRosa1	iyAthRosa2	Athalia rosae	turnip sawfly	2982298	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyBomHort1	iyBomHort1	Bombus hortorum	garden bumblebee	7458	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyBomPasc1	iyBomPasc1	Bombus pascuorum	common carder bee	7458	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyBomPrat1	iyBomPrat1	Bombus pratorum	early bumblebee	7458	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyBomTerr1	iyBomTerr1	Bombus terrestris	buff tailed bumblebee	7458	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyBuaLabo1	iyBuaLabo1	Buathra laborator	.	7408	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyCamRapt1	iyCamRapt1	Campoletis raptor	.	7408	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyCerRyby1	iyCerRyby1	Cerceris rybyensis	ornate tailed digger wasp	253718	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyCliInci1	iyCliInci1	Clistopyga incitator	.	7408	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyCoeConi1	iyCoeConi1	Coelioxys conoideus	.	124286	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyDolMedi1	iyDolMedi1	Dolichovespula media	median wasp	7438	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyEctCont1	iyEctCont1	Ectemnius continuus	.	253718	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyEctLitu1	iyEctLitu1	Ectemnius lituratus	.	253718	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyIchXant1	iyIchXant1	Ichneumon xanthorius	.	7408	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyLasLatv2	iyLasLatv2	Lasioglossum lativentre	furry claspered furrow bee	77572	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyLasMori1	iyLasMori1	Lasioglossum morio	common green furrow bee	77572	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyLasPaux1	iyLasPaux1	Lasioglossum pauxillum	base banded furrow bee	77572	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyMegLign1	iyMegLign1	Megachile ligniseca	wood carving leafcutter bee	124286	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyMegWill1	iyMegWill1	Megachile willughbiella	Willughby's leafcutter bee	124286	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyMimDahl1	iyMimDahl1	Mimumesa dahlbomi	.	253718	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyNetDila1	iyNetDila1	Netelia fuscicornis	.	7408	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyNomFabr1	iyNomFabr1	Nomada fabriciana	Fabricius' nomad bee	7458	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyNomFuca1	iyNomFuca1	Nomada fucata	painted nomad bee	7458	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyNysSpin1	iyNysSpin1	Nysson spinosus	large spurred digger wasp	253718	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyOphLute1	iyOphLute1	Ophion slaviceki	.	7408	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyPemLugu1	iyPemLugu1	Pemphredon lugubris	mournful wasp	253718	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyRhoChlo1	iyRhoChlo1	Rhogogaster chlorosoma	narrow striped Rhogogaster	27532	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyStePhae1	iyStePhae1	Stelis phaeoptera	plain dark bee	124286	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyTenMeso1	iyTenMeso1	Tenthredo mesomela	common green Tenthredo	27532	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyTenNoth1	iyTenNoth1	Tenthredo notha	.	27532	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyTipFemo1	iyTipFemo1	Tiphia femorata	beetle killing wasp	92421	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyVesCrab1	iyVesCrab1	Vespa crabro	European hornet	7438	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyVesGerm1	iyVesGerm1	Vespula germanica	German wasp	7438	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyVesVulg1	iyVesVulg1	Vespula vulgaris	common wasp	7438	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyVesVulg1	iyVesVulg2	Vespula vulgaris	common wasp	7438	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyVesVulg1	iyVesVulg3	Vespula vulgaris	common wasp	7438	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+iyVesVulg1	iyVesVulg5	Vespula vulgaris	common wasp	7438	Eukaryota	Metazoa	Arthropoda	Hexapoda	Insecta	.	Neoptera	Hymenoptera
+jaDiaLine6	jaDiaLine6	Diadumene lineata	orange striped anemone	478428	Eukaryota	Metazoa	Cnidaria	.	Anthozoa	.	.	Actiniaria
+jaMetSeni4	jaMetSeni4	Metridium senile	brown sea anemone	37511	Eukaryota	Metazoa	Cnidaria	.	Anthozoa	.	.	Actiniaria
+jaNemVect1	jaNemVect1	Nematostella vectensis	.	45349	Eukaryota	Metazoa	Cnidaria	.	Anthozoa	.	.	Actiniaria
+jhCanCock6	jhCanCock6	Candelabrum cocksii	(a hydroid)	264048	Eukaryota	Metazoa	Cnidaria	.	Hydrozoa	.	.	Anthoathecata
+jrHalOcto1	jrHalOcto1	Haliclystus octoradiatus	spotted kaleidoscope jellyfish	1927917	Eukaryota	Metazoa	Cnidaria	.	Staurozoa	.	.	Stauromedusae
+kaAplTurb1	kaAplTurb1	Aplidium turbinatum	(a colonial sea squirt)	201955	Eukaryota	Metazoa	Chordata	Tunicata	Ascidiacea	.	.	Aplousobranchia
+kaAscMent1	kaAscMent1	Ascidia mentula	(a solitary sea squirt)	30274	Eukaryota	Metazoa	Chordata	Tunicata	Ascidiacea	.	.	Phlebobranchia
+kaClaLepa1	kaClaLepa1	Clavelina lepadiformis	light bulb sea squirt	159415	Eukaryota	Metazoa	Chordata	Tunicata	Ascidiacea	.	.	Aplousobranchia
+kcLamFluv1	kcLamFluv1	Lampetra fluviatilis	European river lamprey	7746	Eukaryota	Metazoa	Chordata	Craniata	Hyperoartia	.	.	Petromyzontiformes
+laTriPals1	laTriPals1	Triglochin palustris	.	55434	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Alismatales
+lpBroSter1	lpBroSter1	Bromus sterilis	barren brome	4479	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpCarAren1	lpCarAren1	Carex arenaria	.	4609	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpCarDepa1	lpCarDepa1	Carex depauperata	.	4609	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpCarDivu1	lpCarDivu1	Carex divulsa	.	4609	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpCarPend1	lpCarPend1	Carex pendula	pendulous sedge	4609	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpCarRost1	lpCarRost1	Carex rostrata	.	4609	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpCarSylv1	lpCarSylv1	Carex sylvatica	.	4609	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpJunEffu1	lpJunEffu1	Juncus effusus	.	14101	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpLuzSylv1	lpLuzSylv1	Luzula sylvatica	.	14101	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpPhrAust1	lpPhrAust1	Phragmites australis	common reed	4479	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpSchLacu1	lpSchLacu1	Schoenoplectus lacustris	.	4609	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+lpSchTriq1	lpSchTriq1	Schoenoplectus triqueter	club rush	4609	Eukaryota	Viridiplantae	Streptophyta	Streptophytina	Magnoliopsida	.	.	Poales
+mCanLor1	mCanLor1	Canis lupus	Greenland wolf	9608	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mCerEla1	mCerEla1	Cervus elaphus	red deer	9850	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mDelDel1	mDelDel1	Delphinus delphis	saddleback dolphin	9726	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mEptNil1	mEptNil1	Eptesicus nilssonii	northern bat	9431	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mGloMel1	mGloMel1	Globicephala melas	long finned pilot whale	9726	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mHypAmp2	mHypAmp2	Hyperoodon ampullatus	northern bottlenose whale	9756	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mLagAlb1	mLagAlb1	Lagenorhynchus albirostris	white beaked dolphin	9726	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mMarMar1	mMarMar1	Martes martes	European pine marten	9655	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mMelMel3	mMelMel3	Meles meles	European badger	9655	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mMusMuc1	mMusMuc1	Mus musculus	house mouse	10066	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Euarchontoglires
+mOrcOrc1	mOrcOrc1	Orcinus orca	killer whale	9726	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mPipPyg2	mPipPyg2	Pipistrellus pygmaeus	soprano pipistrelle	9431	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mPleAur1	mPleAur1	Plecotus auritus	brown big eared bat	9431	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+mSteCoe1	mSteCoe1	Stenella coeruleoalba	striped dolphin	9726	Eukaryota	Metazoa	Chordata	Craniata	Mammalia	Sarcopterygii	.	Laurasiatheria
+paTetJugo1	paTetJugo1	Tetramitus jugosus	.	5765	Eukaryota	.	Heterolobosea	.	.	.	.	.
+pxEimPrae1	pxEimPrae1	Eimeria praecox	Coccidian parasite	5799	Eukaryota	.	Apicomplexa	.	Conoidasida	.	.	Eucoccidiorida
+qcStrAcum1	qcStrAcum1	Strigamia acuminata	.	126955	Eukaryota	Metazoa	Arthropoda	Myriapoda	Chilopoda	.	.	Geophilomorpha
+qhLepNord3	qhLepNord3	Lepeophtheirus nordmannii	sea louse	72034	Eukaryota	Metazoa	Arthropoda	Crustacea	Hexanauplia	Multicrustacea	Neocopepoda	Podoplea
+qqAmaFero1	qqAmaFero1	Amaurobius ferox	.	107460	Eukaryota	Metazoa	Arthropoda	Chelicerata	Arachnida	.	.	Araneae
+qqArgBrue1	qqArgBrue1	Argiope bruennichi	wasp spider	6913	Eukaryota	Metazoa	Arthropoda	Chelicerata	Arachnida	.	.	Araneae
+qqMetBour1	qqMetBour1	Meta bourneti	.	27394	Eukaryota	Metazoa	Arthropoda	Chelicerata	Arachnida	.	.	Araneae
+qqOdiSpin1	qqOdiSpin1	Odiellus spinosus	.	101160	Eukaryota	Metazoa	Arthropoda	Chelicerata	Arachnida	.	.	Opiliones
+qqParLuna2	qqParLuna2	Parasteatoda lunata	.	34643	Eukaryota	Metazoa	Arthropoda	Chelicerata	Arachnida	.	.	Araneae
+qqTetMont2	qqTetMont2	Tetragnatha montana	silver stretch spider	27394	Eukaryota	Metazoa	Arthropoda	Chelicerata	Arachnida	.	.	Araneae
+qxSacCarc1	qxSacCarc1	Sacculina carcini	crab hacker barnacle	38011	Eukaryota	Metazoa	Arthropoda	Crustacea	Thecostraca	Multicrustacea	Rhizocephala	.
+rZooViv1	rZooViv1	Zootoca vivipara	common lizard	8522	Eukaryota	Metazoa	Chordata	Craniata	Lepidosauria	Sarcopterygii	.	Squamata
+sRajBra1	sRajBra1	Raja brachyura	blonde ray	30475	Eukaryota	Metazoa	Chordata	Craniata	Chondrichthyes	.	.	Batoidea
+tnLinLong1	tnLinLong1	Lineus longissimus	bootlace worm	6222	Eukaryota	Metazoa	Nemertea	.	Pilidiophora	.	.	Heteronemertea
+tzBugNeri2	tzBugNeri2	Bugula neritina	ruby bryozoan	10210	Eukaryota	Metazoa	Bryozoa	.	Gymnolaemata	.	.	Cheilostomatida
+tzBugStol2	tzBugStol2	Bugulina stolonifera	an erect bryozoan	10210	Eukaryota	Metazoa	Bryozoa	.	Gymnolaemata	.	.	Cheilostomatida
+tzCryPall5	tzCryPall5	Cryptosula pallasiana	an encrusting bryozoan	558762	Eukaryota	Metazoa	Bryozoa	.	Gymnolaemata	.	.	Cheilostomatida
+tzMemMemb1	tzMemMemb1	Membranipora membranacea	sea mat	192924	Eukaryota	Metazoa	Bryozoa	.	Gymnolaemata	.	.	Cheilostomatida
+tzWatSuba1	tzWatSuba1	Watersipora subatra	red ripple bryozoan	193245	Eukaryota	Metazoa	Bryozoa	.	Gymnolaemata	.	.	Cheilostomatida
+ucDunPrim2	ucDunPrim2	Dunaliella primolecta	.	3043	Eukaryota	Viridiplantae	Chlorophyta	.	Chlorophyceae	.	.	Chlamydomonadales
+ucMarCocc1	ucMarCocc1	Marvania coccoides	.	35461	Eukaryota	Viridiplantae	Chlorophyta	.	Trebouxiophyceae	.	.	Chlorellales
+ucPycProv1	ucPycProv1	Pycnococcus provasolii	.	41878	Eukaryota	Viridiplantae	Chlorophyta	.	.	.	.	.
+wcApoIcte1	wcApoIcte1	Aporrectodea icterica	.	6392	Eukaryota	Metazoa	Annelida	.	Clitellata	.	.	Crassiclitellata
+wcLumRube1	wcLumRube1	Lumbricus rubellus	red compost earthworm	6392	Eukaryota	Metazoa	Annelida	.	Clitellata	.	.	Crassiclitellata
+wcLumTerr1	wcLumTerr1	Lumbricus terrestris	common earthworm	6392	Eukaryota	Metazoa	Annelida	.	Clitellata	.	.	Crassiclitellata
+wdMagJohn1	wdMagJohn1	Magelona johnstoni	.	46596	Eukaryota	Metazoa	Annelida	.	Polychaeta	.	Canalipalpata	Spionida
+wkErpOcto2	wkErpOcto2	Erpobdella octoculata	leech	57110	Eukaryota	Metazoa	Annelida	.	Clitellata	.	.	Hirudinida
+wpAchSqua1	wpAchSqua1	Acholoe squamosa	star devouring scaleworm	46593	Eukaryota	Metazoa	Annelida	.	Polychaeta	.	.	Phyllodocida
+wpAleGela1	wpAleGela1	Alentia gelatinosa	(a scale worm)	46593	Eukaryota	Metazoa	Annelida	.	Polychaeta	.	.	Phyllodocida
+wpAliVire1	wpAliVire1	Alitta virens	.	39820	Eukaryota	Metazoa	Annelida	.	Polychaeta	.	.	Phyllodocida
+wpHarImpa5	wpHarImpa5	Harmothoe impar	(a scale worm)	46593	Eukaryota	Metazoa	Annelida	.	Polychaeta	.	.	Phyllodocida
+wpSthLimi1	wpSthLimi1	Sthenelais limicola	(a segmented worm)	104728	Eukaryota	Metazoa	Annelida	.	Polychaeta	.	.	Phyllodocida
+wrPisGeom1	wrPisGeom1	Piscicola geometra	.	60930	Eukaryota	Metazoa	Annelida	.	Clitellata	.	.	Hirudinida
+wtTerLapi1	wtTerLapi1	Terebella lapidaria	(a segmented worm)	32261	Eukaryota	Metazoa	Annelida	.	Polychaeta	.	Canalipalpata	Terebellida
+xbArcSenh1	xbArcSenh1	Arcuatula senhousia	Asian date mussel	6547	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	.	Mytilida
+xbAzoCham1	xbAzoCham1	Azorinus chamasolen	.	282291	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	Euheterodonta	Imparidentia
+xbCerEdul1	xbCerEdul1	Cerastoderma edule	edible cockle	55708	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	Euheterodonta	Imparidentia
+xbGarTell2	xbGarTell2	Gari tellinella	(a clam)	61354	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	Euheterodonta	Imparidentia
+xbLutLutr1	xbLutLutr1	Lutraria lutraria	common otter shell	6581	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	Euheterodonta	Imparidentia
+xbMagGiga1	xbMagGiga1	Magallana gigas	Pacific oyster	6563	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	.	Ostreida
+xbMimVari1	xbMimVari1	Mimachlamys varia	.	6566	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	.	Pectinida
+xbMytEdul2	xbMytEdul2	Mytilus edulis	blue mussel	6547	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	.	Mytilida
+xbOstEdul1	xbOstEdul1	Ostrea edulis	native oyster	6563	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	.	Ostreida
+xbSpiSubt1	xbSpiSubt1	Spisula subtruncata	cut surfclam	6581	Eukaryota	Metazoa	Mollusca	.	Bivalvia	.	Euheterodonta	Imparidentia
+xgAniVort1	xgAniVort1	Anisus vortex	whirlpool ramshorn	6524	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	.
+xgGibMagu1	xgGibMagu1	Gibbula magus	turban top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgOncCelt3	xgOncCelt3	Onchidella celtica	Celtic sea slug	42451	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Eupulmonata
+xgPatDepr1	xgPatDepr1	Patella depressa	black footed limpet	6462	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	.
+xgPatPell1	xgPatPell1	Patella pellucida	blue rayed limpet	6462	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	.
+xgPatUlys2	xgPatUlys2	Patella ulyssiponensis	China limpet	6462	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	.
+xgPatVulg1	xgPatVulg1	Patella vulgata	common limpet	6462	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	.
+xgPhoLine1	PHORD0020b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0021b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0022b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0023b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0024b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0030b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0031b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0033b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0034b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0038b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0051b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0053b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0054b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0058b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	PHORD0060b	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	xgPhoLine1	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgPhoLine1	xgPhoLine2	Phorcus lineatus	thick top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xgSteCine2	xgSteCine2	Steromphala cineraria	grey top shell	6466	Eukaryota	Metazoa	Mollusca	.	Gastropoda	.	.	Trochida
+xpLepCine2	xpLepCine2	Lepidochitona cinerea	grey chiton	413412	Eukaryota	Metazoa	Mollusca	.	Polyplacophora	.	.	Chitonida
