@@ -19,6 +19,8 @@ Python scripts and R code are used downstream of germline and somatic mutation d
 
 ### Reference FASTA file trinucleotide (3-mer) counts
 
+There are 64 possible trinucleotides (4 ** 3). The script below counts the occurrences of all 64 trinucleotides. However, if the middle base is a purine (adenine or guanine), the count is incremented using the reverse complement of the trinucleotide. Hence, the counts of trinucleotides where the middle base is a pyrimidine are returned. 
+
 ```
 python get_reference_tricounts.py -i sample.fasta --target sample.target -o sample.tri
 ```
@@ -90,11 +92,11 @@ In the file `hdp_input.mat`, the rows represent samples, and the columns corresp
 ```
 ## Germline mutational signature extraction
 
-Rscript hdp_noprior_SBS52.R ${hdp_input.mat} ${chain_index} ${hdp_output_prefix}
+Rscript hdp_noprior_SBS52.R ${hdp_input.mat} ${chain_index} ${hdp_output_prefix} # repeat this ten times with chain index=1-10
 Rscript hdp_extraction_SBS52.R ${hdp_output_prefix} ${hdp_input.mat} ${output_directory} ${output_prefix}
 
 ## Germline mutational signature extraction
-Rscript hdp_noprior_SBS96.R ${hdp_input.mat} ${chain_index} ${hdp_output_prefix}
+Rscript hdp_noprior_SBS96.R ${hdp_input.mat} ${chain_index} ${hdp_output_prefix} # repeat this ten times with chain index_1=10
 Rscript hdp_extraction_SBS96.R ${hdp_output_prefix} ${hdp_input.mat} ${output_directory} ${output_prefix}
 ```
 `hdp_extraction_SBS52/SBS96.R` returns two excel spreadsheets `${output_prefix}_HDP_sigs.csv` and `${output_prefix}_HDP_exposure.csv`. 
