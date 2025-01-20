@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "treeoflife"
+version = "0.0.1"
+description = "Python scripts, R code, and a Pluto notebook that accompany the paper 'Germline and somatic mutational processes across the tree of life'"
+authors = ["Sangjin Lee <sjin.lee729@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/sjin09/TreeOfLife"
+repository = "https://github.com/sjin09/TreeOfLife"
+classifiers = [
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+package-mode = false
+
+[tool.poetry.urls]
+Changelog = "https://github.com/sjin09/TreeOfLife/releases"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+argparse = "^1.4.0"
+biopython = "^1.85"
+natsort = "^8.0.0"
+newick = "^1.9.0"
+numpy = "^1.20.2"
+plotnine = "^0.12.4"
+pysam = "^0.18.0"
+
+[tool.group.dev.dev-dependencies]
+flake8 = { version = "^6.1" }
+black = { version = "^23.10" } 
+pytest = { version = "^7.4.3" }
+
+[tool.poetry.extras]
+dev = ["flake8", "black", "pytest"]
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -17,6 +17,14 @@ Python scripts and R code are used downstream of germline and somatic mutation d
 
 ## User's Guide
 
+### Create a conda environment install dependencies to run python scripts
+
+```
+conda env create --file environment.yml  # create conda environment
+conda activate treeoflife
+poetry install  # install the package to the virtual environment
+```
+
 ### Reference FASTA file trinucleotide (3-mer) counts
 
 There are 64 possible trinucleotides (4 ** 3). The script below counts the occurrences of all 64 trinucleotides. However, if the middle base is a purine (adenine or guanine), the count is incremented using the reverse complement of the trinucleotide. Hence, the counts of trinucleotides where the middle base is a pyrimidine are returned. 
