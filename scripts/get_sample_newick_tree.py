@@ -36,7 +36,7 @@ def parse_args(args):
     return parser.parse_args(args)
 
 
-def write_newick_tree(input_path: Path, output_path: Path) -> None:
+def write_sample_newick_tree(input_path: Path, output_path: Path) -> None:
     def get_newick_tree(nested_taxonomy: TaxonomicTree) -> str:
         if isinstance(nested_taxonomy, list):
             species = [f"'{element}'" for element in nested_taxonomy]
@@ -70,7 +70,7 @@ def write_newick_tree(input_path: Path, output_path: Path) -> None:
 
 def main() -> int:
     options = parse_args(sys.argv)
-    write_newick_tree(options.input, options.output)
+    write_sample_newick_tree(options.input, options.output)
     return 0
 
 
