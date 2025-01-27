@@ -65,6 +65,7 @@ def write_sample_newick_tree(input_path: Path, output_path: Path) -> None:
     # Reformat
     newick_tree = get_newick_tree(nested_taxonomy)
     tree = Phylo.read(StringIO(newick_tree), "newick")
+    ## Phylo.draw_ascii(tree)
     Phylo.write(tree, output_path, "newick")
 
 

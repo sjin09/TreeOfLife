@@ -55,6 +55,7 @@ def write_taxa_newick_tree(input_path: Path, output_path: Path) -> None:
                 continue
             current_node = get_child(current_node, rank)
     tree = Tree(root=root, rooted=True)
+    # Phylo.draw_ascii(tree)
     Phylo.write(tree, output_path, "newick")
 
 
