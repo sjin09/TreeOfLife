@@ -7,7 +7,7 @@ import sys
 from ete3 import Tree
 import pandas as pd
 
-TAXONOMIC_RANKS = ['Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Species']
+TAXONOMIC_RANKS = ['Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Species', 'Sample']
 
 
 def parse_args(args):
@@ -34,7 +34,7 @@ def parse_args(args):
 
 
 # Use ete3
-def write_species_taxonomic_tree(input_path: Path, output_path: Path) -> None:
+def write_sample_taxonomic_tree(input_path: Path, output_path: Path) -> None:
     def get_child(parent_clade, child_name: str):
         """
         Find the child with the specified name or create a new one if not found.
@@ -60,7 +60,7 @@ def write_species_taxonomic_tree(input_path: Path, output_path: Path) -> None:
 
     # Export tree to newick format
     # format = 4 compatible with Julia Phylo package
-    root.write(format=4, outfile=str(output_path))
+    root.write(format=1, outfile=str(output_path))
 
     # Show tree for debugging
     # root.show()
@@ -68,7 +68,7 @@ def write_species_taxonomic_tree(input_path: Path, output_path: Path) -> None:
 
 def main() -> int:
     options = parse_args(sys.argv)
-    write_species_taxonomic_tree(options.input, options.output)
+    write_sample_taxonomic_tree(options.input, options.output)
     return 0
 
 

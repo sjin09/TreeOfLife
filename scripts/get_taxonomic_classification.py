@@ -44,6 +44,7 @@ def parse_args(args):
 
 @dataclass
 class TaxonomicClassification:
+    domain: str = "Eukaryota"
     kingdom: str = "."
     phylum: str = "."
     taxonomic_class: str = "."
@@ -95,6 +96,7 @@ def get_taxonomic_classification_per_sample(
     fieldnames = [
         "Sample",
         "Common name",
+        "Domain",
         "Kingdom",
         "Phylum",
         "Class",
@@ -104,6 +106,7 @@ def get_taxonomic_classification_per_sample(
         "Species",
     ]
     reference_samples = set(reference_sample_lookup.values())
+    seen = set()
     taxonomic_classification_per_sample = {}
 
     # Write taxonomic classification per reference sample
@@ -118,6 +121,8 @@ def get_taxonomic_classification_per_sample(
         df = pd.read_csv(input_path)
         for (_idx, row) in df.iterrows():
             sample = row["sample"]
+            if sample in seen:
+                continue
             if sample not in reference_samples:
                 continue
             status_summary = row["statussummary"]
@@ -134,6 +139,7 @@ def get_taxonomic_classification_per_sample(
                 common_name = common_name.capitalize()
             ncbi_response = get_taxonomy_data(family_taxon)
             try:
+                seen.add(sample)
                 ncbi_taxonomic_records = ncbi_response["records"][0]["record"]["lineage"]
                 for taxonomy_record in ncbi_taxonomic_records:
                     taxonomic_rank = taxonomy_record["taxon_rank"]
@@ -145,7 +151,7 @@ def get_taxonomic_classification_per_sample(
                         taxonomic_class = taxonomy_record["scientific_name"]
                     elif "order" == taxonomic_rank:
                         order = taxonomy_record["scientific_name"]
-                taxonomic_classification_per_sample[sample] = TaxonomicClassification(
+                sample_taxanomic_classification = TaxonomicClassification(
                     kingdom=kingdom,
                     phylum=phylum,
                     taxonomic_class=taxonomic_class,
@@ -155,16 +161,18 @@ def get_taxonomic_classification_per_sample(
                     species=species,
                     common_name=common_name
                 )
+                taxonomic_classification_per_sample[sample] = sample_taxanomic_classification
                 writer.writerow({
                     "Sample": sample,
-                    "Common name": common_name,
-                    "Kingdom": kingdom,
-                    "Phylum": phylum,
-                    "Class": taxonomic_class,
-                    "Order": order,
-                    "Family": family,
-                    "Genus": genus,
-                    "Species": species
+                    "Common name": sample_taxanomic_classification.common_name,
+                    "Domain": sample_taxanomic_classification.domain,
+                    "Kingdom": sample_taxanomic_classification.kingdom,
+                    "Phylum": sample_taxanomic_classification.phylum,
+                    "Class": sample_taxanomic_classification.taxonomic_class,
+                    "Order": sample_taxanomic_classification.order,
+                    "Family": sample_taxanomic_classification.family,
+                    "Genus": sample_taxanomic_classification.genus,
+                    "Species": sample_taxanomic_classification.species
                 })
             except IndexError:
                 raise ValueError(f"API request for sample '{sample}' failed")
@@ -178,6 +186,7 @@ def write_taxonomic_classification(input_path: Path, samples_path: Path, output_
         "Reference sample",
         "Sample",
         "Common name",
+        "Domain",
         "Kingdom",
         "Phylum",
         "Class",
@@ -205,6 +214,7 @@ def write_taxonomic_classification(input_path: Path, samples_path: Path, output_
                 "Reference sample": reference_sample,
                 "Sample": sample,
                 "Common name": taxonomic_classification.common_name,
+                "Domain": taxonomic_classification.domain,
                 "Kingdom": taxonomic_classification.kingdom,
                 "Phylum": taxonomic_classification.phylum,
                 "Class": taxonomic_classification.taxonomic_class,
