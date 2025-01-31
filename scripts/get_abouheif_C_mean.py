@@ -1,14 +1,35 @@
 #!/usr/bin/env python
 
+"""
+Calculate Abouheif's C_mean measure of phylogenetic signal
+
+Notes:
+    - Abouheif's matrix is a bistochastic matrix with non-null diagonal elements
+        - All entries are non-negative
+        - Each row sums to 1
+        - Each column sums to 1
+        - Here, Abouheif's matrix is a measure of phylogenetic proximity
+    - Abouheif’s C mean tests for serial independence is based on the sum of the successive squared differences
+
+Reference:
+    - Pavoine, S., Ollier, S., Pontier, D., & Chessel, D. (2008). Testing for phylogenetic signal in phenotypic traits:
+"""
+
 import argparse
+import csv
+from collections import defaultdict
 from pathlib import Path
-from typing import List
+from typing import Dict, List, Set, Tuple
 import sys
 
 import ete3
 import numpy as np
+import pandas as pd
+import plotnine as p9
+from statsmodels.stats.multitest import multipletests
 
-# Reference: Testing for phylogenetic signal in phenotypic traits: New matrices of phylogenetic proximities
+RTOL_SIGS = ["sTOL2", "sTOL4", "sTOL7"]
+TAXONOMIC_RANKS = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
 
 
 def parse_args(args):
@@ -17,37 +38,25 @@ def parse_args(args):
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument(
-        "-i",
-        "--input",
+        "--taxonomic-classification",
         type=str,
         required=True,
-        help="file to read newick tree"
+        help="file to read taxonomic classification for each sample",
     )
     parser.add_argument(
-        "-o",
-        "--output",
+        "--signature-exposures",
         type=str,
         required=True,
-        help="file to write",
+        help="file to read germline or somatic mutational signature exposures",
     )
+    parser.add_argument("--pdf", type=str, required=True, help="file to plot")
+    parser.add_argument("-o", "--output", type=str, required=True, help="file to write")
+    parser.add_argument("--is-somatic", required=False, action="store_true", help="is somatic mutational signature")
     args = args[1:]
     return parser.parse_args(args)
 
 
-def get_tree(input_path: Path) -> ete3.TreeNode:
-    tree = ete3.Tree(input_path, format=4)
-    return tree
-
-
-def get_path_to_ancestor(ancestor: ete3.TreeNode, node: ete3.TreeNode) -> List[ete3.TreeNode]:
-    path = []
-    while node != ancestor:
-        node = node.up
-        path.append(node)
-    return path
-
-
-def get_branch_path(tree: ete3.TreeNode, node1: ete3.TreeNode, node2: ete3.TreeNode):
+def get_branch_path(tree: ete3.TreeNode, node1: ete3.TreeNode, node2: ete3.TreeNode) -> List[ete3.TreeNode]:
     common_ancestor = tree.get_common_ancestor(node1, node2)
     path = [common_ancestor]
     path.extend(get_path_to_ancestor(common_ancestor, node1))
@@ -62,6 +71,90 @@ def get_branch_path(tree: ete3.TreeNode, node1: ete3.TreeNode, node2: ete3.TreeN
         path.append(node2)
 
     return path
+
+
+def get_exposure_per_signature_per_sample(
+    signature_exposures_path: Path,
+    is_somatic: bool,
+) -> Tuple[Dict[str, Dict[str, float]], Set[str], List[str]]:
+    # Initialize variable
+    exposure_per_signature_per_sample = {}
+    # Read the signature exposures file
+    df = pd.read_csv(signature_exposures_path)
+    # Rename the columns
+    if is_somatic:
+        df.columns = ["Sample"] + ["sTOL" + col for col in df.columns[1:]]
+        df = df.drop(columns="sTOL0")  # Remove the averaging component
+        df = df.drop(columns=RTOL_SIGS)  # Remove the RTOL signatures
+    else:
+        df.columns = ["Sample"] + ["gTOL" + col for col in df.columns[1:]]
+        df = df.drop(columns="gTOL0")  # Remove the averaging component
+    # Change sample names
+    df["Sample"] = df["Sample"].apply(lambda x: x.split(".")[1] if "." in x else x)
+    samples = set(df["Sample"])
+    signatures = list(df.columns[1:])
+    for (_idx, row) in df.iterrows():
+        row_dict = row.drop("Sample").to_dict()
+        exp_sum = sum(row_dict.values())
+        normalised_row_dict = {}
+        for (k, v) in row_dict.items():
+            normalised_row_dict[k] = v / exp_sum
+        exposure_per_signature_per_sample[row["Sample"]] = normalised_row_dict
+    return exposure_per_signature_per_sample, samples, signatures
+
+
+def get_path_to_ancestor(ancestor: ete3.TreeNode, node: ete3.TreeNode) -> List[ete3.TreeNode]:
+    path = []
+    while node != ancestor:
+        node = node.up
+        path.append(node)
+    return path
+
+
+def get_samples_per_species(taxonomic_classification_path: Path, samples: Set[str]) -> Dict[str, List[str]]:
+    samples_per_species = defaultdict(list)
+    df = pd.read_csv(taxonomic_classification_path)
+    for (_idx, row) in df.iterrows():
+        species = row["Species"]
+        sample = row["Sample"]
+        if sample not in samples:
+            continue
+        samples_per_species[species].append(sample)
+    return dict(samples_per_species)
+
+
+def get_species_tree(taxonomic_classification_path: Path, samples: Set[str]) -> ete3.Tree:
+    def get_child(parent_clade, child_name: str):
+        """
+        Find the child with the specified name or create a new one if not found.
+        """
+        for child in parent_clade.get_children():
+            if child.name == child_name:
+                return child
+        new_child = parent_clade.add_child(name=child_name)
+        return new_child
+
+    # Initialize tree
+    root = ete3.Tree(name="root")
+
+    # Import and iterate through the DToL samplesheet
+    df = pd.read_csv(taxonomic_classification_path)
+    for (_idx, row) in df.iterrows():
+        sample = row["Sample"]
+        if sample not in samples:
+            continue
+        current_node = root
+        sample_taxonomic_ranks = list(row[TAXONOMIC_RANKS])
+        for rank in sample_taxonomic_ranks:
+            if rank == ".":
+                continue
+            current_node = get_child(current_node, rank)
+
+    return root
+
+
+def get_tree(nwk_path: Path) -> ete3.Tree:
+    return ete3.Tree(nwk_path)
 
 
 def get_Abouheif_A_matrix(tree: ete3.TreeNode) -> np.ndarray:
@@ -103,14 +196,136 @@ def get_Abouheif_A_matrix(tree: ete3.TreeNode) -> np.ndarray:
     return mtx
 
 
-def get_Abouheif_C_mean(input_path: Path, output_path: Path):
-    tree = get_tree(input_path)
+def get_Abouheif_C_mean(
+    tree: ete3.TreeNode,
+    exp_per_sig_per_sample,
+    sigs: List[str],
+    samples_per_species: Dict[str, List[str]],
+    iter: int = 1000,
+) -> Tuple[List[float], List[float], List[float]]:
+    """
+    Notes:
+        - Phylogenetic signal is the tendency of related species to resemble each other more
+        than species drawn at random from the same tree.
+         - Abouheif’s C mean tests for serial independence is based on the sum of the successive squared differences
+         between trait values of neighbouring species (Abouheif 1999).
+         - As there exist multiple ways to present the order of branches in a phylogenetic tree,
+         Abouheif suggested Cmean as the mean value of a random subset of all possible representations.
+         - Pavoine et al. (2008) provided an exact analytical value of the test.
+         - They demonstrated that it uses Moran’s I statistic with a new matrix of phylogenetic proximities,
+        which does not relate to branch length but focuses on topology and has a non-zero diagonal.
+
+    C mean = (z^T A z / sum(A))
+
+    Algorithm:
+        - Calculate the signature exposure for each species
+        - Perform Z-score normalisation
+        - Calculate the score for phylogenetic signal
+            - np.dot(traits, A_mtx) gives a vector of weighted trait values
+            based on their phylogenetic distances.
+            - np.dot(np.dot(traits, A_mtx, traits)) gives weighted sum of squared differences
+            betwewen trait values, adjusted by phylogenetic distances.
+        - Perform permutation test to calculate p values
+        - Perform Benjamini-Hochberg correction for multiple hypothesis testingnp.do
+    """
+    # Set the seed for reproducibility
+    np.random.seed(28)
+
+    # Initialize variables
+    C_means = []
+    p_vals = []
     A_mtx = get_Abouheif_A_matrix(tree)
+
+    # Calculate Abouheif's C_mean measure of phylogenetic signal for each signature
+    for sig in sigs:
+        species_sig_exps = []
+        # Calculate the signature exposure for each species
+        for leaf_name in tree.iter_leaf_names():
+            sample_sig_exps = []
+            samples = samples_per_species[leaf_name]
+            for sample in samples:
+                sample_sig_exps.append(exp_per_sig_per_sample[sample][sig])
+            species_sig_exps.append(np.mean(sample_sig_exps))
+        # Perform Z-score normalisation
+        species_sig_exps = [
+            (x - np.mean(species_sig_exps)) / np.std(species_sig_exps, ddof=0) for x in species_sig_exps
+        ]
+        # Calculate the score for phylogenetic signal
+        C_mean = np.dot(np.dot(species_sig_exps, A_mtx), species_sig_exps) / np.sum(A_mtx)
+        # Perform permutation test to calculate p values
+        null_C = np.zeros(iter)
+        for _ in range(iter):
+            np.random.shuffle(species_sig_exps)
+            null_C[_] = np.dot(np.dot(species_sig_exps, A_mtx), species_sig_exps) / np.sum(A_mtx)
+        p_val = np.sum(C_mean < null_C) / iter
+        C_means.append(C_mean)
+        p_vals.append(p_val)
+
+    # Perform Benjamini-Hochberg correction for multiple hypothesis testing
+    _, q_vals, _, _ = multipletests(p_vals, method="fdr_bh")
+    return C_means, p_vals, q_vals
+
+
+def write_Abouheif_C_mean(
+    sigs: List[str], C_means: List[float], p_vals: List[float], q_vals: List[float], output_path: Path
+) -> None:
+    fieldnames = ["Signature", "C_mean", "p_value", "q_value"]
+    with open(output_path, "w") as outfile:
+        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for (sig, C_mean, p_val, q_val) in zip(sigs, C_means, p_vals, q_vals):
+            writer.writerow({"Signature": sig, "C_mean": C_mean, "p_value": p_val, "q_value": q_val})
+
+
+def plot_Abouheif_C_mean(cmean_path: Path, pdf_path: Path) -> None:
+    df = pd.read_csv(cmean_path)
+    df["q_bin"] = pd.cut(
+        df["q_value"], bins=[0, 0.01, 0.05, 1], labels=["< 0.01", "0.01 - 0.05", "> 0.05"], right=False
+    )
+    df = df[df["q_bin"] != "> 0.05"]
+    df["q_bin"] = df["q_bin"].cat.remove_unused_categories()
+    # Reorder 'Signature' based on 'C_mean'
+    df["Signature"] = pd.Categorical(
+        df["Signature"],
+        categories=df.groupby("Signature")["C_mean"].mean().sort_values(ascending=False).index,
+        ordered=True,
+    )
+    plot = (
+        p9.ggplot(df, p9.aes(x="Signature", y="C_mean", fill="q_bin"))
+        + p9.geom_bar(stat="identity")
+        + p9.theme_bw(16)
+        + p9.labs(x="\nMutational Signatures\n", y="\nAbouheif's C mean\n")
+        + p9.theme(axis_text_x=p9.element_text(rotation=90, hjust=1))
+        + p9.scale_fill_manual(values=["#44803F", "#FFEC5C"])
+        + p9.guides(fill=p9.guide_legend(title="q-value"))
+    )
+    plot.save(pdf_path, width=22, height=12)
+
+
+def get_phylogenetic_signal(
+    taxonomic_classification_path: Path,
+    signature_exposure_path: Path,
+    is_somatic: bool,
+    pdf_path: Path,
+    output_path: Path,
+):
+    exp_per_sig_per_sample, samples, sigs = get_exposure_per_signature_per_sample(signature_exposure_path, is_somatic)
+    samples_per_species = get_samples_per_species(taxonomic_classification_path, samples)
+    tree = get_species_tree(taxonomic_classification_path, samples)
+    C_means, p_vals, q_vals = get_Abouheif_C_mean(tree, exp_per_sig_per_sample, sigs, samples_per_species, 1000)
+    write_Abouheif_C_mean(sigs, C_means, p_vals, q_vals, output_path)
+    plot_Abouheif_C_mean(output_path, pdf_path)
 
 
 def main() -> int:
     options = parse_args(sys.argv)
-    get_Abouheif_C_mean(options.input, options.output)
+    get_phylogenetic_signal(
+        taxonomic_classification_path=options.taxonomic_classification,
+        signature_exposure_path=options.signature_exposures,
+        is_somatic=options.is_somatic,
+        pdf_path=options.pdf,
+        output_path=options.output,
+    )
     return 0
 
 
