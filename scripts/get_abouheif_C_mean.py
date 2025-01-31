@@ -9,6 +9,14 @@ Notes:
         - Each row sums to 1
         - Each column sums to 1
         - Here, Abouheif's matrix is a measure of phylogenetic proximity
+        - Abouheif test measures the proximity between two taxa i and j
+        as the inverse of the number of branches descending from each interior node
+        in the path connecting i to j the root of the tree.
+        - The proximity depends thus on the interior nodes in the path connecting i to j.
+        - aii is a measure of how evolutionarily isolated species i is relative
+        to other members of the phylogenetic tree under study.
+        - The definition of A is independent of branch length and
+        depends only on the topology of the tree.
     - Abouheif’s C mean tests for serial independence is based on the sum of the successive squared differences
 
 Reference:
@@ -84,8 +92,13 @@ def get_exposure_per_signature_per_sample(
     # Rename the columns
     if is_somatic:
         df.columns = ["Sample"] + ["sTOL" + col for col in df.columns[1:]]
-        df = df.drop(columns="sTOL0")  # Remove the averaging component
         df = df.drop(columns=RTOL_SIGS)  # Remove the RTOL signatures
+        col_names = ["Sample"] + [f"sTOL{op_idx}" for op_idx, _col_name in enumerate(df.columns[1:])]
+        with open("stol_signature_mapping_lookup.tsv", "w") as outfile:
+            for (col_name_i, col_name_j) in zip(df.columns[1:], col_names[1:]):
+                outfile.write(f"{col_name_i}\t{col_name_j}\n")
+        df.columns = col_names
+        df = df.drop(columns="sTOL0")  # Remove the averaging component
     else:
         df.columns = ["Sample"] + ["gTOL" + col for col in df.columns[1:]]
         df = df.drop(columns="gTOL0")  # Remove the averaging component
@@ -191,7 +204,13 @@ def get_Abouheif_A_matrix(tree: ete3.TreeNode) -> np.ndarray:
 
     # Calculate the diagonal scores for originality of the species
     for k in range(n_leaves):
-        mtx[k, k] = 1 - np.sum(mtx[k, :])
+        mtx[k, k] = 1 - np.sum(mtx[k, :])  # row and columns sums to 1
+
+    # root = tree.get_tree_root()
+    # for k in range(n_leaves):
+    #     p = set(get_branch_path(tree, leaves[k], root))
+    #     ddp = [len(node.get_children()) for node in p]
+    #     mtx[k, k] = 1 / np.prod(ddp)
 
     return mtx
 
