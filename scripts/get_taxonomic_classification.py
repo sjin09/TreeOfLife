@@ -110,7 +110,7 @@ def get_taxonomic_classification_per_sample(
     taxonomic_classification_per_sample = {}
 
     # Write taxonomic classification per reference sample
-    with open("dtol_reference_samples.taxonomic_classification.tsv", "w") as outfile:
+    with open("dtol_reference_samples.taxonomic_classification.csv", "w") as outfile:
         # Create a DictWriter object
         writer = csv.DictWriter(outfile, fieldnames=fieldnames)
 
@@ -124,6 +124,8 @@ def get_taxonomic_classification_per_sample(
             if sample in seen:
                 continue
             if sample not in reference_samples:
+                continue
+            if not sample.startswith("ilYpoPade"):  # TODO
                 continue
             status_summary = row["statussummary"]
             if status_summary not in STATUS_SUMMARY:
@@ -151,6 +153,10 @@ def get_taxonomic_classification_per_sample(
                         taxonomic_class = taxonomy_record["scientific_name"]
                     elif "order" == taxonomic_rank:
                         order = taxonomy_record["scientific_name"]
+                # Addresing a bug in the original samplesheet
+                if sample.startswith("ilYpoPade"):
+                    genus = "Yponomeuta"
+                    species = "Yponomeuta padella"
                 sample_taxanomic_classification = TaxonomicClassification(
                     kingdom=kingdom,
                     phylum=phylum,
