@@ -4,7 +4,7 @@ import argparse
 import csv
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict
 import sys
 
 import pandas as pd
@@ -13,7 +13,7 @@ import requests
 STATUS_SUMMARY = set(["1 submitted", "2 curated", "3 curation"])
 
 
-def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
+def parse_args(args):
     parser = argparse.ArgumentParser(
         description="Get taxonomic classification per sample",
         formatter_class=argparse.RawDescriptionHelpFormatter
@@ -124,6 +124,8 @@ def get_taxonomic_classification_per_sample(
             if sample in seen:
                 continue
             if sample not in reference_samples:
+                continue
+            if not sample.startswith("ilYpoPade"):  # TODO
                 continue
             status_summary = row["statussummary"]
             if status_summary not in STATUS_SUMMARY:
