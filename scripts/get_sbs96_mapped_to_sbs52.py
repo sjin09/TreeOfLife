@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+
+"""
+Map SBS96 to SBS52 using a SBS96 to SBS52 lookup table
+"""
+
 import argparse
 from collections import defaultdict
 from pathlib import Path

@@ -1,3 +1,15 @@
+#!/usr/bin/env python
+
+"""
+Notes:
+    - The ancestral allele is known for somatic mutations, but unknown for germline mutations.
+    - To determine the ancestral allele of a germline mutation, an outgroup is required for comparison.
+    - Given that the ancestral allele of a germline mutation cannot be determined without an outgroup,
+    SBS52 classification was developed for categorizing germline mutations.
+    - This script identifies SBS96 classifications that cannot be distinguishd from each other and
+    generates a lookup table to map SBS96 to SBS52 classifications.
+"""
+
 from dataclasses import dataclass
 from typing import Dict, List
 

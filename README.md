@@ -30,7 +30,10 @@ poetry install  # install the package to the virtual environment
 There are 64 possible trinucleotides (4 ** 3). The script below counts the occurrences of all 64 trinucleotides. However, if the middle base is a purine (adenine or guanine), the count is incremented using the reverse complement of the trinucleotide. Hence, the counts of trinucleotides where the middle base is a pyrimidine are returned. 
 
 ```
-python get_reference_tricounts.py -i sample.fasta --target sample.target -o sample.tri
+python get_reference_tricounts.py \
+    -i sample.fasta \
+    --target sample.target \
+    -o sample.tri
 ```
 
 ### SBS52 classification counts
@@ -39,15 +42,33 @@ Unlike somatic mutations, germline mutations are classified into 52 categories (
 
 ```
 ## The file sample.vcf.gz contains germline mutations.
-python get_sbs52_counts.py -i sample.vcf.bgz --ref-fasta sample.fasta -o sample.sbs52.tsv
-python get_sbs52_barplot.py -i sample.sbs52.tsv --sample sample -o sample.sbs52.pdf
+
+python get_sbs52_counts.py \
+    -i sample.vcf.bgz \
+    --ref-fasta sample.fasta \
+    -o sample.sbs52.tsv
+
+python get_sbs52_barplot.py \
+    -i sample.sbs52.tsv \
+    --sample sample \
+    -o sample.sbs52.pdf
 ```
 
 #### SBS52 counts, where each trinucleotide contributes equally.
 
 ```
-python get_tri_equal_weight_sbs52_counts.py -i sample.vcf.bgz --ref-fasta sample.fasta --target sample.target --tri sample.tri -o -o sample.tri_equal_weight.sbs52.tsv --is-sample-reference-sample
-python get_sbs52_barplot.py -i sample.tri_equal_weight.sbs52.tsv --sample sample -o sample.tri_equal_weight.sbs52.pdf
+python get_tri_equal_weight_sbs52_counts.py \
+    -i sample.vcf.bgz \
+    --ref-fasta sample.fasta \
+    --target sample.target \
+    --tri sample.tri \
+    -o sample.tri_equal_weight.sbs52.tsv \
+    --is-sample-reference-sample
+
+python get_sbs52_barplot.py \
+    -i sample.tri_equal_weight.sbs52.tsv \
+    --sample sample \
+    -o sample.tri_equal_weight.sbs52.pdf
 ```
 
 ### SBS96 classification counts
@@ -59,14 +80,24 @@ Please note that the script here is used to retrieve and plot raw SBS96 counts a
 ```
 ## The file sample.vcf.gz contains somatic mutations.
 
-python get_sbs96_counts.py -i sample.vcf.bgz --ref-fasta sample.fasta -o sample.sbs96.tsv
-python get_sbs96_barplot.py -i sample.sbs96.tsv --sample sample -o sample.sbs96.pdf
+python get_sbs96_counts.py \
+    -i sample.vcf.bgz \
+    --ref-fasta sample.fasta \
+    -o sample.sbs96.tsv
+
+python get_sbs96_barplot.py \
+    -i sample.sbs96.tsv \
+    --sample sample \
+    -o sample.sbs96.pdf
 ```
 
 #### SBS96 counts, where each trinucleotide contributes equally.
 
 ```
-python get_tri_equal_weight_sbs96_counts.py -i sample.sbs96.tsv --tri sample.tri -o sample.tri_equal_weight.sbs96.tsv
+python get_tri_equal_weight_sbs96_counts.py \
+    -i sample.sbs96.tsv \
+    --tri sample.tri \
+    -o sample.tri_equal_weight.sbs96.tsv
 ```
 
 #### Collapse SBS96 classification counts to SBS52 classification counts
@@ -75,9 +106,17 @@ Please refer to the methods section of the manuscript or the `get_sbs96_to_sbs52
 
 ```
 ## sbs96_to_sbs52_lookup_table.tsv can be found under the scripts directory
-## get_sbs96_to_sbs52_lookup_table.py is used to generate sbs96_to_sbs52_lookup_table.tsv
-python sbs96_to_sbs52.py -i sample.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.sbs96_to_sbs52.tsv
-python sbs96_to_sbs52.py -i sample.tri_equal_weight.sbs96.tsv --sbs96-to-sbs52 sbs96_to_sbs52.tsv -o sample.tri_equal_weight.sbs96_to_sbs52.tsv
+## get_sbs96_to_sbs52_lookup_table.py is used to generate the sbs96_to_sbs52_lookup_table.tsv
+
+python sbs96_to_sbs52.py \
+    -i sample.sbs96.tsv \
+    --sbs96-to-sbs52 sbs96_to_sbs52.tsv \
+    -o sample.sbs96_to_sbs52.tsv
+
+python sbs96_to_sbs52.py \
+    -i sample.tri_equal_weight.sbs96.tsv \
+    --sbs96-to-sbs52 sbs96_to_sbs52.tsv \
+    -o sample.tri_equal_weight.sbs96_to_sbs52.tsv
 ```
 ### Calculate mutation burden per cell
 
@@ -85,8 +124,15 @@ Please note that the calculation here does not account for the number of mutatio
 
 ```
 ## Himut normcounts returns sample.observed_sbs96.tsv
-## Here, sample.target needs to have both the autosomes and sex chromosomes to calculate the mutation burden per genome and the mutation burden per cell.
-python get_mutation_burden_per_cell.py -i sample.observed_sbs96.tsv --ref-fasta sample.fasta --target sample.target --ploidy 2 -o sample.burden
+## Here, sample.target needs to have both the autosomes and sex chromosomes to 
+## calculate the mutation burden per genome and the mutation burden per cell.
+
+python get_mutation_burden_per_cell.py \
+    -i sample.observed_sbs96.tsv \
+    --ref-fasta sample.fasta \
+    --target sample.target \
+    --ploidy 2 \
+    -o sample.burden
 ```
 
 - Avian sex chromosomes: chrW and chrZ
@@ -103,7 +149,7 @@ In the file `hdp_input.mat`, the rows represent samples, and the columns corresp
 Rscript hdp_noprior_SBS52.R ${hdp_input.mat} ${chain_index} ${hdp_output_prefix} # repeat this ten times with chain index=1-10
 Rscript hdp_extraction_SBS52.R ${hdp_output_prefix} ${hdp_input.mat} ${output_directory} ${output_prefix}
 
-## Germline mutational signature extraction
+## Somatic mutational signature extraction
 Rscript hdp_noprior_SBS96.R ${hdp_input.mat} ${chain_index} ${hdp_output_prefix} # repeat this ten times with chain index_1=10
 Rscript hdp_extraction_SBS96.R ${hdp_output_prefix} ${hdp_input.mat} ${output_directory} ${output_prefix}
 ```
@@ -111,6 +157,28 @@ Rscript hdp_extraction_SBS96.R ${hdp_output_prefix} ${hdp_input.mat} ${output_di
 - In the file `${output_prefix}_HDP_sigs.csv`, the rows represent SBS52/SBS96 classifications, and the columns correspond to the mutational signatures. Each element in the matrix indicates the probability of a mutation occuring in a specific sequence context under a given mutational signature.
 - In the file `${output_prefix}_HDP_exposure.csv`, the rows represent samples, and the columns correspond to the mutational signatures. Each element in the matrix reflects the contribution of each mutational signature to the sample's mutation burden.
 
-### Julia script for phylogenetic signal analysis
+### Calculate Abouheif's Cmean for each germline and somatic mutational signature
 
-Please refer to the pluto/DToL_signatures.html Pluto notebook for detailed instructions on how to perform a phylogenetic signal analysis of germline and somatic mutational signatures.
+Given a table containing the taxonomic classification of each species and another table with their respective mutational signature exposures, the script `get_abouheif_C_mean.py` constructs a phylogenetic tree based on these classifications. It then calculates the phylogenetic proximity between species and assesses the phylogenetic signal of each mutational signature.
+
+
+```
+### Phylogenetic signal analysis of germline mutational signatures
+
+python get_abouheif_C_mean.py \
+    --taxonomic-classification dtol_sample_taxonomic_classification.csv \
+    --signature-exposures gtol_exposure.csv \
+    --pdf gtol_abouheif_cmean.pdf \
+    -o gtol_abouheif_cmean.csv
+```
+
+```
+### Phylogenetic signal analysis of somatic mutational signatures
+
+python get_abouheif_C_mean.py \
+    --taxonomic-classification dtol_sample_taxonomic_classification.csv \
+    --signature-exposures stol_exposure.csv \
+    --pdf stol_abouheif_cmean.pdf \
+    -o stol_abouheif_cmean.csv \
+    --is-somatic
+```

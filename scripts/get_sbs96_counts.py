@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+"""
+Given a VCF file with somatmic mutations and a reference FASTA file, write a table with SBS96 counts.
+"""
+
 import argparse
 from collections import defaultdict
 from pathlib import Path

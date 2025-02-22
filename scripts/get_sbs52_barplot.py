@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+"""
+Given SBS52 counts file, generate a barplot.
+"""
+
 import argparse
 from collections import defaultdict
 from pathlib import Path

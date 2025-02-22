@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+"""
+Given a VCF file with either germline or somatmic mutations and a reference FASTA file, write a table with SBS52 counts.
+"""
+
 import argparse
 from collections import defaultdict
 from pathlib import Path
@@ -13,8 +17,6 @@ import pysam
 NTS = ["A", "C", "G", "T"]
 PUR = set(["A", "G"])
 PUR_TO_PYR_LOOKUP = {"A": "T", "T": "A", "G": "C", "C": "G", "N": "N"}
-SBS52_MUTSIG_FILL_COLOURS = ("#98D7EC", "#212121", "#FF003A", "#A6A6A6", "#F5ABCC")
-SBS96_MUTSIG_FILL_COLOURS = ("#98D7EC", "#212121", "#FF003A", "#A6A6A6", "#83A603", "#F5ABCC")
 SBS52_SUBS = ["C>A", "C>G", "C>T", "T>A", "T>G"]
 SBS96_SUBS = ["C>A", "C>G", "C>T", "T>A", "T>C", "T>G"]
 SBS96_CLASSIFICATION = [f"{nti}[{sub}]{ntj}" for sub in SBS96_SUBS for nti in NTS for ntj in NTS]

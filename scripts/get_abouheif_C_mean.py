@@ -27,8 +27,9 @@ import argparse
 import csv
 from collections import defaultdict
 from pathlib import Path
-from typing import Dict, List, Set, Tuple
 import sys
+from typing import Dict, List, Optional, Set, Tuple
+
 
 import ete3
 import numpy as np
@@ -36,11 +37,17 @@ import pandas as pd
 import plotnine as p9
 from statsmodels.stats.multitest import multipletests
 
+FILL_COLOURS = ["#F21D1D", "#2AA4BF"]
 RTOL_SIGS = ["sTOL2", "sTOL4", "sTOL7"]
+# GERMLINE_FILL_COLOURS = ["#F25757", "#1C588C"]
+# SOMATIC_FILL_COLOURS = ["#F21D1D", "#2AA4BF"]
 TAXONOMIC_RANKS = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
 
 
-def parse_args(args):
+def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
+    if args is None:
+        args = sys.argv[1:]
+
     parser = argparse.ArgumentParser(
         description="Calculate Abouheif's C_mean measure of phylogenetic signal",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -87,8 +94,10 @@ def get_exposure_per_signature_per_sample(
 ) -> Tuple[Dict[str, Dict[str, float]], Set[str], List[str]]:
     # Initialize variable
     exposure_per_signature_per_sample = {}
+
     # Read the signature exposures file
     df = pd.read_csv(signature_exposures_path)
+
     # Rename the columns
     if is_somatic:
         df.columns = ["Sample"] + ["sTOL" + col for col in df.columns[1:]]
@@ -102,6 +111,7 @@ def get_exposure_per_signature_per_sample(
     else:
         df.columns = ["Sample"] + ["gTOL" + col for col in df.columns[1:]]
         df = df.drop(columns="gTOL0")  # Remove the averaging component
+
     # Change sample names
     df["Sample"] = df["Sample"].apply(lambda x: x.split(".")[1] if "." in x else x)
     samples = set(df["Sample"])
@@ -247,6 +257,7 @@ def get_Abouheif_C_mean(
         - Perform permutation test to calculate p values
         - Perform Benjamini-Hochberg correction for multiple hypothesis testingnp.do
     """
+
     # Set the seed for reproducibility
     np.random.seed(28)
 
@@ -258,6 +269,7 @@ def get_Abouheif_C_mean(
     # Calculate Abouheif's C_mean measure of phylogenetic signal for each signature
     for sig in sigs:
         species_sig_exps = []
+
         # Calculate the signature exposure for each species
         for leaf_name in tree.iter_leaf_names():
             sample_sig_exps = []
@@ -265,12 +277,15 @@ def get_Abouheif_C_mean(
             for sample in samples:
                 sample_sig_exps.append(exp_per_sig_per_sample[sample][sig])
             species_sig_exps.append(np.mean(sample_sig_exps))
+
         # Perform Z-score normalisation
         species_sig_exps = [
             (x - np.mean(species_sig_exps)) / np.std(species_sig_exps, ddof=0) for x in species_sig_exps
         ]
+
         # Calculate the score for phylogenetic signal
         C_mean = np.dot(np.dot(species_sig_exps, A_mtx), species_sig_exps) / np.sum(A_mtx)
+
         # Perform permutation test to calculate p values
         null_C = np.zeros(iter)
         for _ in range(iter):
@@ -296,28 +311,42 @@ def write_Abouheif_C_mean(
             writer.writerow({"Signature": sig, "C_mean": C_mean, "p_value": p_val, "q_value": q_val})
 
 
-def plot_Abouheif_C_mean(cmean_path: Path, pdf_path: Path) -> None:
+def plot_Abouheif_C_mean(cmean_path: Path, pdf_path: Path, is_somatic: bool) -> None:
     df = pd.read_csv(cmean_path)
     df["q_bin"] = pd.cut(
-        df["q_value"], bins=[0, 0.01, 0.05, 1], labels=["< 0.01", "0.01 - 0.05", "> 0.05"], right=False
+        df["q_value"], bins=[0, 0.01, np.inf], labels=["< 0.01", ">= 0.01"], right=False
     )
-    df = df[df["q_bin"] != "> 0.05"]
     df["q_bin"] = df["q_bin"].cat.remove_unused_categories()
+
     # Reorder 'Signature' based on 'C_mean'
     df["Signature"] = pd.Categorical(
         df["Signature"],
         categories=df.groupby("Signature")["C_mean"].mean().sort_values(ascending=False).index,
         ordered=True,
     )
-    plot = (
+
+    # Generate base plot
+    base_plot = (
         p9.ggplot(df, p9.aes(x="Signature", y="C_mean", fill="q_bin"))
         + p9.geom_bar(stat="identity")
-        + p9.theme_bw(16)
-        + p9.labs(x="\nMutational Signatures\n", y="\nAbouheif's C mean\n")
+        + p9.theme_classic(16)
         + p9.theme(axis_text_x=p9.element_text(rotation=90, hjust=1))
-        + p9.scale_fill_manual(values=["#44803F", "#FFEC5C"])
         + p9.guides(fill=p9.guide_legend(title="q-value"))
+        + p9.scale_fill_manual(values=FILL_COLOURS)
     )
+
+    if is_somatic:
+        plot = (
+            base_plot
+            + p9.labs(x="\nSomatic mutational signatures\n", y="\nAbouheif's C mean\n")
+        )
+    else:
+        plot = (
+            base_plot
+            + p9.labs(x="\nGermline mutational signatures\n", y="\nAbouheif's C mean\n")
+        )
+
+    # Generate the plot
     plot.save(pdf_path, width=22, height=12)
 
 
@@ -333,7 +362,7 @@ def get_phylogenetic_signal(
     tree = get_species_tree(taxonomic_classification_path, samples)
     C_means, p_vals, q_vals = get_Abouheif_C_mean(tree, exp_per_sig_per_sample, sigs, samples_per_species, 1000)
     write_Abouheif_C_mean(sigs, C_means, p_vals, q_vals, output_path)
-    plot_Abouheif_C_mean(output_path, pdf_path)
+    plot_Abouheif_C_mean(output_path, pdf_path, is_somatic)
 
 
 def main() -> int:

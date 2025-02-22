@@ -54,6 +54,16 @@ def write_species_tree(input_path: Path, output_path: Path) -> None:
 
     # Import and iterate through the DToL samplesheet
     df = pd.read_csv(input_path)
+    df["Species"] = df.apply(
+        lambda row: "{}/{}/{}/{}/{}".format(
+            row["Kingdom"],
+            row["Phylum"],
+            row["Class"],
+            row["Order"],
+            row["Species"].replace(" ", "_"),
+        ),
+        axis=1,
+    )
     for (_idx, row) in df.iterrows():
         current_node = root
         sample_taxonomic_ranks = list(row[TAXONOMIC_RANKS])

@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+"""
+Given SBS96 counts file, generate a barplot.
+"""
+
 import argparse
 from pathlib import Path
 import sys
