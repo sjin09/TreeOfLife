@@ -2,15 +2,19 @@
 
 import argparse
 from pathlib import Path
+from typing import List, Optional
 import sys
 
 from ete3 import Tree
 import pandas as pd
 
-TAXONOMIC_RANKS = ['Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Species']
+TAXONOMIC_RANKS = ["Domain", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
 
 
-def parse_args(args):
+def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
+    if args is None:
+        args = sys.argv[1:]
+
     parser = argparse.ArgumentParser(
         description="Get newick tree from taxonomic classification",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -34,7 +38,7 @@ def parse_args(args):
 
 
 # Use ete3
-def write_species_taxonomic_tree(input_path: Path, output_path: Path) -> None:
+def write_species_tree(input_path: Path, output_path: Path) -> None:
     def get_child(parent_clade, child_name: str):
         """
         Find the child with the specified name or create a new one if not found.
@@ -50,6 +54,16 @@ def write_species_taxonomic_tree(input_path: Path, output_path: Path) -> None:
 
     # Import and iterate through the DToL samplesheet
     df = pd.read_csv(input_path)
+    df["Species"] = df.apply(
+        lambda row: "{}/{}/{}/{}/{}".format(
+            row["Kingdom"],
+            row["Phylum"],
+            row["Class"],
+            row["Order"],
+            row["Species"].replace(" ", "_"),
+        ),
+        axis=1,
+    )
     for (_idx, row) in df.iterrows():
         current_node = root
         sample_taxonomic_ranks = list(row[TAXONOMIC_RANKS])
@@ -59,16 +73,15 @@ def write_species_taxonomic_tree(input_path: Path, output_path: Path) -> None:
             current_node = get_child(current_node, rank)
 
     # Export tree to newick format
-    # format = 4 compatible with Julia Phylo package
-    root.write(format=4, outfile=str(output_path))
+    root.write(format=1, outfile=str(output_path))
 
     # Show tree for debugging
     # root.show()
 
 
 def main() -> int:
-    options = parse_args(sys.argv)
-    write_species_taxonomic_tree(options.input, options.output)
+    options = parse_args()
+    write_species_tree(options.input, options.output)
     return 0
 
 

@@ -2,6 +2,7 @@
 
 import argparse
 from pathlib import Path
+from typing import List, Optional
 import sys
 
 from ete3 import Tree
@@ -11,7 +12,7 @@ import pandas as pd
 TAXONOMIC_RANKS = ['Kingdom', 'Phylum', 'Class', 'Order']
 
 
-def parse_args(args):
+def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Get newick tree from taxonomic classification",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -35,7 +36,7 @@ def parse_args(args):
 
 
 # Use ete3
-def write_taxonomic_tree(input_path: Path, output_path: Path) -> None:
+def write_order_tree(input_path: Path, output_path: Path) -> None:
     def get_child(parent_clade, child_name: str):
         """
         Find the child with the specified name or create a new one if not found.
@@ -51,24 +52,32 @@ def write_taxonomic_tree(input_path: Path, output_path: Path) -> None:
 
     # Import and iterate through the DToL samplesheet
     df = pd.read_csv(input_path)
+    df["Order"] = df.apply(
+        lambda row: f"{row['Kingdom']}/{row['Phylum']}/{row['Class']}/{row['Order']}",
+        axis=1,
+    )
     for (_idx, row) in df.iterrows():
         current_node = root
         sample_taxonomic_ranks = list(row[TAXONOMIC_RANKS])
         for rank in sample_taxonomic_ranks:
             if rank == ".":
                 continue
-            current_node = get_child(current_node, rank)
+            if rank == "Order":
+                if row["Class"] == "Insecta":
+                    current_node = get_child(current_node, rank)
+            else:
+                current_node = get_child(current_node, rank)
 
     # Export tree to newick format
     root.write(format=1, outfile=str(output_path))
 
     # Show tree for debugging
-    root.show()
+    # root.show()
 
 
 def main() -> int:
     options = parse_args(sys.argv)
-    write_taxonomic_tree(options.input, options.output)
+    write_order_tree(options.input, options.output)
     return 0
 
 
