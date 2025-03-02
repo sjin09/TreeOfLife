@@ -33,7 +33,6 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
         required=True,
         help="file to write newick tree (.nwk)",
     )
-    args = args[1:]
     return parser.parse_args(args)
 
 
