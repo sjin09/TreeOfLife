@@ -41,7 +41,9 @@ FILL_COLOURS = ["#F21D1D", "#2AA4BF"]
 RTOL_SIGS = ["sTOL2", "sTOL4", "sTOL7"]
 # GERMLINE_FILL_COLOURS = ["#F25757", "#1C588C"]
 # SOMATIC_FILL_COLOURS = ["#F21D1D", "#2AA4BF"]
-TAXONOMIC_RANKS = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
+
+SAMPLE_LEVEL_TAXONOMIC_RANKS = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Sample"]
+SPECIES_LEVEL_TAXONOMIC_RANKS = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
 
 
 def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
@@ -146,6 +148,36 @@ def get_samples_per_species(taxonomic_classification_path: Path, samples: Set[st
     return dict(samples_per_species)
 
 
+def get_sample_tree(taxonomic_classification_path: Path, samples: Set[str]) -> ete3.Tree:
+    def get_child(parent_clade, child_name: str):
+        """
+        Find the child with the specified name or create a new one if not found.
+        """
+        for child in parent_clade.get_children():
+            if child.name == child_name:
+                return child
+        new_child = parent_clade.add_child(name=child_name)
+        return new_child
+
+    # Initialize tree
+    root = ete3.Tree(name="root")
+
+    # Import and iterate through the DToL samplesheet
+    df = pd.read_csv(taxonomic_classification_path)
+    for (_idx, row) in df.iterrows():
+        sample = row["Sample"]
+        if sample not in samples:
+            continue
+        current_node = root
+        for taxonomic_rank in SAMPLE_LEVEL_TAXONOMIC_RANKS:
+            sample_taxonomic_rank = row[taxonomic_rank]
+            if sample_taxonomic_rank == ".":
+                raise ValueError(f"Taxonomic rank {taxonomic_rank} is undefined for sample {sample}")
+            current_node = get_child(current_node, sample_taxonomic_rank)
+
+    return root
+
+
 def get_species_tree(taxonomic_classification_path: Path, samples: Set[str]) -> ete3.Tree:
     def get_child(parent_clade, child_name: str):
         """
@@ -167,11 +199,12 @@ def get_species_tree(taxonomic_classification_path: Path, samples: Set[str]) -> 
         if sample not in samples:
             continue
         current_node = root
-        sample_taxonomic_ranks = list(row[TAXONOMIC_RANKS])
-        for rank in sample_taxonomic_ranks:
-            if rank == ".":
-                continue
-            current_node = get_child(current_node, rank)
+        sample_taxonomic_ranks = list(row[SPECIES_LEVEL_TAXONOMIC_RANKS])
+        for taxonomic_rank in SAMPLE_LEVEL_TAXONOMIC_RANKS:
+            sample_taxonomic_rank = row[taxonomic_rank]
+            if sample_taxonomic_rank == ".":
+                raise ValueError(f"Taxonomic rank {taxonomic_rank} is undefined for sample {sample}")
+            current_node = get_child(current_node, sample_taxonomic_rank)
 
     return root
 
@@ -215,12 +248,6 @@ def get_Abouheif_A_matrix(tree: ete3.TreeNode) -> np.ndarray:
     # Calculate the diagonal scores for originality of the species
     for k in range(n_leaves):
         mtx[k, k] = 1 - np.sum(mtx[k, :])  # row and columns sums to 1
-
-    # root = tree.get_tree_root()
-    # for k in range(n_leaves):
-    #     p = set(get_branch_path(tree, leaves[k], root))
-    #     ddp = [len(node.get_children()) for node in p]
-    #     mtx[k, k] = 1 / np.prod(ddp)
 
     return mtx
 
@@ -268,29 +295,48 @@ def get_Abouheif_C_mean(
 
     # Calculate Abouheif's C_mean measure of phylogenetic signal for each signature
     for sig in sigs:
-        species_sig_exps = []
-
-        # Calculate the signature exposure for each species
-        for leaf_name in tree.iter_leaf_names():
-            sample_sig_exps = []
-            samples = samples_per_species[leaf_name]
-            for sample in samples:
-                sample_sig_exps.append(exp_per_sig_per_sample[sample][sig])
-            species_sig_exps.append(np.mean(sample_sig_exps))
+        # Get signature exposure for each species
+        # species_sig_exps = []
+        # for leaf_name in tree.iter_leaf_names():
+        #     sample_sig_exps = []
+        #     samples = samples_per_species[leaf_name]
+        #     for sample in samples:
+        #         sample_sig_exps.append(exp_per_sig_per_sample[sample][sig])
+        #     species_sig_exps.append(np.mean(sample_sig_exps))
 
         # Perform Z-score normalisation
-        species_sig_exps = [
-            (x - np.mean(species_sig_exps)) / np.std(species_sig_exps, ddof=0) for x in species_sig_exps
+        # species_sig_exps = [
+        #     (x - np.mean(species_sig_exps)) / np.std(species_sig_exps, ddof=0) for x in species_sig_exps
+        # ]
+
+        # Calculate the score for phylogenetic signal
+        # C_mean = np.dot(np.dot(species_sig_exps, A_mtx), species_sig_exps) / np.sum(A_mtx)
+
+        # Perform permutation test to calculate p values
+        # null_C = np.zeros(iter)
+        # for _ in range(iter):
+        #     np.random.shuffle(species_sig_exps)
+        #     null_C[_] = np.dot(np.dot(species_sig_exps, A_mtx), species_sig_exps) / np.sum(A_mtx)
+        # p_val = np.sum(C_mean < null_C) / iter
+        # C_means.append(C_mean)
+        # p_vals.append(p_val)
+
+        # Get signature exposure for each sample
+        sample_sig_exps = [exp_per_sig_per_sample[leaf_name][sig] for leaf_name in tree.iter_leaf_names()]
+
+        # Perform Z-score normalisation
+        sample_sig_exps = [
+            (x - np.mean(sample_sig_exps)) / np.std(sample_sig_exps, ddof=0) for x in sample_sig_exps
         ]
 
         # Calculate the score for phylogenetic signal
-        C_mean = np.dot(np.dot(species_sig_exps, A_mtx), species_sig_exps) / np.sum(A_mtx)
+        C_mean = np.dot(np.dot(sample_sig_exps, A_mtx), sample_sig_exps) / np.sum(A_mtx)
 
         # Perform permutation test to calculate p values
         null_C = np.zeros(iter)
         for _ in range(iter):
-            np.random.shuffle(species_sig_exps)
-            null_C[_] = np.dot(np.dot(species_sig_exps, A_mtx), species_sig_exps) / np.sum(A_mtx)
+            np.random.shuffle(sample_sig_exps)
+            null_C[_] = np.dot(np.dot(sample_sig_exps, A_mtx), sample_sig_exps) / np.sum(A_mtx)
         p_val = np.sum(C_mean < null_C) / iter
         C_means.append(C_mean)
         p_vals.append(p_val)
@@ -359,7 +405,7 @@ def get_phylogenetic_signal(
 ):
     exp_per_sig_per_sample, samples, sigs = get_exposure_per_signature_per_sample(signature_exposure_path, is_somatic)
     samples_per_species = get_samples_per_species(taxonomic_classification_path, samples)
-    tree = get_species_tree(taxonomic_classification_path, samples)
+    tree = get_sample_tree(taxonomic_classification_path, samples)
     C_means, p_vals, q_vals = get_Abouheif_C_mean(tree, exp_per_sig_per_sample, sigs, samples_per_species, 1000)
     write_Abouheif_C_mean(sigs, C_means, p_vals, q_vals, output_path)
     plot_Abouheif_C_mean(output_path, pdf_path, is_somatic)
