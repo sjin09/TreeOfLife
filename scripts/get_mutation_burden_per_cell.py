@@ -40,13 +40,6 @@ def parse_args(args):
         help="sample id"
     )
     parser.add_argument(
-        "--ploidy",
-        type=int,
-        default=2,
-        required=False,
-        help="number of complete sets of chromosomes in a cell"
-    )
-    parser.add_argument(
         "-t",
         "--threads",
         type=int,
@@ -175,7 +168,7 @@ def get_somatic_mutation_rate_per_trinucleotide(input_path: Path) -> Dict[str, f
     return somatic_mutation_rate_per_tri
 
 
-def get_mutation_burden_per_genome(
+def get_mutation_burden_per_cell(
     somatic_mutation_rate_per_tri: Dict[str, float],
     ref_tri_count_per_tri: Dict[str, int]
 ) -> float:
@@ -185,21 +178,10 @@ def get_mutation_burden_per_genome(
     return burden
 
 
-def get_mutation_burden_per_cell(
-    ploidy: int,
-    soamtic_mutation_rate_per_tri: Dict[str, float],
-    count_per_tri: Dict[str, int]
-) -> float:
-    burden_per_genome = get_mutation_burden_per_genome(soamtic_mutation_rate_per_tri, count_per_tri)
-    burden_per_cell = ploidy * burden_per_genome
-    return burden_per_cell
-
-
 def write_mutation_burden_per_cell(
     input_path: Path,
     ref_fasta_path: Path,
     target_path: Path,
-    ploidy: int,
     sample: str,
     thread_count: int,
     output_path: Path
@@ -210,7 +192,7 @@ def write_mutation_burden_per_cell(
         target_path,
         thread_count
     )
-    burden_per_cell = get_mutation_burden_per_cell(ploidy, somatic_mutation_rate_per_tri, ref_tri_count_per_tri)
+    burden_per_cell = get_mutation_burden_per_cell(somatic_mutation_rate_per_tri, ref_tri_count_per_tri)
     with open(output_path, "w") as outfile:
         outfile.write(f"{sample}\t{burden_per_cell}\n")
 
@@ -221,7 +203,6 @@ def main() -> int:
         options.input,
         options.ref_fasta,
         options.target,
-        options.ploidy,
         options.sample,
         options.threads,
         options.output
