@@ -24,13 +24,13 @@ def parse_args(args):
         "--sig1",
         type=Path,
         required=True,
-        help="Path to the first HDP somatic mutational signature file",
+        help="Path to the un-normalised HDP somatic mutational signature file",
     )
     parser.add_argument(
         "--sig2",
         type=Path,
         required=True,
-        help="Path to the second HDP somatic mutational signature file",
+        help="Path to the normalised HDP somatic mutational signature file",
     )
     parser.add_argument(
         "-o",
