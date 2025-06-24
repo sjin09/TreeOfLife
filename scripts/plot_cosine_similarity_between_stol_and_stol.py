@@ -48,38 +48,29 @@ def calculate_cosine_similarity_between_signatures(sig1_path: Path, sig2_path: P
     sig1 = pd.read_csv(sig1_path, sep=",")
     sig2 = pd.read_csv(sig2_path, sep=",")
 
+    # Change first column values
+    sig1.iloc[:, 0] = SBS96_CLASSIFICATIONS
+    sig2.iloc[:, 0] = SBS96_CLASSIFICATIONS
+    
+    # Change column name
+    sig1.rename(columns={sig1.columns[0]: 'SBS96'}, inplace=True)
+    sig2.rename(columns={sig2.columns[0]: 'SBS96'}, inplace=True)
+
+    # Assign first column as index
+    sig1 = sig1.set_index("SBS96")
+    sig2 = sig2.set_index("SBS96")
+
     # calculate cosine similarity
     sig_sim_mtx = cosine_similarity(sig1.values.T, sig2.values.T)
     return sig_sim_mtx
-
-
-def calculate_cosine_similarity_between_exposures(exp1_path: Path, exp2_path: Path) -> pd.DataFrame:
-    # Load the exposures
-    exp1 = pd.read_csv(exp1_path, sep=",", index_col=0)
-    exp2 = pd.read_csv(exp2_path, sep=",", index_col=0)
-
-    # Get samples
-    exp1_samples = exp1.index
-    exp2_samples = exp2.index
-
-    # Get the intersection of samples
-    common_samples = exp1_samples.intersection(exp2_samples)
-
-    # Filtered and ordered the exposures to only include common samples
-    exp1 = exp1.loc[common_samples]
-    exp2 = exp2.loc[common_samples]
-
-    # calculate cosine similarity
-    exp_sim_mtx = cosine_similarity(exp1.values.T, exp2.values.T)
-    return exp_sim_mtx
 
 
 def plot_sim_heatmap(sig_sim_mtx: pd.DataFrame, output_path: Path):
 
     # Set the row and column names
     nrows, ncols = sig_sim_mtx.shape
-    row_names = [f"HDP{i}" for i in range(1, nrows+1)]
-    column_names = [f"HDP{i}" for i in range(1, ncols+1)]
+    row_names = [f"sTOL{i}" for i in range(1, nrows+1)]
+    column_names = [f"sTOL{i}" for i in range(1, ncols+1)]
 
     # Create a heatmap using matplotlib
     fig, ax = plt.subplots(figsize=(24, 20))
@@ -91,7 +82,8 @@ def plot_sim_heatmap(sig_sim_mtx: pd.DataFrame, output_path: Path):
         spine.set_visible(False)
 
     # draw the heatmap
-    im = ax.imshow(sig_sim_mtx, cmap="Blues", vmin=0.4, vmax=1.0, aspect='auto')
+    # im = ax.imshow(sig_sim_mtx, cmap="Blues", vmin=0.4, vmax=1.0, aspect='auto')
+    im = ax.imshow(sig_sim_mtx, cmap="YlGnBu", vmin=0.4, vmax=1.0, aspect='auto')
 
     # —— Add white gridlines between cells ——
     ax.set_xticks(np.arange(-.5, len(column_names), 1), minor=True)
@@ -108,8 +100,8 @@ def plot_sim_heatmap(sig_sim_mtx: pd.DataFrame, output_path: Path):
     ax.set_yticklabels(row_names)
 
     # Set the title and labels
-    ax.set_xlabel("\nHDP somatic mutational signature set 2\n", fontsize=14, labelpad=10)
-    ax.set_ylabel("\nHDP somatic mutational signature set 1\n", fontsize=14, labelpad=10)
+    ax.set_xlabel("\nSomatic mutational signatures extracted from normalised counts\n", fontsize=14, labelpad=10)
+    ax.set_ylabel("\nSomatic mutational signatures extracted from raw counts\n", fontsize=14, labelpad=10)
 
     # Add colorbar
     # cbar = fig.colorbar(im, ax=ax, orientation='horizontal')

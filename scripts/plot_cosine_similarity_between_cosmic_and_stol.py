@@ -104,10 +104,9 @@ def plot_sim_heatmap(
 
     # Set the title and labels
     ax.set_xlabel("\nTree of life somatic mutational signatures\n", fontsize=14, labelpad=10)
-    ax.set_ylabel("\nCOSMIC somatic mutational signature\n", fontsize=14, labelpad=10)
+    ax.set_ylabel("\nCOSMIC somatic mutational signatures\n", fontsize=14, labelpad=10)
 
     # Add colorbar
-    # cbar = fig.colorbar(im, ax=ax, orientation='horizontal')
     cbar = fig.colorbar(im, ax=ax, orientation="horizontal", fraction=0.02, pad=0.08, shrink=0.7)
     cbar.set_label("Cosine similarity", fontsize=14)
 

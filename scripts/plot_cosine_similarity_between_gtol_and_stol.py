@@ -68,6 +68,14 @@ def get_sbs96_to_sbs52_lookup_table(sbs96_to_sbs52_path: Path) -> Dict[str, str]
     return sbs96_to_sbs52_lookup_table
 
 
+def load_gtol_sigs(gtol_sig_path: Path, sbs52_classifications: List[str]):
+    gtol_sbs52_sigs = pd.read_csv(gtol_sig_path, sep=",")
+    gtol_sbs52_sigs.iloc[:, 0] = sbs52_classifications
+    gtol_sbs52_sigs.rename(columns={gtol_sbs52_sigs.columns[0]: 'SBS52'}, inplace=True)
+    gtol_sbs52_sigs = gtol_sbs52_sigs.set_index("SBS52")
+    return gtol_sbs52_sigs
+
+
 def load_stol_sigs(
     stol_sig_path: Path,
     sbs96_to_sbs52_path: Dict[str, str],
@@ -77,7 +85,7 @@ def load_stol_sigs(
     stol_sbs96_sigs = pd.read_csv(stol_sig_path, sep=",")
     stol_sbs96_sigs.iloc[:, 0] = SBS96_CLASSIFICATIONS
     stol_sbs96_sigs.rename(columns={stol_sbs96_sigs.columns[0]: 'SBS96'}, inplace=True)
-
+    
     # Load the SBS96 to SBS52 lookup table
     sbs96_to_sbs52_lookup_table = get_sbs96_to_sbs52_lookup_table(sbs96_to_sbs52_path)
 
@@ -109,11 +117,11 @@ def calculate_cosine_similarity_between_signatures(
     sbs52_classifications = [line.rstrip() for line in open(sbs52_path)]
 
     # Load signatures
-    gtol_sigs = pd.read_csv(gtol_sig_path, sep=",")
-    stol_sigs = load_stol_sigs(stol_sig_path, sbs96_to_sbs52_path, sbs52_classifications)
+    gtol_sbs52_sigs = load_gtol_sigs(gtol_sig_path, sbs52_classifications)
+    stol_sbs52_sigs = load_stol_sigs(stol_sig_path, sbs96_to_sbs52_path, sbs52_classifications)
 
     # calculate cosine similarity
-    sig_sim_mtx = cosine_similarity(stol_sigs.values.T, gtol_sigs.values.T)
+    sig_sim_mtx = cosine_similarity(gtol_sbs52_sigs.values.T, stol_sbs52_sigs.values.T)
     return sig_sim_mtx
 
 
@@ -121,8 +129,8 @@ def plot_sim_heatmap(sig_sim_mtx: pd.DataFrame, output_path: Path):
 
     # Set the row and column names
     nrows, ncols = sig_sim_mtx.shape
-    row_names = [f"sTOL{i}" for i in range(1, nrows+1)]
-    column_names = [f"gTOL{i}" for i in range(1, ncols+1)]
+    row_names = [f"gTOL{i}" for i in range(1, nrows+1)]
+    column_names = [f"sTOL{i}" for i in range(1, ncols+1)]
 
     # Create a heatmap using matplotlib
     fig, ax = plt.subplots(figsize=(24, 20))
@@ -134,7 +142,7 @@ def plot_sim_heatmap(sig_sim_mtx: pd.DataFrame, output_path: Path):
         spine.set_visible(False)
 
     # draw the heatmap
-    im = ax.imshow(sig_sim_mtx, cmap="Greens", vmin=0.4, vmax=1.0, aspect='auto')
+    im = ax.imshow(sig_sim_mtx, cmap="BuPu", vmin=0.4, vmax=1.0, aspect='auto')
 
     # —— Add white gridlines between cells ——
     ax.set_xticks(np.arange(-.5, len(column_names), 1), minor=True)
@@ -151,11 +159,10 @@ def plot_sim_heatmap(sig_sim_mtx: pd.DataFrame, output_path: Path):
     ax.set_yticklabels(row_names)
 
     # Set the title and labels
-    ax.set_xlabel("\nHDP somatic mutational signature set\n", fontsize=14, labelpad=10)
-    ax.set_ylabel("\nHDP germline mutational signature set\n", fontsize=14, labelpad=10)
+    ax.set_xlabel("\nSomatic mutational signatures\n", fontsize=14, labelpad=10)
+    ax.set_ylabel("\nGermline mutational signatures\n", fontsize=14, labelpad=10)
 
     # Add colorbar
-    # cbar = fig.colorbar(im, ax=ax, orientation='horizontal')
     cbar = fig.colorbar(im, ax=ax, orientation='horizontal', fraction=0.02, pad=0.08, shrink=0.7)
     cbar.set_label('Cosine similarity', fontsize=14)
 
