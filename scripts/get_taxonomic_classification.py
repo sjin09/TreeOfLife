@@ -15,28 +15,12 @@ STATUS_SUMMARY = set(["1 submitted", "2 curated", "3 curation"])
 
 def parse_args(args):
     parser = argparse.ArgumentParser(
-        description="Get taxonomic classification per sample",
-        formatter_class=argparse.RawDescriptionHelpFormatter
+        description="Get taxonomic classification per sample", formatter_class=argparse.RawDescriptionHelpFormatter
     )
+    parser.add_argument("-i", "--input", type=Path, required=True, help="file to read DToL samplesheet")
+    parser.add_argument("--samples", type=Path, required=True, help="a list of samples, separated by new line")
     parser.add_argument(
-        "-i",
-        "--input",
-        type=Path,
-        required=True,
-        help="file to read DToL samplesheet"
-    )
-    parser.add_argument(
-        "--samples",
-        type=Path,
-        required=True,
-        help="a list of samples, separated by new line"
-    )
-    parser.add_argument(
-        "-o",
-        "--output",
-        type=Path,
-        required=True,
-        help="file to write taxonomic classifications per sample"
+        "-o", "--output", type=Path, required=True, help="file to write taxonomic classifications per sample"
     )
     args = args[1:]
     return parser.parse_args(args)
@@ -92,6 +76,7 @@ def get_taxonomy_data(family_taxon: str):
 def get_taxonomic_classification_per_sample(
     input_path: Path, reference_sample_lookup: Dict[str, str]
 ) -> Dict[str, TaxonomicClassification]:
+
     # Initialize variables
     fieldnames = [
         "Sample",
@@ -106,7 +91,6 @@ def get_taxonomic_classification_per_sample(
         "Species",
     ]
     reference_samples = set(reference_sample_lookup.values())
-    seen = set()
     taxonomic_classification_per_sample = {}
 
     # Write taxonomic classification per reference sample
@@ -121,15 +105,18 @@ def get_taxonomic_classification_per_sample(
         df = pd.read_csv(input_path)
         for (_idx, row) in df.iterrows():
             sample = row["sample"]
-            if sample in seen:
-                continue
             if sample not in reference_samples:
                 continue
-            if not sample.startswith("ilYpoPade"):  # TODO
-                continue
+            # if not sample.startswith("ilYpoPade"):  # TODO
+            #     continue
             status_summary = row["statussummary"]
             if status_summary not in STATUS_SUMMARY:
                 continue
+
+            # Initialize variables
+            domain = kingdom = phylum = taxonomic_class = order = family = genus = species = common_name = "."
+
+            # Assign variables values from the samplesheet
             family = row["family"]
             genus = row["genus"]
             species = row["species"]
@@ -139,9 +126,15 @@ def get_taxonomic_classification_per_sample(
                 common_name = "."
             else:
                 common_name = common_name.capitalize()
+
+            # Addresing a bug in the original samplesheet
+            if sample.startswith("ilYpoPade"):
+                genus = "Yponomeuta"
+                species = "Yponomeuta padella"
+
+            # Make API request
             ncbi_response = get_taxonomy_data(family_taxon)
             try:
-                seen.add(sample)
                 ncbi_taxonomic_records = ncbi_response["records"][0]["record"]["lineage"]
                 for taxonomy_record in ncbi_taxonomic_records:
                     taxonomic_rank = taxonomy_record["taxon_rank"]
@@ -153,10 +146,7 @@ def get_taxonomic_classification_per_sample(
                         taxonomic_class = taxonomy_record["scientific_name"]
                     elif "order" == taxonomic_rank:
                         order = taxonomy_record["scientific_name"]
-                # Addresing a bug in the original samplesheet
-                if sample.startswith("ilYpoPade"):
-                    genus = "Yponomeuta"
-                    species = "Yponomeuta padella"
+
                 sample_taxanomic_classification = TaxonomicClassification(
                     kingdom=kingdom,
                     phylum=phylum,
@@ -165,21 +155,24 @@ def get_taxonomic_classification_per_sample(
                     family=family,
                     genus=genus,
                     species=species,
-                    common_name=common_name
+                    common_name=common_name,
                 )
                 taxonomic_classification_per_sample[sample] = sample_taxanomic_classification
-                writer.writerow({
-                    "Sample": sample,
-                    "Common name": sample_taxanomic_classification.common_name,
-                    "Domain": sample_taxanomic_classification.domain,
-                    "Kingdom": sample_taxanomic_classification.kingdom,
-                    "Phylum": sample_taxanomic_classification.phylum,
-                    "Class": sample_taxanomic_classification.taxonomic_class,
-                    "Order": sample_taxanomic_classification.order,
-                    "Family": sample_taxanomic_classification.family,
-                    "Genus": sample_taxanomic_classification.genus,
-                    "Species": sample_taxanomic_classification.species
-                })
+
+                writer.writerow(
+                    {
+                        "Sample": sample,
+                        "Common name": sample_taxanomic_classification.common_name,
+                        "Domain": sample_taxanomic_classification.domain,
+                        "Kingdom": sample_taxanomic_classification.kingdom,
+                        "Phylum": sample_taxanomic_classification.phylum,
+                        "Class": sample_taxanomic_classification.taxonomic_class,
+                        "Order": sample_taxanomic_classification.order,
+                        "Family": sample_taxanomic_classification.family,
+                        "Genus": sample_taxanomic_classification.genus,
+                        "Species": sample_taxanomic_classification.species,
+                    }
+                )
             except IndexError:
                 raise ValueError(f"API request for sample '{sample}' failed")
 
@@ -203,7 +196,6 @@ def write_taxonomic_classification(input_path: Path, samples_path: Path, output_
     ]
     reference_sample_lookup = get_reference_sample_lookup(samples_path)
     taxonomic_classification_per_sample = get_taxonomic_classification_per_sample(input_path, reference_sample_lookup)
-
     with open(output_path, "w") as outfile:
         # Create a DictWriter object
         writer = csv.DictWriter(outfile, fieldnames=fieldnames)
@@ -216,19 +208,21 @@ def write_taxonomic_classification(input_path: Path, samples_path: Path, output_
             taxonomic_classification = taxonomic_classification_per_sample.get(reference_sample)
             if taxonomic_classification is None:
                 continue
-            writer.writerow({
-                "Reference sample": reference_sample,
-                "Sample": sample,
-                "Common name": taxonomic_classification.common_name,
-                "Domain": taxonomic_classification.domain,
-                "Kingdom": taxonomic_classification.kingdom,
-                "Phylum": taxonomic_classification.phylum,
-                "Class": taxonomic_classification.taxonomic_class,
-                "Order": taxonomic_classification.order,
-                "Family": taxonomic_classification.family,
-                "Genus": taxonomic_classification.genus,
-                "Species": taxonomic_classification.species
-            })
+            writer.writerow(
+                {
+                    "Reference sample": reference_sample,
+                    "Sample": sample,
+                    "Common name": taxonomic_classification.common_name,
+                    "Domain": taxonomic_classification.domain,
+                    "Kingdom": taxonomic_classification.kingdom,
+                    "Phylum": taxonomic_classification.phylum,
+                    "Class": taxonomic_classification.taxonomic_class,
+                    "Order": taxonomic_classification.order,
+                    "Family": taxonomic_classification.family,
+                    "Genus": taxonomic_classification.genus,
+                    "Species": taxonomic_classification.species,
+                }
+            )
 
 
 def main() -> int:
