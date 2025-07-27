@@ -38,10 +38,6 @@ import plotnine as p9
 from statsmodels.stats.multitest import multipletests
 
 FILL_COLOURS = ["#F21D1D", "#2AA4BF"]
-RTOL_SIGS = ["sTOL2", "sTOL4", "sTOL7"]
-# GERMLINE_FILL_COLOURS = ["#F25757", "#1C588C"]
-# SOMATIC_FILL_COLOURS = ["#F21D1D", "#2AA4BF"]
-
 SAMPLE_LEVEL_TAXONOMIC_RANKS = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Sample"]
 SPECIES_LEVEL_TAXONOMIC_RANKS = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
 
@@ -66,6 +62,7 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
         required=True,
         help="file to read germline or somatic mutational signature exposures",
     )
+    parser.add_argument("--rtol-sigs", type=str, required=True, help="file to read a list of artefactual signatures")
     parser.add_argument("--pdf", type=str, required=True, help="file to plot")
     parser.add_argument("-o", "--output", type=str, required=True, help="file to write")
     parser.add_argument("--is-somatic", required=False, action="store_true", help="is somatic mutational signature")
@@ -92,6 +89,7 @@ def get_branch_path(tree: ete3.TreeNode, node1: ete3.TreeNode, node2: ete3.TreeN
 
 def get_exposure_per_signature_per_sample(
     signature_exposures_path: Path,
+    rtol_sig_path: Path,
     is_somatic: bool,
 ) -> Tuple[Dict[str, Dict[str, float]], Set[str], List[str]]:
     # Initialize variable
@@ -100,19 +98,22 @@ def get_exposure_per_signature_per_sample(
     # Read the signature exposures file
     df = pd.read_csv(signature_exposures_path)
 
+    # Load artefactual signatures
+    rtol_sigs = [line.rstrip() for line in open(rtol_sig_path).readlines()]
+
     # Rename the columns
     if is_somatic:
-        df.columns = ["Sample"] + ["sTOL" + col for col in df.columns[1:]]
-        df = df.drop(columns=RTOL_SIGS)  # Remove the RTOL signatures
-        col_names = ["Sample"] + [f"sTOL{op_idx}" for op_idx, _col_name in enumerate(df.columns[1:])]
+        df.columns = ["Sample"] + ["sToL" + col for col in df.columns[1:]]
+        df = df.drop(columns=rtol_sigs)  # Remove the rtol signatures
+        col_names = ["Sample"] + [f"sToL{op_idx}" for op_idx, _col_name in enumerate(df.columns[1:])]
         with open("stol_signature_mapping_lookup.tsv", "w") as outfile:
             for (col_name_i, col_name_j) in zip(df.columns[1:], col_names[1:]):
                 outfile.write(f"{col_name_i}\t{col_name_j}\n")
         df.columns = col_names
-        df = df.drop(columns="sTOL0")  # Remove the averaging component
+        df = df.drop(columns="sToL0")  # Remove the averaging component
     else:
-        df.columns = ["Sample"] + ["gTOL" + col for col in df.columns[1:]]
-        df = df.drop(columns="gTOL0")  # Remove the averaging component
+        df.columns = ["Sample"] + ["gToL" + col for col in df.columns[1:]]
+        df = df.drop(columns="gToL0")  # Remove the averaging component
 
     # Change sample names
     df["Sample"] = df["Sample"].apply(lambda x: x.split(".")[1] if "." in x else x)
@@ -325,9 +326,7 @@ def get_Abouheif_C_mean(
         sample_sig_exps = [exp_per_sig_per_sample[leaf_name][sig] for leaf_name in tree.iter_leaf_names()]
 
         # Perform Z-score normalisation
-        sample_sig_exps = [
-            (x - np.mean(sample_sig_exps)) / np.std(sample_sig_exps, ddof=0) for x in sample_sig_exps
-        ]
+        sample_sig_exps = [(x - np.mean(sample_sig_exps)) / np.std(sample_sig_exps, ddof=0) for x in sample_sig_exps]
 
         # Calculate the score for phylogenetic signal
         C_mean = np.dot(np.dot(sample_sig_exps, A_mtx), sample_sig_exps) / np.sum(A_mtx)
@@ -359,9 +358,7 @@ def write_Abouheif_C_mean(
 
 def plot_Abouheif_C_mean(cmean_path: Path, pdf_path: Path, is_somatic: bool) -> None:
     df = pd.read_csv(cmean_path)
-    df["q_bin"] = pd.cut(
-        df["q_value"], bins=[0, 0.01, np.inf], labels=["< 0.01", ">= 0.01"], right=False
-    )
+    df["q_bin"] = pd.cut(df["q_value"], bins=[0, 0.01, np.inf], labels=["< 0.01", ">= 0.01"], right=False)
     df["q_bin"] = df["q_bin"].cat.remove_unused_categories()
 
     # Reorder 'Signature' based on 'C_mean'
@@ -382,15 +379,9 @@ def plot_Abouheif_C_mean(cmean_path: Path, pdf_path: Path, is_somatic: bool) -> 
     )
 
     if is_somatic:
-        plot = (
-            base_plot
-            + p9.labs(x="\nSomatic mutational signatures\n", y="\nAbouheif's C mean\n")
-        )
+        plot = base_plot + p9.labs(x="\nSomatic mutational signatures\n", y="\nAbouheif's C mean\n")
     else:
-        plot = (
-            base_plot
-            + p9.labs(x="\nGermline mutational signatures\n", y="\nAbouheif's C mean\n")
-        )
+        plot = base_plot + p9.labs(x="\nGermline mutational signatures\n", y="\nAbouheif's C mean\n")
 
     # Generate the plot
     plot.save(pdf_path, width=22, height=12)
@@ -399,11 +390,14 @@ def plot_Abouheif_C_mean(cmean_path: Path, pdf_path: Path, is_somatic: bool) -> 
 def get_phylogenetic_signal(
     taxonomic_classification_path: Path,
     signature_exposure_path: Path,
-    is_somatic: bool,
+    rtol_sig_path: Path,
     pdf_path: Path,
     output_path: Path,
+    is_somatic: bool,
 ):
-    exp_per_sig_per_sample, samples, sigs = get_exposure_per_signature_per_sample(signature_exposure_path, is_somatic)
+    exp_per_sig_per_sample, samples, sigs = get_exposure_per_signature_per_sample(
+        signature_exposure_path, rtol_sig_path, is_somatic
+    )
     samples_per_species = get_samples_per_species(taxonomic_classification_path, samples)
     tree = get_sample_tree(taxonomic_classification_path, samples)
     C_means, p_vals, q_vals = get_Abouheif_C_mean(tree, exp_per_sig_per_sample, sigs, samples_per_species, 1000)
@@ -416,9 +410,10 @@ def main() -> int:
     get_phylogenetic_signal(
         taxonomic_classification_path=options.taxonomic_classification,
         signature_exposure_path=options.signature_exposures,
-        is_somatic=options.is_somatic,
+        rtol_sig_path=options.rtol_sigs,
         pdf_path=options.pdf,
         output_path=options.output,
+        is_somatic=options.is_somatic,
     )
     return 0
 
