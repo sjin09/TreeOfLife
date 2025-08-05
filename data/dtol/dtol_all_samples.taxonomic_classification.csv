@@ -79,6 +79,7 @@ drMalSylv7,drMalSylv7,.,Eukaryota,Viridiplantae,Streptophyta,Magnoliopsida,Rosal
 drMedArab1,drMedArab1,.,Eukaryota,Viridiplantae,Streptophyta,Magnoliopsida,Fabales,Fabaceae,Medicago,Medicago arabica
 drMedLupu1,drMedLupu1,.,Eukaryota,Viridiplantae,Streptophyta,Magnoliopsida,Fabales,Fabaceae,Medicago,Medicago lupulina
 drParJuda1,drParJuda1,.,Eukaryota,Viridiplantae,Streptophyta,Magnoliopsida,Rosales,Urticaceae,Parietaria,Parietaria judaica
+drPotAnse1,drPotAnse1,.,Eukaryota,Viridiplantae,Streptophyta,Magnoliopsida,Rosales,Rosaceae,Potentilla,Potentilla anserina
 drPotSter1,drPotSter1,.,Eukaryota,Viridiplantae,Streptophyta,Magnoliopsida,Rosales,Rosaceae,Potentilla,Potentilla sterilis
 drPruPadu1,drPruPadu1,Bird cherry,Eukaryota,Viridiplantae,Streptophyta,Magnoliopsida,Rosales,Rosaceae,Prunus,Prunus padus
 drPyrComm1,drPyrComm1,Pear,Eukaryota,Viridiplantae,Streptophyta,Magnoliopsida,Rosales,Rosaceae,Pyrus,Pyrus communis
@@ -92,6 +93,7 @@ eaLuiSars1,eaLuiSars1,(a starfish),Eukaryota,Metazoa,Echinodermata,Asteroidea,Pa
 eaMarGlac1,eaMarGlac1,Spiny starfish,Eukaryota,Metazoa,Echinodermata,Asteroidea,Forcipulatida,Asteriidae,Marthasterias,Marthasterias glacialis
 ecAntBifi1,ecAntBifi1,Rosy feather star,Eukaryota,Metazoa,Echinodermata,Crinoidea,Comatulida,Antedonidae,Antedon,Antedon bifida
 fAbrBra2,fAbrBra2,Common bream,Eukaryota,Metazoa,Chordata,Actinopteri,Cypriniformes,Cyprinidae,Abramis,Abramis brama
+fAciRut3,fAciRut3,sterlet,Eukaryota,Metazoa,Chordata,Actinopteri,Acipenseriformes,Acipenseridae,Acipenser ,Acipenser ruthenus
 fBarBab1,fBarBab1,Barbel,Eukaryota,Metazoa,Chordata,Actinopteri,Cypriniformes,Cyprinidae,Barbus,Barbus barbus
 fBarBar1,fBarBar1,Stone loach,Eukaryota,Metazoa,Chordata,Actinopteri,Cypriniformes,Nemacheilidae,Barbatula,Barbatula barbatula
 fBleOce1,fBleOce1,Butterfly blenny,Eukaryota,Metazoa,Chordata,Actinopteri,Blenniiformes,Blenniidae,Blennius,Blennius ocellaris
@@ -681,6 +683,7 @@ mGloMel1,mGloMel1,Long-finned pilot whale,Eukaryota,Metazoa,Chordata,Mammalia,Ar
 mHypAmp2,mHypAmp2,Northern bottlenose whale,Eukaryota,Metazoa,Chordata,Mammalia,Artiodactyla,Ziphiidae,Hyperoodon,Hyperoodon ampullatus
 mLagAlb1,mLagAlb1,White-beaked dolphin,Eukaryota,Metazoa,Chordata,Mammalia,Artiodactyla,Delphinidae,Lagenorhynchus,Lagenorhynchus albirostris
 mMarMar1,mMarMar1,European pine marten,Eukaryota,Metazoa,Chordata,Mammalia,Carnivora,Mustelidae,Martes,Martes martes
+mMelMel3,mMelMel3,European badger,Eukaryota,Metazoa,Chordata,Mammalia,Carnivora,Mustelidae,Meles ,Meles meles
 mMicMin1,mMicMin1,European harvest mouse,Eukaryota,Metazoa,Chordata,Mammalia,Rodentia,Muridae,Micromys,Micromys minutus
 mMunRee1,mMunRee1,Reeves' muntjac,Eukaryota,Metazoa,Chordata,Mammalia,Artiodactyla,Cervidae,Muntiacus,Muntiacus reevesi
 mMusMuc1,mMusMuc1,House mouse,Eukaryota,Metazoa,Chordata,Mammalia,Rodentia,Muridae,Mus,Mus musculus
@@ -689,8 +692,8 @@ mPhoPho1,mPhoPho1,Harbor porpoise,Eukaryota,Metazoa,Chordata,Mammalia,Artiodacty
 mPipPyg2,mPipPyg2,Soprano pipistrelle,Eukaryota,Metazoa,Chordata,Mammalia,Chiroptera,Vespertilionidae,Pipistrellus,Pipistrellus pygmaeus
 mPleAur1,mPleAur1,Brown big-eared bat,Eukaryota,Metazoa,Chordata,Mammalia,Chiroptera,Vespertilionidae,Plecotus,Plecotus auritus
 mSteCoe1,mSteCoe1,Striped dolphin,Eukaryota,Metazoa,Chordata,Mammalia,Artiodactyla,Delphinidae,Stenella,Stenella coeruleoalba
-paTetJugo1,paTetJugo1,.,Eukaryota,,Heterolobosea,,,Vahlkampfiidae,Tetramitus,Tetramitus jugosus
-pxEimPrae1,pxEimPrae1,Coccidian parasite,Eukaryota,,Apicomplexa,Conoidasida,Eucoccidiorida,Eimeriidae,Eimeria,Eimeria praecox
+paTetJugo1,paTetJugo1,.,Eukaryota,.,Heterolobosea,.,.,Vahlkampfiidae,Tetramitus,Tetramitus jugosus
+pxEimPrae1,pxEimPrae1,Coccidian parasite,Eukaryota,.,Apicomplexa,Conoidasida,Eucoccidiorida,Eimeriidae,Eimeria,Eimeria praecox
 qcStrAcum1,qcStrAcum1,.,Eukaryota,Metazoa,Arthropoda,Chilopoda,Geophilomorpha,Linotaeniidae,Strigamia,Strigamia acuminata
 qhLepNord3,qhLepNord3,Sea louse,Eukaryota,Metazoa,Arthropoda,Hexanauplia,Siphonostomatoida,Caligidae,Lepeophtheirus,Lepeophtheirus nordmannii
 qqAmaFero1,qqAmaFero1,.,Eukaryota,Metazoa,Arthropoda,Arachnida,Araneae,Amaurobiidae,Amaurobius,Amaurobius ferox
@@ -700,7 +703,7 @@ qqMetSegm1,qqMetSegm1,.,Eukaryota,Metazoa,Arthropoda,Arachnida,Araneae,Tetragnat
 qqOdiSpin1,qqOdiSpin1,.,Eukaryota,Metazoa,Arthropoda,Arachnida,Opiliones,Phalangiidae,Odiellus,Odiellus spinosus
 qqParLuna2,qqParLuna2,.,Eukaryota,Metazoa,Arthropoda,Arachnida,Araneae,Theridiidae,Parasteatoda,Parasteatoda lunata
 qqTetMont2,qqTetMont2,Silver stretch spider,Eukaryota,Metazoa,Arthropoda,Arachnida,Araneae,Tetragnathidae,Tetragnatha,Tetragnatha montana
-qxSacCarc1,qxSacCarc1,Crab hacker barnacle,Eukaryota,Metazoa,Arthropoda,Thecostraca,,Sacculinidae,Sacculina,Sacculina carcini
+qxSacCarc1,qxSacCarc1,Crab hacker barnacle,Eukaryota,Metazoa,Arthropoda,Thecostraca,.,Sacculinidae,Sacculina,Sacculina carcini
 rZooViv1,rZooViv1,Common lizard,Eukaryota,Metazoa,Chordata,Lepidosauria,Squamata,Lacertidae,Zootoca,Zootoca vivipara
 sRajBra1,sRajBra1,Blonde ray,Eukaryota,Metazoa,Chordata,Chondrichthyes,Rajiformes,Rajidae,Raja,Raja brachyura
 tnLinLong1,tnLinLong1,Bootlace worm,Eukaryota,Metazoa,Nemertea,Pilidiophora,Heteronemertea,Lineidae,Lineus,Lineus longissimus
@@ -735,26 +738,22 @@ xbMytEdul2,xbMytEdul2,Blue mussel,Eukaryota,Metazoa,Mollusca,Bivalvia,Mytilida,M
 xbOstEdul1,xbOstEdul1,Native oyster,Eukaryota,Metazoa,Mollusca,Bivalvia,Ostreida,Ostreidae,Ostrea,Ostrea edulis
 xbSpiSoli1,xbSpiSoli1,(a clam),Eukaryota,Metazoa,Mollusca,Bivalvia,Venerida,Mactridae,Spisula,Spisula solida
 xbSpiSubt1,xbSpiSubt1,Cut surfclam,Eukaryota,Metazoa,Mollusca,Bivalvia,Venerida,Mactridae,Spisula,Spisula subtruncata
-xgAniVort1,xgAniVort1,Whirlpool ramshorn,Eukaryota,Metazoa,Mollusca,Gastropoda,,Planorbidae,Anisus,Anisus vortex
+xgAniVort1,xgAniVort1,Whirlpool ramshorn,Eukaryota,Metazoa,Mollusca,Gastropoda,.,Planorbidae,Anisus,Anisus vortex
 xgGibMagu1,xgGibMagu1,Turban top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Gibbula,Gibbula magus
 xgOncCelt3,xgOncCelt3,Celtic sea slug,Eukaryota,Metazoa,Mollusca,Gastropoda,Systellommatophora,Onchidiidae,Onchidella,Onchidella celtica
-xgPatDepr1,xgPatDepr1,Black-footed limpet,Eukaryota,Metazoa,Mollusca,Gastropoda,,Patellidae,Patella,Patella depressa
-xgPatPell1,xgPatPell1,Blue-rayed limpet,Eukaryota,Metazoa,Mollusca,Gastropoda,,Patellidae,Patella,Patella pellucida
-xgPatUlys2,xgPatUlys2,China limpet,Eukaryota,Metazoa,Mollusca,Gastropoda,,Patellidae,Patella,Patella ulyssiponensis
-xgPatVulg1,xgPatVulg1,Common limpet,Eukaryota,Metazoa,Mollusca,Gastropoda,,Patellidae,Patella,Patella vulgata
+xgPatDepr1,xgPatDepr1,Black-footed limpet,Eukaryota,Metazoa,Mollusca,Gastropoda,.,Patellidae,Patella,Patella depressa
+xgPatPell1,xgPatPell1,Blue-rayed limpet,Eukaryota,Metazoa,Mollusca,Gastropoda,.,Patellidae,Patella,Patella pellucida
+xgPatUlys2,xgPatUlys2,China limpet,Eukaryota,Metazoa,Mollusca,Gastropoda,.,Patellidae,Patella,Patella ulyssiponensis
+xgPatVulg1,xgPatVulg1,Common limpet,Eukaryota,Metazoa,Mollusca,Gastropoda,.,Patellidae,Patella,Patella vulgata
 xgPhoLine1,PHORD0020b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0021b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
-xgPhoLine1,PHORD0022b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0023b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0024b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0030b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0031b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
-xgPhoLine1,PHORD0033b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0034b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0038b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0051b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
-xgPhoLine1,PHORD0053b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
-xgPhoLine1,PHORD0054b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0058b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,PHORD0060b,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
 xgPhoLine1,xgPhoLine1,Thick top shell,Eukaryota,Metazoa,Mollusca,Gastropoda,Trochida,Trochidae,Phorcus,Phorcus lineatus
