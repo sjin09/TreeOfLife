@@ -28,7 +28,7 @@ def parse_args(args):
         "--stol",
         type=Path,
         required=True,
-        help="Path to the tree of life somatic mutational signature file",
+        help="Path to the tree of life somatic mutational signature file excluding artefactual mutational signatures",
     )
     parser.add_argument("-o", "--output", type=Path, required=True, help="Path to the file to plot")
     args = args[1:]
@@ -62,7 +62,7 @@ def calculate_cosine_similarity_between_signatures(cosmic_path: Path, stol_path:
 
     # Get column names
     cosmic_sig_names = cosmic_sigs.columns.tolist()
-    stol_sig_names = [f"sTOL{op_idx}" for op_idx, sig_name in enumerate(stol_sigs.columns.tolist(), start=1)]
+    stol_sig_names = [f"sToL{op_idx}" for op_idx, sig_name in enumerate(stol_sigs.columns.tolist(), start=1)]
 
     # Write a table mapping HDP signature names to sTOL signature names
     write_table_mapping_hdp_to_stol(stol_sigs.columns.tolist(), stol_sig_names)
@@ -77,38 +77,38 @@ def plot_sim_heatmap(
 ):
 
     # Create a heatmap using matplotlib
-    fig, ax = plt.subplots(figsize=(24, 20))
+    # fig, ax = plt.subplots(figsize=(24, 24))
+    fig, ax = plt.subplots(figsize=(8.27, 11.69))  # A4 page dimensions
     fig.patch.set_facecolor("white")  # Set the figure background color
     ax.set_facecolor("white")  # Set the axes background color
 
-    # remove the default spines
-    for spine in ax.spines.values():
-        spine.set_visible(False)
-
     # draw the heatmap
     im = ax.imshow(sig_sim_mtx, cmap="Greens", vmin=0.4, vmax=1.0, aspect="auto")
+    # im = ax.imshow(sig_sim_mtx, cmap="BuPu", vmin=0.4, vmax=1.0, aspect="auto")
+    # im = ax.imshow(sig_sim_mtx, cmap="YlGnBu", vmin=0.4, vmax=1.0, aspect="auto")
 
     # —— Add white gridlines between cells ——
     ax.set_xticks(np.arange(-0.5, len(stol_sig_names), 1), minor=True)  #  columns
     ax.set_yticks(np.arange(-0.5, len(cosmic_sig_names), 1), minor=True)  # rows
-    ax.grid(which="minor", color="white", linewidth=2)
+    ax.grid(which="minor", color="white", linewidth=1)
+    # ax.grid(which="minor", color="grey", linewidth=0.5)
     ax.tick_params(which="minor", length=0)
 
     # set x-ticks & labels
     ax.set_xticks(np.arange(len(stol_sig_names)))
-    ax.set_xticklabels(stol_sig_names, rotation=90, ha="center")
+    ax.set_xticklabels(stol_sig_names, rotation=90, ha="center", fontsize=5, fontfamily="Helvetica")
 
     # set y-ticks & labels
     ax.set_yticks(np.arange(len(cosmic_sig_names)))
-    ax.set_yticklabels(cosmic_sig_names)
+    ax.set_yticklabels(cosmic_sig_names, fontsize=6, fontfamily="Helvetica")
 
     # Set the title and labels
-    ax.set_xlabel("\nTree of life somatic mutational signatures\n", fontsize=14, labelpad=10)
-    ax.set_ylabel("\nCOSMIC somatic mutational signatures\n", fontsize=14, labelpad=10)
+    ax.set_xlabel("\nTree of Life somatic mutational signatures\n", fontsize=7, labelpad=10, fontfamily="Helvetica")
+    ax.set_ylabel("\nCOSMIC somatic mutational signatures\n", fontsize=7, labelpad=10, fontfamily="Helvetica")
 
     # Add colorbar
-    cbar = fig.colorbar(im, ax=ax, orientation="horizontal", fraction=0.02, pad=0.08, shrink=0.7)
-    cbar.set_label("Cosine similarity", fontsize=14)
+    cbar = fig.colorbar(im, ax=ax, orientation="horizontal", fraction=0.025, pad=0.04, shrink=0.5)
+    cbar.set_label("Cosine similarity", fontsize=7, fontfamily="Helvetica")
 
     if output_path:
         plt.savefig(output_path, bbox_inches="tight", dpi=300)
