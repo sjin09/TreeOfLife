@@ -38,7 +38,7 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
 
 
 # Use ete3
-def write_species_tree(input_path: Path, output_path: Path) -> None:
+def write_newick_tree(input_path: Path, output_path: Path) -> None:
     def get_child(parent_clade, child_name: str):
         """
         Find the child with the specified name or create a new one if not found.
@@ -48,30 +48,30 @@ def write_species_tree(input_path: Path, output_path: Path) -> None:
                 return child
         new_child = parent_clade.add_child(name=child_name)
         return new_child
+    
+    # Import and iterate through the DToL samplesheet
+    df = pd.read_csv(input_path)
+
+    # Subset data frame # Remove samples with incomplete taxonomic classification
+    df_subset = df[~(df.eq(".").any(axis=1))]
 
     # Initialize tree
     root = Tree(name="root")
 
-    # Import and iterate through the DToL samplesheet
-    df = pd.read_csv(input_path)
-    for (_idx, row) in df.iterrows():
+    # Build newick tree
+    for (_idx, row) in df_subset.iterrows():
         current_node = root
         sample_taxonomic_ranks = list(row[TAXONOMIC_RANKS])
         for rank in sample_taxonomic_ranks:
-            if rank == ".":
-                continue
             current_node = get_child(current_node, rank)
 
     # Export tree to newick format
     root.write(format=1, outfile=str(output_path))
 
-    # Show tree for debugging
-    # root.show()
-
 
 def main() -> int:
     options = parse_args()
-    write_species_tree(options.input, options.output)
+    write_newick_tree(options.input, options.output)
     return 0
 
 
