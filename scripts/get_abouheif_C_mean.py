@@ -29,7 +29,7 @@ from collections import defaultdict
 from pathlib import Path
 import sys
 from typing import Dict, List, Optional, Set, Tuple
-
+import warnings
 
 import ete3
 import numpy as np
@@ -165,8 +165,13 @@ def get_sample_tree(taxonomic_classification_path: Path, samples: Set[str]) -> e
 
     # Import and iterate through the DToL samplesheet
     df = pd.read_csv(taxonomic_classification_path)
-    for (_idx, row) in df.iterrows():
+
+    # Remove samples with incomplete taxonomic classification
+    df_subset = df[~(df.eq(".").any(axis=1))]
+
+    for (_idx, row) in df_subset.iterrows():
         sample = row["Sample"]
+        # Don't add sample to the tree if the sample is absent from signature exposure spreadsheet
         if sample not in samples:
             continue
         current_node = root
@@ -175,7 +180,6 @@ def get_sample_tree(taxonomic_classification_path: Path, samples: Set[str]) -> e
             if sample_taxonomic_rank == ".":
                 raise ValueError(f"Taxonomic rank {taxonomic_rank} is undefined for sample {sample}")
             current_node = get_child(current_node, sample_taxonomic_rank)
-
     return root
 
 
@@ -195,18 +199,19 @@ def get_species_tree(taxonomic_classification_path: Path, samples: Set[str]) -> 
 
     # Import and iterate through the DToL samplesheet
     df = pd.read_csv(taxonomic_classification_path)
-    for (_idx, row) in df.iterrows():
+
+    # Remove samples with incomplete taxonomic classification
+    df_subset = df[~(df.eq(".").any(axis=1))]
+    for (_idx, row) in df_subset.iterrows():
         sample = row["Sample"]
+        # Don't add sample to the tree if the sample is absent from signature exposure spreadsheet
         if sample not in samples:
             continue
         current_node = root
         sample_taxonomic_ranks = list(row[SPECIES_LEVEL_TAXONOMIC_RANKS])
         for taxonomic_rank in SAMPLE_LEVEL_TAXONOMIC_RANKS:
             sample_taxonomic_rank = row[taxonomic_rank]
-            if sample_taxonomic_rank == ".":
-                raise ValueError(f"Taxonomic rank {taxonomic_rank} is undefined for sample {sample}")
             current_node = get_child(current_node, sample_taxonomic_rank)
-
     return root
 
 
