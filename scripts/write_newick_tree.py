@@ -3,7 +3,7 @@
 import argparse
 from collections import defaultdict
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 import sys
 
 from ete3 import Tree, TreeStyle, NodeStyle, TextFace
@@ -37,13 +37,22 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
     return parser.parse_args(args)
 
 
-def get_sample_count_per_reference_sample(df: pd.DataFrame):
+def get_sample_count_per_reference_sample(df: pd.DataFrame) -> Dict[str, int]:
     # Count number of samples for each reference sample
     sample_count_per_reference_sample = defaultdict(lambda: 0)
     for (_idx, row) in df.iterrows():
         ref_sample = row["ref_sample"]
         sample_count_per_reference_sample[ref_sample] += 1
     return sample_count_per_reference_sample 
+
+
+def get_sample_count_per_species(df: pd.DataFrame) -> Dict[str, int]:
+    # Count number of samples for each reference sample
+    sample_count_per_species = defaultdict(lambda: 0)
+    for (_idx, row) in df.iterrows():
+        species_name = row["Species"]
+        sample_count_per_species[species_name] += 1
+    return sample_count_per_species
 
 
 def write_newick_tree(input_path: Path, output_path: Path) -> None:
@@ -61,9 +70,10 @@ def write_newick_tree(input_path: Path, output_path: Path) -> None:
     df = pd.read_csv(input_path)
 
     # Subset data frame # Remove samples with incomplete taxonomic classification
-    df_subset = df[~(df.eq(".").any(axis=1))]
+    df_subset = df[~(df.iloc[:, 3:10].eq(".").any(axis=1))]
 
     # Calculate number of sample for each reference sample
+    sample_count_per_species = get_sample_count_per_species(df_subset)
     sample_count_per_reference_sample = get_sample_count_per_reference_sample(df_subset)
 
     # Initialize tree
@@ -73,13 +83,18 @@ def write_newick_tree(input_path: Path, output_path: Path) -> None:
     for (_idx, row) in df_subset.iterrows():
         current_node = root
         sample = row["Sample"]
+        species = row["Species"]
         ref_sample = row["ref_sample"]
         sample_taxonomic_ranks = list(row[TAXONOMIC_RANKS])
         for taxonomic_rank, sample_taxonomic_rank in zip(TAXONOMIC_RANKS, sample_taxonomic_ranks):
             if taxonomic_rank == "Species":
                 if ref_sample == sample:
                     if sample_count_per_reference_sample[ref_sample] == 1:
-                        current_node = get_child(current_node, sample_taxonomic_rank)
+                        if sample_count_per_species[species] == 1:
+                            current_node = get_child(current_node, sample_taxonomic_rank)
+                        else:
+                            sample_taxonomic_rank = f"{sample_taxonomic_rank} ({sample})"
+                            current_node = get_child(current_node, sample_taxonomic_rank)
                     else:
                         sample_taxonomic_rank = f"{sample_taxonomic_rank} ({sample})"
                         current_node = get_child(current_node, sample_taxonomic_rank)
@@ -127,7 +142,7 @@ def plot_circular_tree(tree: Tree, output_path: Path, leaf_fontsize: int = 7, ca
 def main() -> int:
     options = parse_args()
     tree = write_newick_tree(options.input, options.output)
-    plot_circular_tree(tree, "{}.pdf".format(options.output.stem))
+    # plot_circular_tree(tree, "{}.pdf".format(options.output.stem))
     return 0
 
 
