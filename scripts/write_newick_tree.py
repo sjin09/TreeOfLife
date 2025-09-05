@@ -142,7 +142,7 @@ def plot_circular_tree(tree: Tree, output_path: Path, leaf_fontsize: int = 7, ca
 def main() -> int:
     options = parse_args()
     tree = write_newick_tree(options.input, options.output)
-    # plot_circular_tree(tree, "{}.pdf".format(options.output.stem))
+    plot_circular_tree(tree, "{}.pdf".format(options.output.stem))
     return 0
 
 

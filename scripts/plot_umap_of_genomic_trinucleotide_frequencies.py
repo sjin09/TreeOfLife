@@ -92,7 +92,7 @@ def load_taxonomic_classification_table(taxonomic_classification_path: Path, min
     df = df.drop_duplicates(keep="first")
 
     # Subset data frame
-    df_subset = df[~(df.eq(".").any(axis=1))]
+    df_subset = df[~(df.iloc[:, 3:10].eq(".").any(axis=1))]
 
     # Get the list of unique kingdoms present in the dataframe
     kingdoms = df_subset["Kingdom"].unique()
@@ -222,7 +222,7 @@ def plot_umap(
     sample_names: List[str],
     sample_to_label_lookup: Dict[str, str],
     label_color_lookup: Dict[str, Tuple[float, float, float]],
-    figsize: Tuple[int, int] = (7.09, 7.09),
+    figsize: Tuple[int, int] = (7.4, 7.4),
     point_size: int = 80,
     alpha: float = 0.85,
     output_path: Path = Path("umap_plot.pdf"),

@@ -167,8 +167,7 @@ def get_sample_tree(taxonomic_classification_path: Path, samples: Set[str]) -> e
     df = pd.read_csv(taxonomic_classification_path)
 
     # Remove samples with incomplete taxonomic classification
-    df_subset = df[~(df.eq(".").any(axis=1))]
-
+    df_subset = df[~(df.iloc[:, 3:10].eq(".").any(axis=1))]
     for (_idx, row) in df_subset.iterrows():
         sample = row["Sample"]
         # Don't add sample to the tree if the sample is absent from signature exposure spreadsheet
@@ -201,7 +200,7 @@ def get_species_tree(taxonomic_classification_path: Path, samples: Set[str]) -> 
     df = pd.read_csv(taxonomic_classification_path)
 
     # Remove samples with incomplete taxonomic classification
-    df_subset = df[~(df.eq(".").any(axis=1))]
+    df_subset = df[~(df.iloc[:, 3:10].eq(".").any(axis=1))]
     for (_idx, row) in df_subset.iterrows():
         sample = row["Sample"]
         # Don't add sample to the tree if the sample is absent from signature exposure spreadsheet
@@ -379,7 +378,7 @@ def plot_Abouheif_C_mean(cmean_path: Path, pdf_path: Path, is_somatic: bool) -> 
         + p9.geom_bar(stat="identity")
         + p9.theme_classic(16)
         + p9.theme(axis_text_x=p9.element_text(rotation=90, hjust=1))
-        + p9.guides(fill=p9.guide_legend(title="q-value"))
+        + p9.guides(fill=None)
         + p9.scale_fill_manual(values=FILL_COLOURS)
     )
 
