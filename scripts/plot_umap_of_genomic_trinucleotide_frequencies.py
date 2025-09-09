@@ -13,6 +13,18 @@ import umap
 from sklearn.preprocessing import StandardScaler
 
 KINGDOMS = ["Viridiplantae", "Metazoa", "Fungi"]
+TAXNOMIC_RANKS_OF_INTEREST = [
+    "Fungi",
+    "Viridiplantae",
+    "Aves",
+    "Actinopteri",
+    "Mammalia",
+    "Mollusca",
+    "Lepidoptera",
+    "Coleoptera",
+    "Diptera",
+    "Hymenoptera",
+]
 
 
 def parse_args(args):
@@ -45,27 +57,29 @@ def assign_umap_label(df: pd.DataFrame) -> pd.DataFrame:
         elif kingdom == "Fungi":
             labels.append("Fungi")
         else:
-            if phylum == "Arthropoda":
-                labels.append(f"{order} ({_class})")
-            elif phylum == "Chordata":
-                labels.append(f"{_class} ({phylum})")
+            if any(rank in TAXNOMIC_RANKS_OF_INTEREST for rank in (phylum, _class, order)):
+                if phylum == "Arthropoda":
+                    labels.append(f"{order} ({_class})")
+                elif phylum == "Chordata":
+                    labels.append(f"{_class} ({phylum})")
+                else:
+                    labels.append(phylum)
             else:
-                labels.append(phylum)
+                labels.append(".")
     df["Label"] = labels
 
 
 def generate_label_color_lookup(df: pd.DataFrame) -> Dict[str, Tuple[float, float, float]]:
-    metazoa_colors = [
-        "#031CA6",  # Aves
-        "#0468BF",  # Actinopetri
-        "#F25C05",  # Lepidoptera
-        "#324001",  # Coleoptera
-        "#B2BF4B",  # Diptera
-        "#F2E205",  # Hymenoptera
-        "#04B2D9",  # Mammalia
-        "#73168C",  # Annedlida
-        "#C04BF2",  # Mollusca
-    ]
+    metazoa_color_lookup = {
+       'Aves (Chordata)': "#031CA6",
+       'Actinopteri (Chordata)': "#0468BF",
+       'Lepidoptera (Insecta)': "#A63603",
+       'Coleoptera (Insecta)': "#E6550D",
+       'Diptera (Insecta)': "#FBAE17",
+       'Hymenoptera (Insecta)': "#FFD92F",
+       'Mammalia (Chordata)': "#04B2D9",
+       'Mollusca': "#C04BF2"
+    }
 
     # Group labels by kingdom
     kingdom_groups = {}
@@ -74,18 +88,18 @@ def generate_label_color_lookup(df: pd.DataFrame) -> Dict[str, Tuple[float, floa
 
     # Assign colors within each kingdom group
     label_color_lookup = {}
-    for kingdom, kingdom_labels in kingdom_groups.items():
+    for (kingdom, kingdom_labels) in kingdom_groups.items():
         if kingdom == "Viridiplantae":
             label_color_lookup["Viridiplantae"] = "#115923"
         elif kingdom == "Fungi":
-            label_color_lookup["Fungi"] = "#A67458"
-        else:
-            for lbl, lbl_color in zip(kingdom_labels, metazoa_colors):
-                label_color_lookup[lbl] = lbl_color
+            label_color_lookup["Fungi"] = "#7F2704"
+        else:  # Metazoa
+            for lbl in kingdom_labels:
+                label_color_lookup[lbl] = metazoa_color_lookup[lbl]
     return label_color_lookup
 
 
-def load_taxonomic_classification_table(taxonomic_classification_path: Path, min_count: int = 10) -> pd.DataFrame:
+def load_taxonomic_classification_table(taxonomic_classification_path: Path) -> Tuple[pd.DataFrame, Dict[str, str]]:
     # Load data frame
     df = pd.read_csv(taxonomic_classification_path, header=0)
     df = df.drop(columns=["Sample", "Common name"])
@@ -93,50 +107,11 @@ def load_taxonomic_classification_table(taxonomic_classification_path: Path, min
 
     # Subset data frame
     df_subset = df[~(df.iloc[:, 3:10].eq(".").any(axis=1))]
-
-    # Get the list of unique kingdoms present in the dataframe
-    kingdoms = df_subset["Kingdom"].unique()
-
-    # For each kingdom, keep only phyla with at least 10 samples and drop underrepresented phyla
-    for kingdom in kingdoms:
-        if kingdom == "Fungi":
-            continue
-        kingdom_phylum_species_counts = df_subset.loc[df_subset["Kingdom"] == kingdom, "Phylum"].value_counts()
-        kingdom_phylum_with_sufficient_samples = set(
-            kingdom_phylum_species_counts[kingdom_phylum_species_counts >= min_count].index
-        )
-        df_subset = df_subset[
-            ~((df_subset["Kingdom"] == kingdom) & (~df_subset["Phylum"].isin(kingdom_phylum_with_sufficient_samples)))
-        ]
-
-    # Count the number of samples per Chordata order
-    chordata_classes_samples_counts = df_subset.loc[df_subset["Phylum"] == "Chordata", "Class"].value_counts()
-
-    # Identify orders with at least 5 samples
-    chordata_classes_with_sufficient_samples = set(
-        chordata_classes_samples_counts[chordata_classes_samples_counts >= 5].index
-    )
-
-    # Filter out Chordata rows that belong to orders with fewer than 5 samples
-    df_subset = df_subset[
-        ~((df_subset["Phylum"] == "Chordata") & (~df_subset["Class"].isin(chordata_classes_with_sufficient_samples)))
-    ]
-
-    # Count the number of samples per Arthropoda order
-    arthropoda_order_samples_counts = df_subset.loc[df_subset["Phylum"] == "Arthropoda", "Order"].value_counts()
-
-    # Identify orders with at least 10 samples
-    arthropoda_orders_with_sufficient_samples = set(
-        arthropoda_order_samples_counts[arthropoda_order_samples_counts >= min_count].index
-    )
-
-    # Filter out Arthropoda rows that belong to orders with fewer than 10 samples
-    df_subset = df_subset[
-        ~((df_subset["Phylum"] == "Arthropoda") & (~df_subset["Order"].isin(arthropoda_orders_with_sufficient_samples)))
-    ]
-
     # Assign UMAP labels
     assign_umap_label(df_subset)
+
+    # Remove samples with unassigned label
+    df_subset = df_subset[df_subset["Label"] != "."]
 
     # Generate sample to label lookup
     sample_to_label_lookup = dict(zip(df_subset["ref_sample"], df_subset["Label"]))
@@ -325,7 +300,7 @@ def plot_umap_of_genomic_trinucleotide_frequencies(
         sample_names=sample_names,
         sample_to_label_lookup=sample_to_label_lookup,
         label_color_lookup=label_color_lookup,
-        alpha=0.85,
+        alpha=0.95,
         point_size=25,
         output_path=output_path,
     )
