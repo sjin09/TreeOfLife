@@ -1,6 +1,7 @@
-### SBS52 classification counts
-
+## SBS52 classification
 Unlike somatic mutations, germline mutations are classified into 52 categories (SBS52 classification). Please refer to the methods section of the manuscript for a detailed description of how the SBS96 classification is collapsed into the SBS52 classification.
+
+## SBS52 counts
 
 ```
 ## The file sample.vcf.gz contains germline mutations.
@@ -16,7 +17,7 @@ python get_sbs52_barplot.py \
     -o sample.sbs52.pdf
 ```
 
-### SBS52 counts, where each trinucleotide contributes equally.
+## SBS52 counts, where each trinucleotide contributes equally.
 
 ```
 python get_tri_equal_weight_sbs52_counts.py \

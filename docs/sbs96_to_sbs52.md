@@ -1,6 +1,7 @@
-### Collapse SBS96 classification counts to SBS52 classification counts
-
+## Mapping SBS96 classification to SBS52 classification
 Please refer to the methods section of the manuscript or the `get_sbs96_to_sbs52_lookup_table.py` script for a detailed description of how the SBS96 classification is mapped to the SBS52 classification.
+
+### Collapse SBS96 classification counts to SBS52 classification counts
 
 ```
 ## sbs96_to_sbs52_lookup_table.tsv can be found under the scripts directory

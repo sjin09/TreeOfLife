@@ -1,5 +1,7 @@
-### R code for mutational signature extraction
+## Mutational signature extraction
+Given a matrix with germline and somatic mutations categorized under SBS52 and SBS96 classifications, respectively, HDP can *de novo* extract mutational signatures.
 
+### R code for mutational signature extraction
 In the file `hdp_input.mat`, the rows represent samples, and the columns correspond to either the SBS52 or the SBS96 classification. Each element in the matrix indicates the counts of mutations.
 
 ```

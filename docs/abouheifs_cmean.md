@@ -1,5 +1,7 @@
-### Calculate Abouheif's Cmean for each germline and somatic mutational signature
+## Abouheif's Cmean
+Please refer to the paper *Testing for phylogenetic signal in phenotypic traits: New matrices of phylogenetic proximities* for the calculation of Abouheif’s Cmean.
 
+### Calculate Abouheif's Cmean for each germline and somatic mutational signature
 Given a table containing the taxonomic classification of each species and another table with their respective mutational signature exposures, the script `get_abouheif_C_mean.py` constructs a phylogenetic tree based on these classifications. It then calculates the phylogenetic proximity between species and assesses the phylogenetic signal of each mutational signature.
 
 ```

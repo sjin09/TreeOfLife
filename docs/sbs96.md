@@ -1,7 +1,7 @@
-### SBS96 classification counts
-
+## SBS96 classification
 Somatic mutations can be classified into 96 categories (SBS96 classification), depending on the 6 different classes of base substitution and 16 combinations of the bases immediately 5’ and 3’ to the mutation.
 
+### SBS96 counts
 Please note that the script here is used to retrieve and plot raw SBS96 counts and not the observed number of somatic mutations based on the callable positions in the reference genome and the callable bases from Pacific Biosciences CCS reads.
 
 ```
