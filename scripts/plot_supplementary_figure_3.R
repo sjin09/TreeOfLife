@@ -10,7 +10,7 @@ library(stringr)
 library(dplyr)
 
 ## setwd
-# setwd("/Users/sl666/Manuscript/My Drive/ToL_Nature/SI/SF1-3")
+setwd("/Users/sl666/Manuscript/My Drive/ToL_Nature/SI/SF1-3")
 
 # Load data
 # metadata = read.csv("dtol_all_samples.taxonomic_classification.csv")
@@ -64,7 +64,7 @@ tr$tip.label <- str_replace_all(tr$tip.label, "_", " ")
 tr$tip.label <- gsub("\\^(.*?)\\^", "(\\1)", tr$tip.label)
 
 # ----------------By Class and Order-------------------
-pal <- c(
+pal1 <- c(
   # Kingdom
   Fungi = "#7F2704", # warm brown
   Viridiplantae = "#115923", # deep green
@@ -92,7 +92,40 @@ pal <- c(
   Arachnida = "#FEE725"
 )
 
-# Build data frame annotation
+pal2 <- c(
+  Fungi = "#8b4513",  # saddlebrown
+  Viridiplantae = "#556b2f",  # darkolivegreen
+  # Clitellata = "#228b22",  # forestgreen
+  # Polychaeta = "#483d8b",  # darkslateblue
+  Clitellata = "#ffe4b5",  # forestgreen
+  Polychaeta = "#ffb6c1",  # darkslateblue
+  Aves = "#ff1493",  # darkcyan
+  Actinopteri = "#da70d6",  # steelblue
+  # Aves = "#008b8b",  # darkcyan
+  # Actinopteri = "#4682b4",  # steelblue
+  Mammalia = "#000080",  # navy
+  Bivalvia = "#9acd32",  # yellowgreen
+  Gastropoda = "#7f007f",  # purple2
+  Gymnolaemata = "#8fbc8f",  # darkseagreen
+  Lepidoptera = "#ff8c00",  # darkorange
+  Coleoptera = "#ffd700",  # gold
+  Diptera = "#7fff00",  # chartreuse
+  Hemiptera = "#00ff7f",  # springgreen
+  Trichoptera = "#00ffff",  # aqua
+  Plecoptera = "#f4a460",  # sandybrown
+  Hymenoptera = "#0000ff",  # blue
+  Arachnida = "#7b68ee"  # purple3
+)
+#   "#da70d6",  # orchid
+#   "#1e90ff",  # dodgerblue
+#   "#90ee90",  # lightgreen
+#   "#add8e6",  # lightblue
+#   "#ff1493",  # deeppink
+#   "#7b68ee",  # mediumslateblue
+#   "#ffe4b5",  # moccasin
+#   "#ffb6c1"   # lightpink
+
+# Build data e annotation
 anno <- tibble(label = tr$tip.label) %>%
   mutate(Species = str_trim(str_replace(label, "\\s*\\(.*\\)$", "")))  # drop the (...) part
 anno$Kingdom <- sapply(anno$Species,function(x){
@@ -108,22 +141,38 @@ anno$Order <- sapply(anno$Species,function(x){
   unique(metadata$Order[metadata$Species==x])
 })
 anno <- anno %>% mutate(label_expr = get_expr_labels(anno$label))
+# palette 1
+# anno <- anno %>%
+#   mutate(
+#     ColorGroup = case_when(
+#       Phylum %in% names(pal1) ~ Phylum,                # use phylum if in pal1ette
+#       Order %in% names(pal1) ~ Order,                # use phylum if in pal1ette
+#       Class %in% names(pal1) ~ Class,                # use phylum if in pal1ette
+#       Kingdom == "Viridiplantae" ~ "Viridiplantae",
+#       Kingdom == "Fungi" ~ "Fungi",
+#       TRUE ~ NA_character_ 
+#     )
+#   ) %>%
+#   mutate(
+#     ColorGroup = factor(ColorGroup, levels = names(pal1))  # enforce order
+#   ) %>% 
+#   select(label, label_expr, ColorGroup)
+# palette 2
 anno <- anno %>%
   mutate(
     ColorGroup = case_when(
-      Phylum %in% names(pal) ~ Phylum,                # use phylum if in palette
-      Order %in% names(pal) ~ Order,                # use phylum if in palette
-      Class %in% names(pal) ~ Class,                # use phylum if in palette
+      Phylum %in% names(pal2) ~ Phylum,                # use phylum if in pal2ette
+      Order %in% names(pal2) ~ Order,                # use phylum if in pal2ette
+      Class %in% names(pal2) ~ Class,                # use phylum if in pal2ette
       Kingdom == "Viridiplantae" ~ "Viridiplantae",
       Kingdom == "Fungi" ~ "Fungi",
       TRUE ~ NA_character_ 
     )
   ) %>%
   mutate(
-    ColorGroup = factor(ColorGroup, levels = names(pal))  # enforce order
+    ColorGroup = factor(ColorGroup, levels = names(pal2))  # enforce order
   ) %>% 
   select(label, label_expr, ColorGroup)
-
 # build data frame
 grp_list <- split(anno$label, anno$ColorGroup)
 hilight_df <- lapply(names(grp_list), function(g) {
@@ -155,7 +204,8 @@ p <- ggtree(tr, layout = "circular") +
     legend.position = "right",
     text = element_text(family = "Helvetica")
   ) +
-  scale_fill_manual(values = pal, name = "Class and Order")
-ggsave("SF3.pdf", plot = p, width = 10, height = 10, units = "in") 
+  # scale_fill_manual(values = pal1, name = "Class and Order")
+  scale_fill_manual(values = pal2, name = "Class and Order")
+ggsave("SF3_beta.pdf", plot = p, width = 10, height = 10, units = "in") 
 
 
