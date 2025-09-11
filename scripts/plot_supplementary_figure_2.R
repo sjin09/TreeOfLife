@@ -65,14 +65,14 @@ tr$tip.label <- gsub("\\^(.*?)\\^", "(\\1)", tr$tip.label)
 
 # Define palette
 pal <- c(
-  Arthropoda = "#CE6C47",
-  Chordata = "#EABE63",
-  Mollusca = "#C04BF2",
+  Viridiplantae = "#004300",
+  Fungi = "#8C564B",
+  Arthropoda = "#B80080",
+  Chordata = "#30A2DA",
+  Mollusca = "#000097",
   Annelida = "#73168C",
   Bryozoa = "#0B7A75",
-  Cnidaria = "#A9D2D5",
-  Viridiplantae = "#115923",
-  Fungi = "#A67458"
+  Cnidaria = "#A9D2D5"
 )
 
 # build annotation

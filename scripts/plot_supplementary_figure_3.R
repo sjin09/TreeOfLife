@@ -8,13 +8,14 @@ library(ggtreeExtra)
 library(tidyverse)
 library(stringr)
 library(dplyr)
+library(Polychrome)
 
 ## setwd
 setwd("/Users/sl666/Manuscript/My Drive/ToL_Nature/SI/SF1-3")
 
 # Load data
-# metadata = read.csv("dtol_all_samples.taxonomic_classification.csv")
-# txt = readLines("tree.nwk")
+metadata = read.csv("dtol_all_samples.taxonomic_classification.csv")
+txt = readLines("tree.nwk")
 
 # ---- CLI ----
 parser <- ArgumentParser(description = "Plot Supplementary Figure 3")
@@ -29,6 +30,52 @@ parser$add_argument(
   help = "Path to dtol_all_samples.taxonomic_classification.csv"
 )
 args <- parser$parse_args()
+
+pal <- c(
+  # Yellows / Oranges
+  "#FFDC00", "#E5AE38", "#FF8002", 
+  
+  # Blues
+  "#30A2DA", "#2B55B9", "#1F77B4", "#4D6EFF", "#6126FF",
+  "#000097", "#0100F8", "#00457B", "#6E7CBB", "#888FFF",
+  
+  # Cyans / Teals / Aquas
+  "#04E3C8", "#17BECF", "#01BE8A", "#00BF00", "#00E83B", 
+  "#83D371", "#91FF00", "#B4FF92", 
+  
+  # Purples / Violets
+  "#9467BD", "#7D00A0", "#9400F5", "#895DFF", "#520066",
+  "#3A0183", "#A737AE", "#7E7CBB", "#AD8BB1", "#CE85FF",
+ 
+  # Pinks / Magentas (strong, not pastel)
+  "#FF55FF", "#DD00FF", "#FF1F83", "#F500C6", "#E377C2",
+  "#B80080", "#84206F", "#FF798F", "#A56089", "#D796AB",
+   
+  # Blue-greens / Blue-purples (bridges)
+  "#95D3FF", "#7CB2FF"
+)
+
+# taxanomic ranks
+taxaonomic_ranks <- c(
+  "Viridiplantae",
+  "Fungi",
+  "Lepidoptera",
+  "Diptera",
+  "Hymenoptera",
+  "Coleoptera",
+  "Hemiptera",
+  "Plecoptera",
+  "Trichoptera",
+  "Arachnida",
+  "Actinopteri",
+  "Mammalia",
+  "Aves",
+  "Clitellata",
+  "Polychaeta",
+  "Bivalvia",
+  "Gastropoda",
+  "Gymnolaemata"
+)
 
 # get parsed labels
 get_expr_labels <- function(labels){
@@ -64,66 +111,31 @@ tr$tip.label <- str_replace_all(tr$tip.label, "_", " ")
 tr$tip.label <- gsub("\\^(.*?)\\^", "(\\1)", tr$tip.label)
 
 # ----------------By Class and Order-------------------
-pal1 <- c(
-  # Kingdom
-  Fungi = "#7F2704", # warm brown
-  Viridiplantae = "#115923", # deep green
-  # Annelida
-  Clitellata = "#3F007D",
-  Polychaeta = "#6A51A3",
-  # Chordata
-  Aves = "#031CA6", # navy blue
-  Actinopteri = "#0468BF", # blue
-  Mammalia = "#04B2D9", # cyan
-  # Mollusca
-  Bivalvia = "#B39DD8",
-  Gastropoda = "#BCBDDC",
-  # Bryozoa
-  Gymnolaemata = "#807DBA",
-  # Insecta by Order
-  Lepidoptera = "#8C510A",
-  Coleoptera = "#EC7014",
-  Diptera = "#A63603",
-  Hemiptera = "#FFD92F",
-  Trichoptera = "#FEC44F",
-  Plecoptera = "#FE9929",
-  Hymenoptera = "#CC4C02",
-  # Arthropoda
-  Arachnida = "#FEE725"
+set.seed(42)
+# rank_colours = c()
+# rank_colours = c("#004300", "#8C564B")
+# rank_colours = c(rank_colours, sample(pal, length(taxaonomic_ranks) - 2, replace=FALSE))
+# names(rank_colours) = taxaonomic_ranks
+rank_colours <- c(
+  Viridiplantae = "#004300",
+  Fungi        = "#8C564B",
+  Lepidoptera  = "#B80080",
+  Diptera      = "#FFDC00",
+  Hymenoptera  = "#895DFF",
+  Coleoptera   = "#0100F8",
+  Hemiptera    = "#E377C2",
+  Plecoptera   = "#00E83B",
+  Trichoptera  = "#9400F5",
+  Arachnida    = "#04E3C8",
+  Actinopteri  = "#30A2DA",
+  Mammalia     = "#AB7200",
+  Aves         = "#520066",
+  Clitellata   = "#84206F",
+  Polychaeta   = "#17BECF",
+  Bivalvia     = "#FF8002",
+  Gastropoda   = "#000097",
+  Gymnolaemata = "#F500C6"
 )
-
-pal2 <- c(
-  Fungi = "#8b4513",  # saddlebrown
-  Viridiplantae = "#556b2f",  # darkolivegreen
-  # Clitellata = "#228b22",  # forestgreen
-  # Polychaeta = "#483d8b",  # darkslateblue
-  Clitellata = "#ffe4b5",  # forestgreen
-  Polychaeta = "#ffb6c1",  # darkslateblue
-  Aves = "#ff1493",  # darkcyan
-  Actinopteri = "#da70d6",  # steelblue
-  # Aves = "#008b8b",  # darkcyan
-  # Actinopteri = "#4682b4",  # steelblue
-  Mammalia = "#000080",  # navy
-  Bivalvia = "#9acd32",  # yellowgreen
-  Gastropoda = "#7f007f",  # purple2
-  Gymnolaemata = "#8fbc8f",  # darkseagreen
-  Lepidoptera = "#ff8c00",  # darkorange
-  Coleoptera = "#ffd700",  # gold
-  Diptera = "#7fff00",  # chartreuse
-  Hemiptera = "#00ff7f",  # springgreen
-  Trichoptera = "#00ffff",  # aqua
-  Plecoptera = "#f4a460",  # sandybrown
-  Hymenoptera = "#0000ff",  # blue
-  Arachnida = "#7b68ee"  # purple3
-)
-#   "#da70d6",  # orchid
-#   "#1e90ff",  # dodgerblue
-#   "#90ee90",  # lightgreen
-#   "#add8e6",  # lightblue
-#   "#ff1493",  # deeppink
-#   "#7b68ee",  # mediumslateblue
-#   "#ffe4b5",  # moccasin
-#   "#ffb6c1"   # lightpink
 
 # Build data e annotation
 anno <- tibble(label = tr$tip.label) %>%
@@ -141,39 +153,23 @@ anno$Order <- sapply(anno$Species,function(x){
   unique(metadata$Order[metadata$Species==x])
 })
 anno <- anno %>% mutate(label_expr = get_expr_labels(anno$label))
-# palette 1
-# anno <- anno %>%
-#   mutate(
-#     ColorGroup = case_when(
-#       Phylum %in% names(pal1) ~ Phylum,                # use phylum if in pal1ette
-#       Order %in% names(pal1) ~ Order,                # use phylum if in pal1ette
-#       Class %in% names(pal1) ~ Class,                # use phylum if in pal1ette
-#       Kingdom == "Viridiplantae" ~ "Viridiplantae",
-#       Kingdom == "Fungi" ~ "Fungi",
-#       TRUE ~ NA_character_ 
-#     )
-#   ) %>%
-#   mutate(
-#     ColorGroup = factor(ColorGroup, levels = names(pal1))  # enforce order
-#   ) %>% 
-#   select(label, label_expr, ColorGroup)
-# palette 2
 anno <- anno %>%
   mutate(
     ColorGroup = case_when(
-      Phylum %in% names(pal2) ~ Phylum,                # use phylum if in pal2ette
-      Order %in% names(pal2) ~ Order,                # use phylum if in pal2ette
-      Class %in% names(pal2) ~ Class,                # use phylum if in pal2ette
+      Phylum %in% names(rank_colours) ~ Phylum,                # use phylum if in rank_coloursette
+      Order %in% names(rank_colours) ~ Order,                # use phylum if in rank_coloursette
+      Class %in% names(rank_colours) ~ Class,                # use phylum if in rank_coloursette
       Kingdom == "Viridiplantae" ~ "Viridiplantae",
       Kingdom == "Fungi" ~ "Fungi",
       TRUE ~ NA_character_ 
     )
   ) %>%
   mutate(
-    ColorGroup = factor(ColorGroup, levels = names(pal2))  # enforce order
+    ColorGroup = factor(ColorGroup, levels = names(rank_colours))  # enforce order
   ) %>% 
   select(label, label_expr, ColorGroup)
 # build data frame
+tr$tip.label = anno$label
 grp_list <- split(anno$label, anno$ColorGroup)
 hilight_df <- lapply(names(grp_list), function(g) {
   tips <- grp_list[[g]]
@@ -187,7 +183,29 @@ hilight_df <- lapply(names(grp_list), function(g) {
 # assign expression label
 tr$tip.label = anno$label_expr
 
-# dot
+# plot
+p <- ggtree(tr, layout = "circular") +
+  theme(
+    legend.position = "right",
+    text = element_text(family = "Helvetica")
+  )
+ggsave("EXF3_alpha.pdf", plot = p, width = 10, height = 10, units = "in")
+
+# plot
+p <- ggtree(tr, layout = "circular") +
+  geom_hilight(
+    data = hilight_df,
+    aes(node = node, fill = ColorGroup),
+    alpha = 0.6
+  ) +
+  theme(
+    legend.position = "right",
+    text = element_text(family = "Helvetica")
+  ) +
+  scale_fill_manual(values = rank_colours, name = "Taxanomic rank")
+ggsave("EXF3_beta.pdf", plot = p, width = 10, height = 10, units = "in")
+
+# plot
 p <- ggtree(tr, layout = "circular") +
   geom_hilight(
     data = hilight_df,
@@ -204,8 +222,8 @@ p <- ggtree(tr, layout = "circular") +
     legend.position = "right",
     text = element_text(family = "Helvetica")
   ) +
-  # scale_fill_manual(values = pal1, name = "Class and Order")
-  scale_fill_manual(values = pal2, name = "Class and Order")
-ggsave("SF3_beta.pdf", plot = p, width = 10, height = 10, units = "in") 
+  # scale_fill_manual(values = pal, name = "Class and Order")
+  scale_fill_manual(values = rank_colours, name = "Taxanomic rank")
+ggsave("SF3.pdf", plot = p, width = 10, height = 10, units = "in")
 
 

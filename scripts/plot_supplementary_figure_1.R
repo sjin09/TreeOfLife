@@ -77,9 +77,9 @@ tr$tip.label = anno$label_expr
 
 # Palette
 pal <- c(
-  Fungi = "#7F2704",
+  Fungi = "#8C564B",
   Metazoa = "#001F54",
-  Viridiplantae = "#115923"
+  Viridiplantae = "#004300"
 )
 
 # annotate by shade
